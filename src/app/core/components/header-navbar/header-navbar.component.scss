@@ -1,0 +1,31 @@
+.nav-link {
+    color: white;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: 700;
+    padding-bottom: 0%;
+    height: 2.5rem;
+
+}
+
+.by-text {
+    padding-top: 0%;
+    font-size: small;
+    font-style: italic !important;
+    font-weight:lighter;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+    color: white;
+    background-image: none;
+    border: none;
+    font-size: sxx-large;
+}
