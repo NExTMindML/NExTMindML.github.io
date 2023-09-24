@@ -14,4 +14,4 @@ const routes: Routes = [
         RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class AuthRoutingModule { }
+export class RepositoryRoutingModule { }
