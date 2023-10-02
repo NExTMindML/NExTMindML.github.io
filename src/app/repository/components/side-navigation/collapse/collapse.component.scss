@@ -1,0 +1,43 @@
+.collapse-button:hover {
+    cursor: pointer;
+}
+
+.collapse-button {
+    margin-right: 100%;
+    text-wrap: nowrap;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.collapse {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.collapse::-webkit-scrollbar {
+    display: none;
+}
+
+.collapse {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.bi-chevron-right {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.rotate {
+    animation: rotateIcon 0.5s linear;
+}

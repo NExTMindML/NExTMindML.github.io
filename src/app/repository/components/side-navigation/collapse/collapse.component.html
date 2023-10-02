@@ -1,0 +1,9 @@
+<p class="collapse-button" (click)="toggleArrow()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    <i [ngClass]="{'bi bi-chevron-right': !isArrowDown, 'bi bi-chevron-down': isArrowDown, 'rotate': isArrowDown}"></i>
+    {{this.tittle}}
+</p>
+
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse">
+    <app-repository-card *ngFor="let card of cards" [tittle]="card.tittle" [python]="card.python" [excel]="card.excel"
+        [miner]="card.miner" [minutesRead]="card.minutesRead"></app-repository-card>
+</div>

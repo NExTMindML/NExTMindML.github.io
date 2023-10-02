@@ -1,0 +1,20 @@
+<div class="card-container">
+    <div class="card mb-2 mt-2">
+        <div class="p card-title">
+            <img *ngIf="this.excel" src="https://i.ibb.co/N9t2bQn/Microsoft-Excel-Logo.png" alt="Microsoft-Excel-Logo" class="excel">
+            <img *ngIf="this.miner" src="https://i.ibb.co/18GRj4V/4490278.png" alt="4490278" class="miner">
+            <img *ngIf="this.python" src="https://i.ibb.co/FmbDMT8/Python-logo-notext-svg.png" alt="Python-logo-notext-svg" class="python">
+        </div>
+        <div class="card-body">
+            <p>
+                {{this.tittle}}
+            </p>
+        </div>
+        <div class="card-footer">
+            {{this.minutesRead}} minutes read
+        </div>
+    </div>
+    <div class="overlay">
+        <!-- Contenido del div que se superpone -->
+    </div>
+</div>
