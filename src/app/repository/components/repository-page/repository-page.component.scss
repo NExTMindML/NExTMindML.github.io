@@ -10,3 +10,24 @@
     padding: 0;
     margin: 0;
 }
+
+.row {
+    height: 85vh;
+}
+
+.col-8 {
+    max-height: 86.5vh;
+    overflow-y: auto;
+}
+
+.col-8::-webkit-scrollbar {
+    display: none;
+}
+
+.col-8 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.col-4 {
+    border-right: 1px solid white;
+}
