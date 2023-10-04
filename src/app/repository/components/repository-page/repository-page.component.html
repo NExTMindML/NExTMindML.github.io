@@ -4,12 +4,14 @@
             <app-navigation (selectCardEvent)="callInfo($event)"></app-navigation>
         </div>
         <div class="col-8 ps-4">
+            <ng-template #container>
 
+            </ng-template>
         </div>
     </div>
 </div>
 
-<div class="container-custom text-center" *ngIf="isMobile">
+<div class="container-custom text-center mb-2" *ngIf="isMobile">
     <app-navigation (selectCardEvent)="callInfo($event)"></app-navigation>
     <div class="container-info {{isViewedInfo ? 'show' : ''}}">
         <button class="btn btn-primary" type="submit" (click)="searchView()">Button</button>
