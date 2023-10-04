@@ -1,0 +1,43 @@
+<app-tittle>Data Preparation</app-tittle>
+
+<app-paragraph>Data handling is one of the stages in the process of building Machine Learning models, and it's likely where most of the time is spent as an analyst. It involves preparing and cleaning the data before it is used to feed an algorithm.</app-paragraph>
+
+<app-paragraph>There are two general approaches to data handling: "blending" and "cleansing."
+
+</app-paragraph>
+
+<app-mini-sub-title>Blending</app-mini-sub-title>
+
+<app-paragraph>It's about transforming a dataset from one state to another or combining multiple sets.</app-paragraph>
+
+<app-mini-sub-title>Cleansing</app-mini-sub-title>
+
+<app-paragraph>It's about improving the data itself so that the model to be trained can deliver better results.</app-paragraph>
+
+<app-sub-title>What should you know?</app-sub-title>
+
+<app-paragraph>For both blending and cleansing, and in general, it's essential to thoroughly analyze the dataset to be examined. This time, we will specify aspects related to cleansing.</app-paragraph>
+
+<app-paragraph>Among the most common aspects that can affect the performance of the model to be trained and should be considered when analyzing attributes are:</app-paragraph>
+
+<ul>
+    <app-list-item>Check for many missing values (?).</app-list-item>
+    <app-list-item>Check if there are attributes related to other attributes.</app-list-item>
+    <app-list-item>Identify unusual information.</app-list-item>
+    <app-list-item>Identify the range of attribute domains.</app-list-item>
+</ul>
+
+<app-callout>An important point to consider is that sometimes the information that is considered problematic is the one that requires attention. An example of this is in fraud detection problems, where unusual information (outliers) is what matters.
+</app-callout><br>
+<app-paragraph>Once the above aspects are identified, the actions that can be taken to try to improve the model's performance as much as possible will depend on the specific algorithm used. However, some strategies to reduce the problems that may arise include:</app-paragraph>
+
+<ul>
+    <app-list-item>Replacing invalid or missing data with statistical data from the rest of the dataset, such as the average, median, minimum, etc., to avoid wasting information.</app-list-item>
+    <app-list-item>Eliminating attributes with many missing data. Sometimes, when there are many missing data, it's best to forgo the use of that attribute. You can also consider removing only those records that have such data.
+    </app-list-item>
+    <app-list-item>Removing attributes that are correlated with each other.
+    </app-list-item>
+    <app-list-item>Normalizing the range of attribute domains, bringing all the data in the dataset to the same scale to avoid possible inconsistencies (standardization).<br>
+                    One possible normalization technique would be to classify a certain set of data that is "farther away" from the rest of the dataset as "Outliers" or with some other distinctive label and handle them based on that characteristic to take appropriate action.
+    </app-list-item>
+</ul>

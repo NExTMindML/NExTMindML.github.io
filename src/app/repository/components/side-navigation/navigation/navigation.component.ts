@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Card } from 'src/app/core/models/card';
 import { WhatIsMachineLearningComponent } from '../../cards-info/what-is-machine-learning/what-is-machine-learning.component';
 import { CRISPDMComponent } from '../../cards-info/crisp-dm/crisp-dm.component';
+import { DataHandlingComponent } from '../../cards-info/data-handling/data-handling.component';
 
 @Component({
   selector: 'app-navigation',
@@ -32,7 +33,7 @@ export class NavigationComponent {
         },
         {
           tittle: "CRISP-DM",
-          minutesRead: 10,
+          minutesRead: 1,
           cardId: CRISPDMComponent
         },
         {
@@ -51,13 +52,8 @@ export class NavigationComponent {
       tittle: "Data Preparation", cards: [
         {
           tittle: "Data Preparation",
-          minutesRead: 10,
-          cardId: "what_ML"
-        },
-        {
-          tittle: "Data Handling",
-          minutesRead: 10,
-          cardId: "what_ML"
+          minutesRead: 3,
+          cardId: DataHandlingComponent
         }
       ]
     },

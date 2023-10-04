@@ -20,7 +20,9 @@ import { NavigationComponent } from './components/side-navigation/navigation/nav
     ListItemComponent,
     QuoteComponent,
     CRISPDMComponent,
-    NotPageInfoComponent
+    NotPageInfoComponent,
+    DataHandlingComponent,
+    CalloutComponent
   ],
   imports: [
     CommonModule,
@@ -40,4 +42,6 @@ import { ListItemComponent } from './components/text-components/list-item/list-i
 import { QuoteComponent } from './components/text-components/quote/quote.component';
 import { CRISPDMComponent } from './components/cards-info/crisp-dm/crisp-dm.component';
 import { NotPageInfoComponent } from './components/cards-info/not-page-info/not-page-info.component';
+import { DataHandlingComponent } from './components/cards-info/data-handling/data-handling.component';
+import { CalloutComponent } from './components/text-components/callout/callout.component';
 
