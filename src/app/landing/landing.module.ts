@@ -4,12 +4,14 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingRoutingModule } from './landing-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 
 @NgModule({
   declarations: [
     LandingPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutMeComponent
   ],
   imports: [
     CommonModule,

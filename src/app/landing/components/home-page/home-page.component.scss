@@ -16,13 +16,19 @@ h1 {
     width: fit-content;
     position: absolute;
     top: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 .phrase, .cite {
     color: white;
-    text-align: right;
     font-style: italic;
     margin: 0;
+    margin-left: auto;
+}
+
+.phrase {
+    text-align: right;
 }
 
 .color-text {
@@ -39,8 +45,9 @@ h1 {
     font-size: medium;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    margin-right: 100%;
+    //margin-right: 100%;
     text-wrap: nowrap;
+    width: fit-content;
     border-radius: 10px;
 }
 
@@ -85,4 +92,29 @@ h1 {
 .par-number-phrase:not(:hover), .btn:not(:hover) {
     transition: transform 0.5s ease;
     transform: scale(1);
+}
+
+@media (max-width: 600px) {
+    .phrase,.cite  {
+        text-align: left;
+    }
+
+    .cite {
+        margin-left: 0;
+    }
+
+    .phrases-bar {
+        bottom: none;
+        top: 80%;
+        background-color: transparent;
+        flex-direction: column;
+    }
+
+    .par-number-phrase {
+        margin-top: 12%;
+    }
+
+    .par-number-phrase .number, .par-number-phrase .phrase {
+        font-size: 1.8rem;
+    }
 }
