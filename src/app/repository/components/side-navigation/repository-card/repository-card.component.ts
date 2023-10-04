@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CardSelectEventEmitterService } from 'src/app/repository/services/card-select-event-emitter.service';
 
 @Component({
   selector: 'app-repository-card',
@@ -11,4 +12,21 @@ export class RepositoryCardComponent {
 @Input() python?: boolean = false;
 @Input() excel?: boolean = false;
 @Input() miner?: boolean = false;
+@Input() info?: any;
+isActive: boolean = false;
+@Output() selectCardEvent = new EventEmitter<any>();
+
+constructor(private cardSelectedEvent: CardSelectEventEmitterService) {}
+
+ngOnInit() {
+  this.cardSelectedEvent.getEvent().subscribe((e: any) => {
+    this.isActive = e == this;
+    }
+  )
+}
+
+selectCard() {
+  this.selectCardEvent.emit(this.info);
+  this.cardSelectedEvent.emitEvent(this)
+}
 }

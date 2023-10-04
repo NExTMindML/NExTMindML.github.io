@@ -1,10 +1,12 @@
 <div class="container-custom text-center">
     <div class="row">
         <div class="col-4">
-            <app-navigation></app-navigation>
+            <app-navigation (selectCardEvent)="callInfo($event)"></app-navigation>
         </div>
         <div class="col-8 ps-4">
-            <app-what-is-machine-learning></app-what-is-machine-learning>
+            <ng-template #container class="container-info">
+
+            </ng-template>
         </div>
     </div>
 </div>

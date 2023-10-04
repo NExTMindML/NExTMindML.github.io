@@ -17,7 +17,10 @@ import { NavigationComponent } from './components/side-navigation/navigation/nav
     ParagraphComponent,
     SubTitleComponent,
     MiniSubTitleComponent,
-    ListItemComponent
+    ListItemComponent,
+    QuoteComponent,
+    CRISPDMComponent,
+    NotPageInfoComponent
   ],
   imports: [
     CommonModule,
@@ -34,4 +37,7 @@ import { ParagraphComponent } from './components/text-components/paragraph/parag
 import { SubTitleComponent } from './components/text-components/sub-title/sub-title.component';
 import { MiniSubTitleComponent } from './components/text-components/mini-sub-title/mini-sub-title.component';
 import { ListItemComponent } from './components/text-components/list-item/list-item.component';
+import { QuoteComponent } from './components/text-components/quote/quote.component';
+import { CRISPDMComponent } from './components/cards-info/crisp-dm/crisp-dm.component';
+import { NotPageInfoComponent } from './components/cards-info/not-page-info/not-page-info.component';
 

@@ -4,7 +4,7 @@
             <button ngbNavLink>Concepts</button>
             <ng-template ngbNavContent>
                 <app-collapse *ngFor="let concept of concetps" [cards]="concept.cards"
-                    [tittle]="concept.tittle"></app-collapse>
+                    [tittle]="concept.tittle" (selectCardEvent)="selectCard($event)"></app-collapse>
             </ng-template>
         </li>
         <li [ngbNavItem]="2">
@@ -16,8 +16,8 @@
         <li [ngbNavItem]="3">
             <button ngbNavLink>Study Cases</button>
             <ng-template ngbNavContent>
-                <app-repository-card *ngFor="let case of cases" [tittle]="case.tittle" [python]="case.python"
-                    [excel]="case.excel" [miner]="case.miner" [minutesRead]="case.minutesRead"></app-repository-card>
+                <app-repository-card *ngFor="let case of cases" [info]="case.cardId" [tittle]="case.tittle" [python]="case.python"
+                    [excel]="case.excel" [miner]="case.miner" [minutesRead]="case.minutesRead" (selectCardEvent)="selectCard($event)"></app-repository-card>
             </ng-template>
         </li>
     </ul>

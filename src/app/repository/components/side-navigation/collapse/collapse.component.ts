@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Card } from 'src/app/core/models/card';
 
 @Component({
@@ -8,7 +8,8 @@ import { Card } from 'src/app/core/models/card';
 })
 export class CollapseComponent {
   @Input() tittle?: String;
-  @Input() cards?: Card[];
+  @Input() cards?: Card[];  
+  @Output() selectCardEvent = new EventEmitter<any>();
 
   isCollapsed = true;
   isArrowDown = false;
@@ -16,5 +17,9 @@ export class CollapseComponent {
   toggleArrow() {
     this.isArrowDown = !this.isArrowDown;
     this.isCollapsed = !this.isCollapsed;
+  }
+
+  selectCard(info: String) {
+    this.selectCardEvent.emit(info);
   }
 }

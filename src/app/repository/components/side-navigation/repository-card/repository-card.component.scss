@@ -78,7 +78,7 @@ img:not(hover) {
     border-radius: 10px;
 }
 
-.card-container:hover .overlay {
+.card-container:hover .overlay, .active .overlay {
     background-image: linear-gradient(90deg, #FF0A6C 0.1%, rgba(255, 0, 0, 0.00) 3.5%);
 }
 
@@ -90,7 +90,7 @@ img:not(hover) {
     transition-duration: all 1s ease;
 }
 
-.card-container:hover .card {
+.card-container:hover .card, .active .card {
     border: solid 1px transparent;
     background-image: linear-gradient(99deg, rgba(255, 10, 108, 0.08) 1.75%, rgba(128, 9, 246, 0.08) 99.04%), linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
     background-origin: border-box;
@@ -99,17 +99,17 @@ img:not(hover) {
 
 }
 
-.card-container:hover {
-    transition: transform 0.5s ease;
-    transform: scale(1.08);
-}
-
 .card-container:not(:hover) {
     transition: transform 0.5s ease;
     transform: scale(1);
 }
 
-.card-container:hover .card-body {
+.card-container:hover, .active {
+    transition: transform 0.5s ease;
+    transform: scale(1.08);
+}
+
+.card-container:hover .card-body, .active .card-body {
     transition: transform 0.5s ease;
     background-image: linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
     -webkit-background-clip: text;
@@ -120,13 +120,13 @@ img:not(hover) {
 p {
     position: relative;
 }
-.card-container:hover p {
+.card-container:hover p, .active p {
     display: inline-block;
     background-image: linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    transition: color 0.3s ease; /* Transición para el cambio de color del texto */
+    transition: color 0.3s ease;
   }
   
   .card-container p::before {
@@ -140,6 +140,7 @@ p {
     transition: width 0.5s ease;
   }
   
-  .card-container:hover p::before {
+  .card-container:hover p::before, .active p::before {
     width: 100%;
   }
+
