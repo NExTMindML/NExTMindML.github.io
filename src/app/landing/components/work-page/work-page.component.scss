@@ -1,0 +1,45 @@
+h1 {
+    font-weight: 700;
+    color: white;
+}
+
+.color-text {
+    background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.done {
+    color: rgba(128, 9, 246);
+}
+
+.applied {
+    color: rgb(255, 10, 108);
+}
+
+.container-custom {
+    height: 100vh;
+}
+
+h4 {
+    color: white;
+    font-weight: 300;
+}
+
+
+.work-cards {
+    display: flex;
+    height: 60%;
+    max-height: 375px;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 870px) {
+    .work-cards {
+       display: block;
+       margin: auto;
+    }
+
+
+}

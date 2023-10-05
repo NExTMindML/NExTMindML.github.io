@@ -1,0 +1,90 @@
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40.5px);
+    width: 225px;
+    height: 100%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+
+img {
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    width: 100px;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+    font-weight: 300;
+}
+
+.btn  {
+    margin-left: auto;
+    margin-right: auto;
+    //background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    background: transparent;
+    border: none;
+
+    border-radius: 10px;
+    border: solid 2px transparent;
+    background-image: linear-gradient(99deg, rgba(255, 10, 108, 0.08) 1.75%, rgba(128, 9, 246, 0.08) 99.04%), linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px rgb(45, 42, 47) inset;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    background-origin: initial;
+    background-clip: initial;
+    box-shadow: none;
+}
+
+
+
+.btn:not(:hover) {
+    transition: all 0.3s ease;
+    border: solid 2px transparent;
+    background-image: linear-gradient(99deg, rgba(255, 10, 108, 0.08) 1.75%, rgba(128, 9, 246, 0.08) 99.04%), linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px rgb(45, 42, 47) inset;
+}
+
+.button-discover {
+    font-weight: 600;
+    font-size: medium;
+    text-wrap: nowrap;
+    width: fit-content;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    color: white !important;
+}
+
+
+.card:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.08);
+}
+
+.card:not(:hover) {
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.text {
+    height: 25%;
+}
+
+@media (max-width: 870px) {
+
+}

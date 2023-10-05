@@ -5,13 +5,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingRoutingModule } from './landing-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { WorkPageComponent } from './components/work-page/work-page.component';
+import { NavigationCardComponent } from './components/work-page/navigation-card/navigation-card.component';
 
 
 @NgModule({
   declarations: [
     LandingPageComponent,
     HomePageComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    WorkPageComponent,
+    NavigationCardComponent
   ],
   imports: [
     CommonModule,
