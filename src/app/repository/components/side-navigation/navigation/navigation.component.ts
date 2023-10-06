@@ -3,6 +3,11 @@ import { Card } from 'src/app/core/models/card';
 import { WhatIsMachineLearningComponent } from '../../cards-info/what-is-machine-learning/what-is-machine-learning.component';
 import { CRISPDMComponent } from '../../cards-info/crisp-dm/crisp-dm.component';
 import { DataHandlingComponent } from '../../cards-info/data-handling/data-handling.component';
+import { MlTechnicalAspectComponent } from '../../cards-info/ml-technical-aspect/ml-technical-aspect.component';
+import { ParamAlgorithmComponent } from '../../cards-info/param-algorithm/param-algorithm.component';
+import { SupervisionAlgorithmComponent } from '../../cards-info/supervision-algorithm/supervision-algorithm.component';
+import { SourcesErrosComponent } from '../../cards-info/sources-erros/sources-erros.component';
+import { LowPerformanceComponent } from '../../cards-info/low-performance/low-performance.component';
 
 @Component({
   selector: 'app-navigation',
@@ -23,13 +28,13 @@ export class NavigationComponent {
       tittle: "Machine Learning", cards: [
         {
           tittle: "What is Machine Learning",
-          minutesRead: 5,
+          minutesRead: 7,
           cardId: WhatIsMachineLearningComponent
         },
         {
-          tittle: "Machine Learning Map",
-          minutesRead: 10,
-          cardId: "what_ML"
+          tittle: "Technical aspect of ML",
+          minutesRead: 5,
+          cardId: MlTechnicalAspectComponent
         },
         {
           tittle: "CRISP-DM",
@@ -38,13 +43,13 @@ export class NavigationComponent {
         },
         {
           tittle: "Param-type Algorithms",
-          minutesRead: 10,
-          cardId: "what_ML"
+          minutesRead: 6,
+          cardId: ParamAlgorithmComponent
         },
         {
           tittle: "Supervision in Algorithms",
-          minutesRead: 10,
-          cardId: "what_ML"
+          minutesRead: 5,
+          cardId: SupervisionAlgorithmComponent
         }
       ]
     },
@@ -52,7 +57,7 @@ export class NavigationComponent {
       tittle: "Data Preparation", cards: [
         {
           tittle: "Data Preparation",
-          minutesRead: 3,
+          minutesRead: 5,
           cardId: DataHandlingComponent
         }
       ]
@@ -80,21 +85,16 @@ export class NavigationComponent {
       tittle: "Performance", cards: [
         {
           tittle: "Sources of Errors",
-          minutesRead: 10,
-          cardId: "what_ML"
+          minutesRead: 5,
+          cardId: SourcesErrosComponent
         },
         {
           tittle: "Low Performance",
-          minutesRead: 10,
-          cardId: "what_ML"
+          minutesRead: 4,
+          cardId: LowPerformanceComponent
         },
         {
           tittle: "Performance test",
-          minutesRead: 10,
-          cardId: "what_ML"
-        },
-        {
-          tittle: "Underfiting-Overfiting",
           minutesRead: 10,
           cardId: "what_ML"
         },

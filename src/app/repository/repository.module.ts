@@ -22,7 +22,12 @@ import { NavigationComponent } from './components/side-navigation/navigation/nav
     CRISPDMComponent,
     NotPageInfoComponent,
     DataHandlingComponent,
-    CalloutComponent
+    CalloutComponent,
+    MlTechnicalAspectComponent,
+    ParamAlgorithmComponent,
+    SupervisionAlgorithmComponent,
+    SourcesErrosComponent,
+    LowPerformanceComponent
   ],
   imports: [
     CommonModule,
@@ -44,4 +49,9 @@ import { CRISPDMComponent } from './components/cards-info/crisp-dm/crisp-dm.comp
 import { NotPageInfoComponent } from './components/cards-info/not-page-info/not-page-info.component';
 import { DataHandlingComponent } from './components/cards-info/data-handling/data-handling.component';
 import { CalloutComponent } from './components/text-components/callout/callout.component';
+import { MlTechnicalAspectComponent } from './components/cards-info/ml-technical-aspect/ml-technical-aspect.component';
+import { ParamAlgorithmComponent } from './components/cards-info/param-algorithm/param-algorithm.component';
+import { SupervisionAlgorithmComponent } from './components/cards-info/supervision-algorithm/supervision-algorithm.component';
+import { SourcesErrosComponent } from './components/cards-info/sources-erros/sources-erros.component';
+import { LowPerformanceComponent } from './components/cards-info/low-performance/low-performance.component';
 

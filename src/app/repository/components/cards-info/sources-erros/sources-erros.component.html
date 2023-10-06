@@ -1,0 +1,88 @@
+<app-tittle>Sources of erros</app-tittle>
+
+<app-paragraph>
+    In Machine Learning, and speaking only of the supervised model, there are two major sources of errors when learning from data: Bias and Variance. Any learning error can fall into one of these categories.
+</app-paragraph>
+
+<app-paragraph>
+    In addition to these errors, there is also the irreducible error that cannot be reduced regardless of the algorithm used (it is not influenced by Machine Learning algorithms). Unlike the Bias and Variance errors that can be influenced by the Machine Learning algorithm used.
+</app-paragraph>
+
+<app-paragraph>
+    Let's specify a little bit more what are these influenceable errors about.
+</app-paragraph>
+
+<app-sub-title>Bias</app-sub-title>
+
+<app-paragraph>
+    Bias refers to the simplifications made by the algorithm to make the problem easy to solve. That is why parametric algorithms generally have a high Bias, making them easy to learn and simple to understand, but less flexible.
+</app-paragraph>
+
+<app-paragraph>
+    But what do we mean by high Bias? Well, we say that there is high Bias when more assumptions are suggested about the shape of the objective function.
+</app-paragraph>
+
+<app-paragraph>
+    Conversely, we say that there is a low Bias when there are fewer assumptions suggested about the form of the objective function.
+</app-paragraph>
+
+<app-sub-title>Variance</app-sub-title>
+
+<app-paragraph>
+    Variance refers to the sensitivity of the model to the change of the training data. Generally nonparametric algorithms, which have a lot of flexibility, have a high variance.
+</app-paragraph>
+
+<app-paragraph>
+    As in Bias, we can divide this type of error into two parts: high variance and low variance.
+</app-paragraph>
+
+<app-paragraph>
+    We say that there is a low variance when there are small changes in the estimation of the objective function when the training data changes.
+</app-paragraph>
+
+<app-paragraph>
+    On the other hand, we say that there is a high variance when there are many changes in the estimate of the objective function when the training data changes. Thus, as expected, algorithms that have high variance are strongly influenced by the specific training data.
+</app-paragraph>
+
+<app-sub-title>Objective</app-sub-title>
+
+<app-paragraph>In terms of error sources, as both Bias and Variance can be influenced by the specific algorithm, the objective of each (supervised) algorithm will then be to maintain a low Bias and a Low Variance. But in reality it happens that:</app-paragraph>
+<ul>
+    <app-list-item>
+        Parametric algorithms usually have a high Bias and a low Variance.
+    </app-list-item>
+
+    <app-list-item>
+        Non-parametric algorithms usually have a low Variance but a high Bias.
+    </app-list-item>
+</ul>
+
+<app-paragraph>In general we will say that:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        If the Bias is increased the Variance decreases.
+    </app-list-item>
+
+    <app-list-item>
+        If the Variance is increased the Bias decreases.
+    </app-list-item>
+</ul>
+
+<app-sub-title>Summary</app-sub-title>
+
+<app-paragraph>In this section we saw that:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        Bias is the simplifications made by the model made by the objective function to make it easy to approximate.
+    </app-list-item>
+
+    <app-list-item>
+        Variance is the number of estimates of the objective function that will change given a new training data set.
+    </app-list-item>
+
+    <app-list-item>
+        Trade-off is the tension between the error introduced by the Bias and the Variance.
+    </app-list-item>
+</ul>

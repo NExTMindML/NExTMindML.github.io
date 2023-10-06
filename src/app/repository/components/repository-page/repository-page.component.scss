@@ -41,10 +41,12 @@
     z-index: -1;
     overflow-y: auto;
     background-color: rgba(21, 18, 23, 1);
+    display: none;
 }
 
 .show {
     z-index: 1;
+    display:block;
 }
 
 .container-info::-webkit-scrollbar {
@@ -54,4 +56,5 @@
 .container-info {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    min-height: 100%;
 }

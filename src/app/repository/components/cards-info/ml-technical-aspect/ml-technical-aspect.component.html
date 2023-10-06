@@ -1,0 +1,52 @@
+<app-tittle>Technical aspect of ML</app-tittle>
+
+<app-paragraph>In a more technical view, it can be said that in Machine Learning there are different algorithms. Each algorithm represents a different strategy of learning the objective function/mapping, so that:</app-paragraph>
+
+<app-paragraph><p class="cite">"Machine Learning algorithms are described as learning an objective function (F) that maps input (X) variables (data) to an output variable (Y)."</p></app-paragraph>
+
+<div class="equation">
+    Y = <span class="variable">F(X)</span>
+</div>
+
+<app-paragraph>The latter can be considered a learning task in general, since one wants to make predictions in the future given new examples of inputs.</app-paragraph>
+
+<app-paragraph>
+    The subfield of Machine Learning that focuses on creating predictions is called "Predictive modeling", and is the most common type of Machine Learning. Where this function is learned to create predictions about the outcome (Y) for new data (x).
+</app-paragraph>
+
+<app-paragraph>
+    This type of modeling is called predictive modeling or predictive analytics and the goal is to create the highest accuracy in predictions.
+</app-paragraph>
+
+<app-paragraph>
+    Also, one can learn the mapping of the function $F(x) = Y$ to learn more about the data used. The latter is called statistical inference.
+</app-paragraph>
+
+<app-paragraph>
+    Talking more deeply about the objective function F, we do not really know what the form of this function looks like, nor is it of much interest, it is like a black box to us, it is just used directly.
+</app-paragraph>
+
+<app-paragraph>
+    Different representations make different assumptions about the form of the function to be learned. That's why it is important to try a set of different algorithms on a Machine Learning problem, because you don't know which would be the best estimate of the structure of the function you are trying to approximate.
+</app-paragraph>
+
+<app-paragraph>
+    But not everything is simple, since there is also an error rate (e) that is independent of the input data (Y) and is present in all algorithms of this style.
+</app-paragraph>
+
+<div class="equation">
+    Y = <span class="variable">F(X) + e</span>
+</div>
+
+<app-paragraph>This error is called irreducible because no matter how well we obtain an estimate, the objective function (F) will not be able to reduce the error. So the estimation of the shape of the function F will always have an error rate.</app-paragraph>
+
+<app-sub-title>Summary</app-sub-title>
+
+<app-paragraph>As a summary, in this section we saw:</app-paragraph>
+
+<ul>
+    <app-list-item>Machine Learning algorithms work to estimate the mapping (structure) of a function F from a set of output information (variables) (Y) given a set of input information (variables) (x).</app-list-item>
+    <app-list-item>Different Machine Learning algorithms make different assumptions about the shape of the function to find out.</app-list-item>
+    <app-list-item>When not much is known about the shape of the objective function, a set of different algorithms should be tried to see which one works/performs best.</app-list-item>
+    <app-list-item>Every mapping function has an inherent error rate.</app-list-item>
+</ul>

@@ -1,0 +1,163 @@
+<app-tittle>Param-type Algorithms</app-tittle>
+
+<app-paragraph>In the world of Machine Learning, it can be said that there are two main classes of algorithms: "Parametric" and "Non-Parametric".</app-paragraph>
+
+<app-paragraph>All Machine Learning algorithms can be organized in these two groups. In this section we will try to explain what they are, and what are their advantages and considerations.</app-paragraph>
+
+<app-sub-title>Parametric</app-sub-title>
+
+<app-paragraph>
+    These algorithms simplify the objective function to an already known assumed shape, so it involves two steps:
+</app-paragraph>
+
+<app-paragraph>
+    1 - Select a shape for the function.
+</app-paragraph>
+
+<app-paragraph>
+    2 - Learn the coefficients for the function from the test data.
+</app-paragraph>
+
+<app-paragraph>
+    This assumption being made can greatly simplify the learning process, but it can also limit what can be learned.
+</app-paragraph>
+
+<app-paragraph>
+    Among the benefits and limitations of this class of algorithms are:
+</app-paragraph>
+
+<app-mini-sub-title>Benefits</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Simple: This method is easy to understand and interpret.
+    </app-list-item>
+
+    <app-list-item>
+        Fast: They are very fast in learning from the data.
+    </app-list-item>
+
+    <app-list-item>
+        Less data: They do not require a large amount of training data and can work well even if some of the data is not perfect.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Limitations</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Restricted: By choosing a functional form this method is largely limited to a specific form.
+    </app-list-item>
+
+    <app-list-item>
+        Limited complexity: These methods are best suited for simple problems.
+    </app-list-item>
+
+    <app-list-item>
+        Poor Fit: In practice, the methods are unlikely to match the underlying mapping function.<br>This is a major problem that lies in the assumption made, since the function to be known may not be of the selected form, leading to unsatisfactory results.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Examples</app-mini-sub-title>
+
+<app-paragraph>Some examples of parametric algorithms are:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        Logistic Regression
+    </app-list-item>
+
+    <app-list-item>
+        Linear Discriminant Analysis
+    </app-list-item>
+
+    <app-list-item>
+        Linear Regression
+    </app-list-item>
+
+    <app-list-item>
+        Perceptron
+    </app-list-item>
+</ul>
+
+<app-callout>Note: Algorithms that assume the function mapping, in a linear form, are often referred to as "Linear Machine Learning Algorithms".</app-callout>
+
+<app-sub-title>Non-Parametric</app-sub-title>
+
+<app-paragraph>
+    Unlike parametric algorithms, non-parametric algorithms do not make strong assumptions about the shape of the objective function. Therefore, they can learn any mapping from inputs to outputs.
+</app-paragraph>
+
+<app-paragraph>
+    Because of their characteristics, these types of algorithms are good when you have a lot of data and no prior knowledge, as well as when you are not too concerned about choosing only the right features.
+</app-paragraph>
+
+<app-paragraph>
+    Among the benefits and limitations of non-parametric algorithms are the following:
+</app-paragraph>
+
+<app-mini-sub-title>Benefits</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Flexibility: They are capable of adjusting to a large number of functional forms.
+    </app-list-item>
+
+    <app-list-item>
+        Power: No (or very low) assumptions about the underlying function.
+    </app-list-item>
+
+    <app-list-item>
+        Performance: Can result in highly performing models for prediction.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Limitations</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        More data: Requires a lot of data for training to estimate the objective function.
+    </app-list-item>
+
+    <app-list-item>
+        Slow: Much slower to train since it has more parameters to train on.
+    </app-list-item>
+
+    <app-list-item>
+        Overfitting: More risk of overfitting the training data and difficult to explain why specific predictions were made.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Examples:</app-mini-sub-title>
+
+<app-paragraph>Some examples of non-parametric algorithms are:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        Naive Bayes
+    </app-list-item>
+
+    <app-list-item>
+        Decision Trees such as CART and C4.5
+    </app-list-item>
+
+    <app-list-item>
+        Support Vector Machines
+    </app-list-item>
+
+    <app-list-item>
+        Neural Networks
+    </app-list-item>
+</ul>
+
+<app-sub-title>Summary</app-sub-title>
+
+<ul>
+    <app-list-item>
+        Parametric methods make large assumptions about the mapping of input variables to output variables, which makes it fast to train and requires less data, but may not be very powerful.
+    </app-list-item>
+
+    <app-list-item>
+        Non-Parametric methods make few or no assumptions about the objective function, which makes it require a lot of data, makes it much slower to train, and with higher complexity, but can result in more powerful models.
+    </app-list-item>
+</ul>
