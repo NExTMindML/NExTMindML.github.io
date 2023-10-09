@@ -7,6 +7,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { WorkPageComponent } from './components/work-page/work-page.component';
 import { NavigationCardComponent } from './components/work-page/navigation-card/navigation-card.component';
+import { NgxTypedJsModule } from 'ngx-typed-js';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { NavigationCardComponent } from './components/work-page/navigation-card/
   imports: [
     CommonModule,
     NgbModule,
-    LandingRoutingModule
+    LandingRoutingModule,
+    NgxTypedJsModule
   ]
 })
 export class LandingModule { }

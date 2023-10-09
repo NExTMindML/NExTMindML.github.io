@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { OpenRepositoryService } from '../../services/open-repository.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-work-page',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class WorkPageComponent {
 
+  ngOnInit() {
+    AOS.init();
+  }
 }

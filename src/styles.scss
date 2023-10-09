@@ -4,3 +4,18 @@
  html, body {
     background-color: rgba(21, 18, 23, 1);
  }
+
+
+body::-webkit-scrollbar {
+   display: none;
+}
+
+body {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+
+.typed-cursor {
+   display: none;
+}

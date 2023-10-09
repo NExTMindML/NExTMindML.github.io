@@ -3,6 +3,10 @@ h1 {
     color: white;
 }
 
+.hide {
+    color: transparent;
+}
+
 .color-text {
     background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
     -webkit-background-clip: text;
@@ -35,11 +39,28 @@ h4 {
     justify-content: space-evenly;
 }
 
+.hidden {
+    display: none;
+ }
+
 @media (max-width: 870px) {
     .work-cards {
        display: block;
        margin: auto;
+       height:fit-content;
+       max-height:none;
     }
+     .hidden {
+        display: block;
+     }
 
+     .pb-4 {
+        padding-bottom: 0 !important;
+     }
 
+}
+
+.fit-content {
+    width: fit-content;
+    margin: auto;
 }

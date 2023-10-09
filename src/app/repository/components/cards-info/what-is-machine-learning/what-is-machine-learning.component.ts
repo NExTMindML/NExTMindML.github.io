@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-what-is-machine-learning',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./what-is-machine-learning.component.scss']
 })
 export class WhatIsMachineLearningComponent {
-
+  ngOnInit() {
+    AOS.init();
+  }
 }

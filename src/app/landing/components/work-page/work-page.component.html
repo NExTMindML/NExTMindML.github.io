@@ -1,13 +1,27 @@
 <div class="container-custom pt-5">
-    <h1 class="color-text">Discover</h1>
-    <h1 class="pb-3">what i do</h1>
-
-    <h4>Look through all the concepts <span class="applied">I have applied</span> in the</h4>
-    <h4 class="pb-3">big and small projects <span class="done">I have done</span></h4>
+    <h1 class="hide"><br></h1>
+    <h1 class="pb-3" data-aos="fade-down" data-aos-duration="2000"><span class="color-text">Discover</span> what I do
+    </h1>
+    <h4 id="work" class="fit-content" data-aos="fade-right" data-aos-duration="2000">Look through all the concepts <span class="applied">I
+            have applied</span> in the</h4>
+    <h4 class="pb-3 fit-content" data-aos="fade-left" data-aos-duration="2000">big and small projects <span class="done">I have
+            done</span></h4>
     <div class="work-cards pb-4">
-    <app-navigation-card [title]="'Key concepts'" [text]="'Look at the different concepts applied in the different solutions'" [imagePath]="'../../../../assets/ai1.png'"></app-navigation-card>
-    <app-navigation-card [title]="'Basics'" [text]="'Look at the small jobs and solutions applied   '" [imagePath]="'../../../../../assets/estadisticas.png'"></app-navigation-card>
-    <app-navigation-card [title]="'Study Cases'" [text]="'See the great works and solutions resulting from all the applied processes'" [imagePath]="'../../../../../assets/procesador.png'"></app-navigation-card>
-    <div class="pb-4"></div>
-</div>
+        <div data-aos="fade-left" data-aos-duration="2000">
+            <app-navigation-card [title]="'Key concepts'"
+                [text]="'Look at the different concepts applied in the different solutions'"
+                [imagePath]="'../../../../assets/ai1.png'"></app-navigation-card>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300">
+            <app-navigation-card [sectionNumber]="2" [title]="'Basics'"
+                [text]="'Look at the small jobs and solutions applied   '"
+                [imagePath]="'../../../../../assets/estadisticas.png'"></app-navigation-card>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="600">
+            <app-navigation-card [sectionNumber]="3" [title]="'Study Cases'"
+                [text]="'See the great works and solutions resulting from all the applied processes'"
+                [imagePath]="'../../../../../assets/procesador.png'"></app-navigation-card>
+        </div>
+        <div class="pb-4 hidden"></div>
+    </div>
 </div>

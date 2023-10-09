@@ -1,12 +1,14 @@
 <div class="container-custom text-center" *ngIf="!isMobile">
     <div class="row">
         <div class="col-4">
-            <app-navigation (selectCardEvent)="callInfo($event)"></app-navigation>
+            <app-navigation (selectCardEvent)="callInfo($event)" [active]="activeNav"></app-navigation>
         </div>
         <div class="col-8 ps-4">
-            <ng-template #container>
+            <div data-aos="fade-zoom-in" data-aos-duration="2000">
+                <ng-template #container>
 
-            </ng-template>
+                </ng-template>
+            </div>
         </div>
     </div>
 </div>

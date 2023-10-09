@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Card } from 'src/app/core/models/card';
 import { WhatIsMachineLearningComponent } from '../../cards-info/what-is-machine-learning/what-is-machine-learning.component';
 import { CRISPDMComponent } from '../../cards-info/crisp-dm/crisp-dm.component';
@@ -8,16 +8,18 @@ import { ParamAlgorithmComponent } from '../../cards-info/param-algorithm/param-
 import { SupervisionAlgorithmComponent } from '../../cards-info/supervision-algorithm/supervision-algorithm.component';
 import { SourcesErrosComponent } from '../../cards-info/sources-erros/sources-erros.component';
 import { LowPerformanceComponent } from '../../cards-info/low-performance/low-performance.component';
+import { appAnimations } from 'src/app/animations';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
+  animations: [appAnimations]
 })
-export class NavigationComponent {
-  active = 1;
+export class NavigationComponent    {
+  @Input() active?: number;
   
-  @Output() selectCardEvent = new EventEmitter<any>();
+  @Output() selectCardEvent = new EventEmitter<any>();  
 
   selectCard(info: String) {
     this.selectCardEvent.emit(info)

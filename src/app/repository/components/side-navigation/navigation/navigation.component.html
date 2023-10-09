@@ -1,22 +1,22 @@
 <div class="nav-buttons-container">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-buttons">
         <li [ngbNavItem]="1">
-            <button ngbNavLink>Concepts</button>
+            <button ngbNavLink class="texto-hover">Concepts</button>
             <ng-template ngbNavContent>
                 <app-collapse *ngFor="let concept of concetps" [cards]="concept.cards"
                     [tittle]="concept.tittle" (selectCardEvent)="selectCard($event)"></app-collapse>
             </ng-template>
         </li>
         <li [ngbNavItem]="2">
-            <button ngbNavLink>Basics</button>
+            <button ngbNavLink class="texto-hover">Basics</button>
             <ng-template ngbNavContent>
-                <app-collapse *ngFor="let basic of basics" [cards]="basic.cards" [tittle]="basic.tittle"></app-collapse>
+                    <app-collapse *ngFor="let basic of basics" [cards]="basic.cards" [tittle]="basic.tittle"></app-collapse>  
             </ng-template>
         </li>
         <li [ngbNavItem]="3">
-            <button ngbNavLink>Study Cases</button>
+            <button ngbNavLink class="texto-hover">Study Cases</button>
             <ng-template ngbNavContent>
-                <app-repository-card *ngFor="let case of cases" [info]="case.cardId" [tittle]="case.tittle" [python]="case.python"
+                <app-repository-card *ngFor="let case of cases; let i = index" [@searchedCards]="{ value: '', params: { delay: i * 100 } }" [info]="case.cardId" [tittle]="case.tittle" [python]="case.python"
                     [excel]="case.excel" [miner]="case.miner" [minutesRead]="case.minutesRead" (selectCardEvent)="selectCard($event)"></app-repository-card>
             </ng-template>
         </li>

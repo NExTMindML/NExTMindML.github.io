@@ -54,4 +54,5 @@ import { ParamAlgorithmComponent } from './components/cards-info/param-algorithm
 import { SupervisionAlgorithmComponent } from './components/cards-info/supervision-algorithm/supervision-algorithm.component';
 import { SourcesErrosComponent } from './components/cards-info/sources-erros/sources-erros.component';
 import { LowPerformanceComponent } from './components/cards-info/low-performance/low-performance.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

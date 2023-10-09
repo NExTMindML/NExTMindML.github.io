@@ -4,6 +4,16 @@
     word-wrap: break-word;
 }
 
+.fixed-top {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    background-color: rgba(21, 18, 23, 1);
+}
+
 .navbar-brand {
     color: white;
     font-weight: 700;
@@ -16,14 +26,15 @@
     padding-top: 0%;
     font-size: small;
     font-style: italic !important;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 .navbar-collapse {
     justify-content: flex-end;
 }
 
-.navbar-toggler, .navbar-toggler-icon {
+.navbar-toggler,
+.navbar-toggler-icon {
     color: white;
     background-image: none;
     border: none;
@@ -32,4 +43,33 @@
 
 .container-fluid {
     padding: 0;
+}
+
+.fs-5 {
+    width: fit-content;
+}
+
+.fs-5:hover {
+    color: rgb(255, 10, 108);
+}
+
+.fs-5:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.08);
+}
+
+.fs-5:not(:hover) {
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .fixed-top {
+        display: none;
+    }
+
+    .invisible {
+        visibility: visible !important;
+    }
 }

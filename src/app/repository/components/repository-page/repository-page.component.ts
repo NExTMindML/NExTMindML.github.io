@@ -2,21 +2,41 @@ import { Component, ElementRef, HostListener, Input, Renderer2, ViewChild, ViewC
 import { WhatIsMachineLearningComponent } from '../cards-info/what-is-machine-learning/what-is-machine-learning.component';
 import { NotPageInfoComponent } from '../cards-info/not-page-info/not-page-info.component';
 import { CardSelectEventEmitterService } from '../../services/card-select-event-emitter.service';
+import { OpenRepositoryService } from 'src/app/landing/services/open-repository.service';
+import { trigger, transition, animate, style } from '@angular/animations';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-repository-page',
   templateUrl: './repository-page.component.html',
-  styleUrls: ['./repository-page.component.scss']
+  styleUrls: ['./repository-page.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms ease-in', style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class RepositoryPageComponent {
   @ViewChild('container', { read: ViewContainerRef, static: false }) container!: ViewContainerRef;
   isMobile?: boolean;
   isViewedInfo: boolean = false;
+  public activeNav?;
 
-  constructor(public viewContainerRef: ViewContainerRef, private cardEventService: CardSelectEventEmitterService) { }
+  constructor(public viewContainerRef: ViewContainerRef, 
+    private cardEventService: CardSelectEventEmitterService, 
+    private repositoryEventEmitter: OpenRepositoryService) { 
+      this.activeNav = repositoryEventEmitter.navSection;
+    }
 
   ngOnInit() {
+    AOS.init();
     this.checkIfMobile();
+    this.repositoryEventEmitter.getEvent().subscribe((section) => {
+      this.activeNav = section;
+    })
   }
 
   @HostListener('window:resize', ['$event'])

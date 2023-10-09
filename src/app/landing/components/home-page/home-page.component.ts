@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  ngOnInit() {
+    AOS.init();
+  }
 }
