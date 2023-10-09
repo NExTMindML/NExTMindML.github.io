@@ -1,6 +1,14 @@
 .container-custom {
     min-height: 100vh;
+    display: flex;
 }
+
+.center-content {
+    margin: auto;
+    width: 100%;
+
+}
+
 
 .color-text {
     background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
