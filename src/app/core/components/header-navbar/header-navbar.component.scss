@@ -49,16 +49,16 @@
     width: fit-content;
 }
 
-.fs-5:hover {
+.hover:hover {
     color: rgb(255, 10, 108);
 }
 
-.fs-5:hover {
+.hover:hover {
     transition: transform 0.3s ease;
     transform: scale(1.08);
 }
 
-.fs-5:not(:hover) {
+.hover:not(:hover) {
     transition: transform 0.5s ease;
     transform: scale(1);
     color: white;
@@ -72,4 +72,32 @@
     .invisible {
         visibility: visible !important;
     }
+}
+
+.contac-me {
+    background-image: linear-gradient(to right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    border: none;
+    font-weight: 600;
+    font-size: medium;
+    text-wrap: nowrap;
+    width: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+.contac-me:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.08);
+}
+
+.contac-me:not(:hover) {
+    transition: transform 0.5s ease;
+    transform: scale(1);
 }

@@ -3,21 +3,12 @@ import { WhatIsMachineLearningComponent } from '../cards-info/what-is-machine-le
 import { NotPageInfoComponent } from '../cards-info/not-page-info/not-page-info.component';
 import { CardSelectEventEmitterService } from '../../services/card-select-event-emitter.service';
 import { OpenRepositoryService } from 'src/app/landing/services/open-repository.service';
-import { trigger, transition, animate, style } from '@angular/animations';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-repository-page',
   templateUrl: './repository-page.component.html',
   styleUrls: ['./repository-page.component.scss'],
-  animations: [
-    trigger('fadeIn', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('500ms ease-in', style({ opacity: 1 })),
-      ]),
-    ]),
-  ],
 })
 export class RepositoryPageComponent {
   @ViewChild('container', { read: ViewContainerRef, static: false }) container!: ViewContainerRef;

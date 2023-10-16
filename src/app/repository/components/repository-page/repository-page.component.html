@@ -16,7 +16,10 @@
 <div class="container-custom text-center mb-2" *ngIf="isMobile">
     <app-navigation (selectCardEvent)="callInfo($event)"></app-navigation>
     <div class="container-info {{isViewedInfo ? 'show' : ''}}">
-        <button class="btn btn-primary" type="submit" (click)="searchView()">Button</button>
+        <div class="margin">
+            <button class="btn-back mb-2" type="submit" (click)="searchView()"><i class="bi bi-chevron-left"></i>
+                Go to Repository</button>
+        </div>
         <ng-template #container>
 
         </ng-template>

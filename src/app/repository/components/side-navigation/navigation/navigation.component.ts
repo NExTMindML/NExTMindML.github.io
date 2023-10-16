@@ -8,13 +8,12 @@ import { ParamAlgorithmComponent } from '../../cards-info/param-algorithm/param-
 import { SupervisionAlgorithmComponent } from '../../cards-info/supervision-algorithm/supervision-algorithm.component';
 import { SourcesErrosComponent } from '../../cards-info/sources-erros/sources-erros.component';
 import { LowPerformanceComponent } from '../../cards-info/low-performance/low-performance.component';
-import { appAnimations } from 'src/app/animations';
+import { TitanicCaseComponent } from '../../cards-info/titanic-case/titanic-case.component';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
-  animations: [appAnimations]
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent    {
   @Input() active?: number;
@@ -161,11 +160,11 @@ export class NavigationComponent    {
       cardId: "what_ML"
     },
     {
-      tittle: "Titanic",
-      minutesRead: 10,
+      tittle: "Titanic - Getting Started",
+      minutesRead: 45,
       miner: true,
       python: true,
-      cardId: "what_ML"
+      cardId: TitanicCaseComponent
     },
     {
       tittle: "Banking",

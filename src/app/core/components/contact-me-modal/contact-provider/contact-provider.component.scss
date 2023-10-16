@@ -1,0 +1,30 @@
+i {
+    font-size: 4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h5 {
+    color: white;
+    width: fit-content;
+    margin: auto;
+}
+
+.card {
+    width: fit-content;
+}
+
+.card:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.08);
+}
+
+.card:not(:hover) {
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+
+

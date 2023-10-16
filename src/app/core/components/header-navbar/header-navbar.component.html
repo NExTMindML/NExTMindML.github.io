@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link fs-5" [routerLink]="['/']" fragment="home">Home</a>
+                    <a class="nav-link fs-5 hover" [routerLink]="['/']" fragment="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-5 "[routerLink]="['/']" fragment="about-me">About me</a>
+                    <a class="nav-link fs-5 hover"[routerLink]="['/']" fragment="about-me">About me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-5" [routerLink]="['/']" fragment="work">Work</a>
+                    <a class="nav-link fs-5 hover" [routerLink]="['/']" fragment="work">Work</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-5" href="/repository">Repository</a>
+                    <a class="nav-link fs-5 hover" href="/repository">Repository</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-5" href="">Contact me</a>
+                <li class="nav-item contac-me" (click)="openModal()">
+                    <a class="nav-link fs-5">Contact me</a>
                 </li>
             </ul>
         </div>
@@ -54,8 +54,8 @@
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="/repository">Repository</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-5" href="">Contact me</a>
+                <li class="nav-item contac-me mt-1 ps-1 pe-1" (click)="openModal()">
+                    <a class="nav-link fs-5">Contact me</a>
                 </li>
             </ul>
         </div>
