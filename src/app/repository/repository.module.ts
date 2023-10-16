@@ -45,7 +45,8 @@ import { LowPerformanceComponent } from './components/cards-info/low-performance
     SourcesErrosComponent,
     LowPerformanceComponent,
     TitanicCaseComponent,
-    ImageComponent
+    ImageComponent,
+    KidneyCaseComponent
   ],
   imports: [
     CommonModule,
@@ -56,4 +57,5 @@ import { LowPerformanceComponent } from './components/cards-info/low-performance
 export class RepositoryModule { }import { RepositoryRoutingModule } from './repository-routing.module';
 import { TitanicCaseComponent } from './components/cards-info/titanic-case/titanic-case.component';
 import { ImageComponent } from './components/text-components/image/image.component';
+import { KidneyCaseComponent } from './components/cards-info/kidney-case/kidney-case.component';
 

@@ -9,6 +9,7 @@ import { SupervisionAlgorithmComponent } from '../../cards-info/supervision-algo
 import { SourcesErrosComponent } from '../../cards-info/sources-erros/sources-erros.component';
 import { LowPerformanceComponent } from '../../cards-info/low-performance/low-performance.component';
 import { TitanicCaseComponent } from '../../cards-info/titanic-case/titanic-case.component';
+import { KidneyCaseComponent } from '../../cards-info/kidney-case/kidney-case.component';
 
 @Component({
   selector: 'app-navigation',
@@ -153,11 +154,11 @@ export class NavigationComponent    {
 
   cases: Card[] = [
     {
-      tittle: "Wine",
-      minutesRead: 10,
+      tittle: "Kidney detection",
+      minutesRead: 35,
       miner: true,
       python: true,
-      cardId: "what_ML"
+      cardId: KidneyCaseComponent
     },
     {
       tittle: "Titanic - Getting Started",
@@ -165,27 +166,6 @@ export class NavigationComponent    {
       miner: true,
       python: true,
       cardId: TitanicCaseComponent
-    },
-    {
-      tittle: "Banking",
-      minutesRead: 10,
-      miner: true,
-      python: true,
-      cardId: "what_ML"
-    },
-    {
-      tittle: "Iris",
-      minutesRead: 10,
-      miner: true,
-      python: true,
-      cardId: "what_ML"
-    },
-    {
-      tittle: "Heart",
-      minutesRead: 10,
-      miner: true,
-      python: true,
-      cardId: "what_ML"
     }
   ];
 }

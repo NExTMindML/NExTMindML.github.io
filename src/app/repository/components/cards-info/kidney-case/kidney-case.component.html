@@ -1,0 +1,280 @@
+<app-sub-title>Problem and context analysis and data.</app-sub-title>
+
+<app-mini-sub-title>Overview</app-mini-sub-title>
+
+<app-paragraph>The problem at hand lies in early detection of chronic kidney disease.</app-paragraph>
+
+<app-mini-sub-title>Context</app-mini-sub-title>
+
+<app-paragraph>Chronic kidney disease affects people globally. But there are some parts of the world where they are more common than others. In fact, there is evidence to suggest that in countries still in the developing stages, they are affected more than in developed countries. But even so, aspects such as detection and treatment are highly influenced by socioeconomic level, cultural and political factors, etc. Therefore, its presence and severity throughout the sphere (the earth) could undergo severe changes. The latter may be due to the fact that detection of kidney disease is invasive, costly, time-consuming, and sometimes risky. So many patients arrive at late stages, and it is worse in developing countries, where quality medical care may be scarce.</app-paragraph>
+
+<app-paragraph>Therefore, there is tremendous benefit in early detection tools and procedures for this disease, especially in the most vulnerable and affected countries and regions.</app-paragraph>
+
+<app-quote [title]="'Reference'"><app-paragraph><a href="https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment">https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment</a></app-paragraph>
+</app-quote>
+
+
+<app-mini-sub-title>Data analysis.</app-mini-sub-title>
+
+<app-paragraph>This time, we have a dataset of 25 attributes representing different physical and non-physical aspects, as well as medical issues affecting people located in India (a country with some difficult contexts):</app-paragraph>
+
+<ul>
+    <app-list-item>1. <strong>age - Age (Age, numeric)</strong>: Represents the patient's age in years.</app-list-item>
+<app-list-item>2. <strong>bp - Blood Pressure (numeric)</strong>: Displays the patient's blood pressure in mm/Hg (millimeters of mercury).</app-list-item>
+<app-list-item>3. <strong>sg - Specific Gravity (nominal)</strong>: This is a categorical attribute indicating the specific gravity of the urine. It can have several nominal values, such as 1.005, 1.010, 1.015, 1.020, 1.025.</app-list-item>
+<app-list-item>4. <strong>al - Albumin (Albumin, nominal)</strong>: Represents the presence of albumin in the urine. Nominal values include 0, 1, 2, 2, 3, 4 and 5, indicating the amount of albumin present.</app-list-item>
+<app-list-item>5. <strong>su - Sugar (nominal)</strong>: Indicates the presence of sugar in the urine. The nominal values are 0, 1, 2, 2, 3, 4 and 5, representing different sugar levels.</app-list-item>
+<app-list-item>6. <strong>rbc - Red Blood Cells (nominal)</strong>: Describes the appearance of the red blood cells in the urine sample, which may be "normal" or "abnormal".</app-list-item>
+<app-list-item>7. <strong>pc - Pus Cell (nominal)</strong>: Indicates the presence of pus cells in the urine sample, which may be "normal" or "abnormal."</app-list-item>
+<app-list-item>8. <strong>pcc - Pus Cell Clumps (nominal)</strong>: Shows whether or not pus cell clumps are present.</app-list-item>
+<app-list-item>9. <strong>ba - Bacteria (Bacteria, nominal)</strong>: Indicates whether bacteria are present in the urine sample.</app-list-item>
+<app-list-item>10. <strong>bgr - Blood Glucose Random (numerical)</strong>: Displays the blood glucose level in milligrams per deciliter (mg/dl) at a random time.</app-list-item>
+<app-list-item>11. <strong>bu - Blood Urea (numerical)</strong>: Represents the blood urea concentration in milligrams per deciliter (mg/dl).</app-list-item>
+<app-list-item>12. <strong>sc - Serum Creatinine (numeric)</strong>: Indicates the blood creatinine concentration in milligrams per deciliter (mg/dl).</app-list-item>
+<app-list-item>13. <strong>sod - Sodium (numeric)</strong>: Shows blood sodium concentration in milliequivalents per liter (mEq/L).</app-list-item>
+<app-list-item>14. <strong>Pot - Potassium (Potassium, numeric)</strong>: Indicates the blood potassium concentration in milliequivalents per liter (mEq/L).</app-list-item>
+<app-list-item>15. <strong>hemo - Hemoglobin (Hemoglobin, numeric)</strong>: Shows the hemoglobin concentration in grams per deciliter (g/dL) of blood.</app-list-item>
+<app-list-item>16. 16. <strong>pcv - Packed Cell Volume (numeric)</strong>: Shows the volume of packed blood cells in percent.</app-list-item>
+<app-list-item>17. <strong>wc - White Blood Cell Count (numerical)</strong>: Represents the white blood cell count in cells per microliter (cumm) of blood.</app-list-item>
+<app-list-item>18. <strong>rc - Red Blood Cell Count (numerical)</strong>: Displays the red blood cell count in millions per cubic millimeter (cmm) of blood.</app-list-item>
+<app-list-item>19. <strong>htn - Hypertension (Hypertension, nominal)</strong>: Indicates whether the patient has hypertension ("yes" or "no").</app-list-item>
+<app-list-item>20. <strong>dm - Diabetes Mellitus (Diabetes Mellitus, nominal)</strong>: Shows whether the patient has diabetes mellitus ("yes" or "no").</app-list-item>
+<app-list-item>21. <strong>cad - Coronary Artery Disease (Coronary Artery Disease, nominal)</strong>: Indicates whether the patient has coronary artery disease ("yes" or "no").</app-list-item>
+<app-list-item>22. <strong>appet - Appetite (nominal)</strong>: Describes the patient's appetite, which may be "good" or "poor." 23.</app-list-item>
+<app-list-item>23. <strong>pe - Pedal Edema (Pedal Edema, nominal)</strong>: Indicates whether the patient has foot edema ("yes" or "no").</app-list-item>
+<app-list-item>24. <strong>ane - Anemia (Anemia, nominal)</strong>: Describes whether the patient has anemia ("yes" or "no").</app-list-item>
+<app-list-item>25. <strong>class - Class (Class, nominal)</strong>: This is the output attribute and is used to classify patients into two classes: "ckd" (chronic kidney disease) and "notckd" (no chronic kidney disease).</app-list-item>
+</ul>
+
+<app-sub-title>Data preparation.</app-sub-title>
+
+<app-paragraph>At this point, with the data already known, we must determine which attributes and records (tuples) will be most useful when training our model. So we will filter our dataset to keep only those that do not affect in a negative or misleading way the performance of our model.</app-paragraph>
+
+<app-mini-sub-title>Discard problematic attributes.</app-mini-sub-title>
+
+<app-paragraph>1. First we will make sure that there are no duplicate tuples throughout the dataset.</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-1.png'"></app-image>
+
+<app-paragraph>2. Now we will begin to determine aspects such as missing values and/or correlations in the attributes.</app-paragraph>
+
+<app-paragraph>For this we will use the correlation matrix (for the numerical values, since for the nominal values, a priori, it is not possible to use it) and missings statistics, with the following operation:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-2.png'"></app-image>
+
+<app-paragraph>This will give us results similar to the following:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-3.png'"></app-image>
+<app-image [image]="'../../../../../assets/kideny-4.png'"></app-image>
+
+<app-mini-sub-title> - RBC</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the appearance of the <strong>Red blood cells.</strong> It has 152 missing values, which is 38% of the total data. Its relevance to the problem to be solved was studied, and it was determined that although there are nuances, it can be dispensed with. In addition, it is a binary nominal type, so there is not much flexibility in the imputation that can be made.
+
+<app-mini-sub-title> - RBCC</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Red Blood Cell Count.</strong> It has 131 missing values, which is 33% of the total data. According to preliminary research. This data is not one of the primary or deterministic data used in the diagnosis of kidney disease. Therefore, it is not used in this iteration.
+
+<app-mini-sub-title> - WBCC</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>White Blood Cell Count.</strong> It has 106 missing values, which is 26% of the total data. We discard it for the same reason as "<strong>RBCC</strong>."
+
+<app-mini-sub-title> - SOD</app-mini-sub-title>
+
+<app-paragraph>This attribute represents <strong>Sodium.</strong> It has 87 missing values, which is 22% of the total data. In addition to this amount of missing values, it also presents a relationship with "blood pressure" (<strong>Hypertension</strong>), an important indicator to determine this type of diseases, according to the following reference:
+
+
+    
+<app-quote [title]="'Reference'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
+</app-quote>
+
+<app-paragraph>Therefore, we decided to discard this attribute.</app-paragraph>
+
+<app-mini-sub-title> - PCV</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Packed Cell Volume</strong>. It has 71 missing values, which is 18% of the total data.  It is also highly correlated with attributes such as <strong>Hypertension</strong> (0.633 relationship points). ****, which is why we discarded it.
+
+<app-mini-sub-title> -  BGR</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Blood Glucose Random.</strong> It has 44 missing values, which is 11% of the total data. In addition, it is closely related to the diabetes attribute, which can become deterministic in the detection of kidney disease. According to the following reference:
+
+
+    <app-quote [title]="'Reference'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
+    </app-quote>
+
+<app-paragraph>Therefore, we decided to discard this attribute.</app-paragraph>
+
+<app-mini-sub-title> - PC</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Pus Cell.</strong> It has 65 missing values, which is 16% of the total data. Also, the distribution of the binomial values is far from equal, which may make it difficult to impute the data. It is also added that, according to research, it is not a determinant aspect of renal disease. For all the above reasons, we discard the attribute.
+
+<app-mini-sub-title> - SU</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Sugar.</strong> It has 49 missing values, which is 12% of the total data. We already have another attribute that provides us with the same information, but it also has a quite uneven distribution, which makes it difficult to treat it for the models, so it is discarded.
+
+<app-mini-sub-title> - BU</app-mini-sub-title>
+
+<app-paragraph>This attribute represents the <strong>Blood Urea.</strong> It has 19 missing values, which is 5% of the total data. Although it is not an exaggerated dimension, it is closely related to <strong>Serum Creatinine</strong> (0.586), and in the context of renal disease detection its use comes in conjunction with the last mentioned, so we limit ourselves to using <strong>Serum Creatinine</strong> discarding the use of <strong>Blood Urea.</strong>.
+
+<app-mini-sub-title>Handling Outliers</app-mini-sub-title>
+
+<app-paragraph>Now, having applied a preliminary filter on the attributes, it remains to analyze the values in the attributes. In this case we will start with the outliers.
+
+<app-mini-sub-title> - BP</app-mini-sub-title>
+
+<app-paragraph>The <strong>Blood Pressure</strong> attribute has some outliers as shown:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-5.png'"></app-image>
+
+<app-paragraph>The alternative left in this situation is to eliminate these tuples. So we will filter the data:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-6.png'"></app-image>
+
+<app-paragraph>In the previous step we used the "Filter Example" operator to filter all those records that meet any of the conditions indicated (that its value is less than or equal to 120), or that it is a missing value. The latter is to avoid discarding all missing values, since these can be solved with other strategies, such as data imputation.</app-paragraph>
+
+<app-mini-sub-title> - SC</app-mini-sub-title>
+
+<app-paragraph>The <strong>Serum Creatinine</strong> attribute presents some considerable outliers:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-7.png'"></app-image>
+
+<app-paragraph>To solve this, in this first iteration, we are going to stick with values less than or equal to 5. This is because, according to research, Serum Creatinine values greater than 5 are considered to be in the most severe stage of kidney disease. And we need to predict early detection, so these values, a priori, would not be of much help to us.</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-8.png'"></app-image>
+
+<app-mini-sub-title>Handling missing values</app-mini-sub-title>
+
+<app-paragraph>In order to solve the problem of missing values, we impute all missing values with the average of their respective attribute. For numeric type values, this would be the mean, while for nominal (categorical) type values, it would be the most popular value. So we will have the following:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-9.png'"></app-image>
+
+<app-mini-sub-title>Handling missing values</app-mini-sub-title>
+
+<app-paragraph>In order to solve the problem of missing values, we impute all missing values with the average of their respective attribute. For numeric type values, this would be the mean, while for nominal (categorical) type values, it would be the most popular value. So we will have the following:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-10.png'"></app-image>
+
+<app-mini-sub-title>Normalization</app-mini-sub-title>
+
+<app-paragraph>Since the scale in the attributes is not the same, it is necessary to normalize our dataset so that this aspect does not impact our models (an example will be K-NN, which is very susceptible to this type of problems). Currently our dataset looks like this:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-11.png'"></app-image>
+
+<app-paragraph>After normalizing, the scale of our attributes would be as follows:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-12.png'"></app-image>
+
+<app-callout>Note that the normalization was tested at this point in order to demonstrate the results. In practice we will normalize within the cross validation operator to avoid contamination.</app-callout>
+
+<app-sub-title>Modeling</app-sub-title>
+
+<app-paragraph>Now, with the dataset prepared, what remains to be done is to select the models to be used.</app-paragraph>
+
+<app-paragraph>This particular problem, which tries to detect kidney disease early, indicating the result with a binomial data (whether it has or does not have), is a classification problem.</app-paragraph>
+
+<app-paragraph>For this type of problem, the algorithms that can help us are:</app-paragraph>
+
+<ul>
+    <app-list-item>Naive Bayes</app-list-item>
+    <app-list-item>Logistic Regression</app-list-item>
+    <app-list-item>K-NN</app-list-item>
+</ul>
+
+<app-paragraph>Let's see some needs and considerations of each one:</app-paragraph>
+
+<app-mini-sub-title>Naive Bayes</app-mini-sub-title>
+<ul>
+    <app-list-item>The set must not have missing values.</app-list-item>
+    <app-list-item>The attributes must be conditionally independent.</app-list-item>
+    <app-list-item>It is advisable to use the Laplace correction in the case that the conditional probability of the value of an attribute gives 0, set it to 1 to avoid the operation of 0 values and that these are multiplied among other probabilities, and misleading results are obtained.</app-list-item>
+</ul>
+
+<app-mini-sub-title>Logistic Regression</app-mini-sub-title>
+<ul>
+    <app-list-item>There should be no outliers.</app-list-item>
+    <app-list-item>A normal distribution is recommended.</app-list-item>
+    <app-list-item>There should be no correlated attributes.</app-list-item>
+    <app-list-item>It is advisable to put a maximum number of iterations (parameter) in case the model does not converge (does not reach the coefficients that minimize the error between predicted and actual probabilities).</app-list-item>
+</ul>
+
+<app-mini-sub-title>K-NN</app-mini-sub-title>
+<ul>
+    <app-list-item>Need for normalization of the data so that the scale of all attributes is the same, and to avoid certain attributes having greater weight than others.</app-list-item>
+    <app-list-item>It is also recommended that the number of nearest neighbors taken is greater than 1, and is an odd number, and is small. Because if the K is 1 a comparison is made with itself and will give a misleading result, since you will always have a 100% prediction.</app-list-item>
+    <app-list-item>I also recommend having a "weighted" vote to take into account the distance of the neighbors for weighting (closer, the more weight it has).</app-list-item>
+</ul>
+
+<app-paragraph>With all the models selected, it remains to apply and evaluate them.</app-paragraph>
+
+<app-sub-title>Evaluation</app-sub-title>
+
+<app-paragraph>For the evaluation we will use cross-validation. So we will obtain these three operators:</app-paragraph>
+
+<div class="resize-3">
+    <app-image [image]="'../../../../../assets/kideny-13.png'"></app-image>
+</div>
+
+<app-paragraph>Each of these cross selections has a distribution of operators identical to the following (except for the models used):</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-14.png'"></app-image>
+
+<app-sub-title>Results</app-sub-title>
+
+<app-paragraph>Regarding the data we are interested in (the results), we obtain that for:</app-paragraph>
+
+<app-mini-sub-title>Naive Bayes</app-mini-sub-title>
+
+<app-image [image]="'../../../../../assets/kideny-15.png'"></app-image>
+
+<app-paragraph>Performance: 99.12%</app-paragraph>
+
+<app-mini-sub-title>Logistic Regression</app-mini-sub-title>
+
+<app-image [image]="'../../../../../assets/kideny-16.png'"></app-image>
+
+<app-paragraph>Performance: 96.47%</app-paragraph>
+
+<app-mini-sub-title>K-NN</app-mini-sub-title>
+
+<app-image [image]="'../../../../../assets/kideny-17.png'"></app-image>
+
+<app-paragraph>Performance: 94.42%</app-paragraph>
+
+<app-paragraph>We see then that these trained models have, a priori, a very good performance, but the one that generates the best performance is Naive Bayes with 99.12%.</app-paragraph>
+
+<app-paragraph>Also, to compare the performance of these models we can use the so-called ROC curves, such that we obtain:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-18.png'"></app-image>
+
+<app-paragraph>To interpret this curve we must know that, the straighter it goes upwards, and then straight to the right, the better the performance of the model.</app-paragraph>
+
+<app-paragraph>We see then that the model with the worst performance is Logistic Regression, while those with the best performance are K-nn, and Naive Bayes. So at this point, we will select the Naive Bayes model to undergo a final optimization.</app-paragraph>
+
+<app-sub-title>Optimizing the model</app-sub-title>
+
+<app-paragraph>One of the ways to optimize the models is with the use of Feature Selection. Applying this operator to the current process, we obtain that:</app-paragraph>
+
+<div class="resize-2">
+    <app-image [image]="'../../../../../assets/kideny-19.png'"></app-image>
+</div>
+
+<app-callout>Note that we make use of an evolutionary algorithm for feature selection, since at this point it is one of the algorithms that could give us better performance (better combination of attributes).</app-callout>
+
+<app-paragraph>Running the process gives us that set of attributes that generates the best performance, which is:</app-paragraph>
+
+<div class="resize">
+    <app-image [image]="'../../../../../assets/kideny-20.png'"></app-image>
+</div>
+
+<app-callout>Note that the selected attributes are those marked with a "1".</app-callout>
+
+<app-paragraph>And with respect to performance, we have the following result:</app-paragraph>
+
+<app-image [image]="'../../../../../assets/kideny-21.png'"></app-image>
+
+<app-paragraph>We see a slight improvement of 0.31%, which is not much, but a priori better than the previous result.</app-paragraph>
+
+<app-sub-title>Conclusions</app-sub-title>
+
+<app-paragraph>As conclusions, to say that although this is the first iteration, the results at first sight look satisfactory. But one thing is for sure, we must continue testing on the model obtained, to avoid false hopes, and to rule out cases such as the presence of overfitting. We must always keep an eye open in these cases of super positive performance, as they are indications of possible deception. So in the next iterations we should pay special attention to the steps performed, and correct what is necessary, if so.</app-paragraph>
+
