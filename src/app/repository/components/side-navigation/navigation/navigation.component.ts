@@ -157,14 +157,12 @@ export class NavigationComponent    {
       tittle: "Kidney detection",
       minutesRead: 35,
       miner: true,
-      python: true,
       cardId: KidneyCaseComponent
     },
     {
       tittle: "Titanic - Getting Started",
       minutesRead: 45,
       miner: true,
-      python: true,
       cardId: TitanicCaseComponent
     }
   ];
