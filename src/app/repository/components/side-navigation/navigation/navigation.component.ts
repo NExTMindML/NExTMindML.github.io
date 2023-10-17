@@ -68,17 +68,17 @@ export class NavigationComponent    {
       tittle: "Modeling", cards: [
         {
           tittle: "Modeling",
-          minutesRead: 10,
+          minutesRead: 0,
           cardId: "what_ML"
         },
         {
           tittle: "Algorithms",
-          minutesRead: 10,
+          minutesRead: 0,
           cardId: "what_ML"
         },
         {
           tittle: "Linear Algorithms",
-          minutesRead: 10,
+          minutesRead: 0,
           cardId: "what_ML"
         }
       ]
@@ -97,12 +97,12 @@ export class NavigationComponent    {
         },
         {
           tittle: "Performance test",
-          minutesRead: 10,
+          minutesRead: 0,
           cardId: "what_ML"
         },
         {
           tittle: "Gradient Descent",
-          minutesRead: 10,
+          minutesRead: 0,
           cardId: "what_ML"
         }
       ]
@@ -114,13 +114,13 @@ export class NavigationComponent    {
       tittle: "Data Understanding", cards: [
         {
           tittle: "Poker Problem",
-          minutesRead: 10,
+          minutesRead: 0,
           miner: true,
           cardId: "what_ML"
         },
         {
           tittle: "Iris Problem",
-          minutesRead: 10,
+          minutesRead: 0,
           miner: true,
           cardId: "what_ML"
         }]
@@ -129,21 +129,21 @@ export class NavigationComponent    {
       tittle: "Linear Algorithms", cards: [
         {
           tittle: "Linear Regression",
-          minutesRead: 10,
+          minutesRead: 0,
           excel: true,
           python: true,
           cardId: "what_ML"
         },
         {
           tittle: "Logistic Regression",
-          minutesRead: 10,
+          minutesRead: 0,
           excel: true,
           python: true,
           cardId: "what_ML"
         },
         {
           tittle: "LDA",
-          minutesRead: 10,
+          minutesRead: 0,
           excel: true,
           python: true,
           cardId: "what_ML"

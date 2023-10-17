@@ -10,7 +10,7 @@
         <li [ngbNavItem]="2">
             <button ngbNavLink class="texto-hover">Basics</button>
             <ng-template ngbNavContent>
-                    <app-collapse *ngFor="let basic of basics" [cards]="basic.cards" [tittle]="basic.tittle"></app-collapse>  
+                    <app-collapse *ngFor="let basic of basics" [cards]="basic.cards" [tittle]="basic.tittle" (selectCardEvent)="selectCard($event)"></app-collapse>  
             </ng-template>
         </li>
         <li [ngbNavItem]="3">

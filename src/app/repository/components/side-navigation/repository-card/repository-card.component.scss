@@ -84,6 +84,7 @@ img:not(hover) {
 
 .card-container {
     transition-duration: all 1s ease;
+    cursor: pointer;
 }
 
 .card-container .card {
