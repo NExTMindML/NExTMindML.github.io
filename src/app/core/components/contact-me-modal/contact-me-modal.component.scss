@@ -14,6 +14,16 @@
     font-size: xx-large;
 }
 
+.color-text-name {
+    width: fit-content;
+    background-image: linear-gradient(to bottom right, rgb(255, 10, 108) 0%, rgba(128, 9, 246) 100%);
+    -webkit-background-clip: text;
+        background-clip: text;
+    color: transparent;
+    margin: auto;
+    font-weight: 700;
+}
+
 .modal-body {
     background-color: rgba(21, 18, 23, 1);
     border-radius: 15px;

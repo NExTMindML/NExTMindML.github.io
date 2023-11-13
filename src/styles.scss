@@ -24,3 +24,12 @@ body {
    background: transparent;
    border: none;
 }
+
+.modal::-webkit-scrollbar {
+   display: none;
+}
+
+.modal {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}

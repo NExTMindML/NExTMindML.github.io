@@ -21,6 +21,16 @@ import { ParamAlgorithmComponent } from './components/cards-info/param-algorithm
 import { SupervisionAlgorithmComponent } from './components/cards-info/supervision-algorithm/supervision-algorithm.component';
 import { SourcesErrosComponent } from './components/cards-info/sources-erros/sources-erros.component';
 import { LowPerformanceComponent } from './components/cards-info/low-performance/low-performance.component';
+import { TitanicCaseComponent } from './components/cards-info/titanic-case/titanic-case.component';
+import { ImageComponent } from './components/text-components/image/image.component';
+import { KidneyCaseComponent } from './components/cards-info/kidney-case/kidney-case.component';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -51,11 +61,14 @@ import { LowPerformanceComponent } from './components/cards-info/low-performance
   imports: [
     CommonModule,
     NgbModule,
-    RepositoryRoutingModule
+    RepositoryRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+    }
+  })
   ]
 })
 export class RepositoryModule { }import { RepositoryRoutingModule } from './repository-routing.module';
-import { TitanicCaseComponent } from './components/cards-info/titanic-case/titanic-case.component';
-import { ImageComponent } from './components/text-components/image/image.component';
-import { KidneyCaseComponent } from './components/cards-info/kidney-case/kidney-case.component';
-

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="d-flex flex-column align-items-start">
             <a class="navbar-brand fs-3" href="#">PortfolioML</a>
-            <a class="nav-link by-text">by NExTMind</a>
+            <a class="nav-link by-text">by <span>NE</span>x<span>TM</span>ind</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,20 +10,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item me-4">
                     <a class="nav-link fs-5 hover" [routerLink]="['/']" fragment="home">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-4">
                     <a class="nav-link fs-5 hover"[routerLink]="['/']" fragment="about-me">About us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-4">
                     <a class="nav-link fs-5 hover" [routerLink]="['/']" fragment="work">Work</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-4">
                     <a class="nav-link fs-5 hover" href="/repository">Repository</a>
                 </li>
-                <li class="nav-item contac-me" (click)="openModal()">
+                <li class="nav-item contac-me me-4" (click)="openModal()">
                     <a class="nav-link fs-5">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link fs-5 hover" (click)="changeLanguage('es')">ES</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link fs-5 hover" (click)="changeLanguage('en')">EN</button>
                 </li>
             </ul>
         </div>

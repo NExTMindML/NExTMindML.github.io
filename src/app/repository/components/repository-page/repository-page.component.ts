@@ -1,6 +1,4 @@
 import { Component, ElementRef, HostListener, Input, Renderer2, ViewChild, ViewContainerRef } from '@angular/core';
-import { WhatIsMachineLearningComponent } from '../cards-info/what-is-machine-learning/what-is-machine-learning.component';
-import { NotPageInfoComponent } from '../cards-info/not-page-info/not-page-info.component';
 import { CardSelectEventEmitterService } from '../../services/card-select-event-emitter.service';
 import { OpenRepositoryService } from 'src/app/landing/services/open-repository.service';
 import * as AOS from 'aos';
@@ -45,10 +43,12 @@ export class RepositoryPageComponent {
     this.container.clear();
   
     console.log(this.isViewedInfo)
+    console.log(info)
     try {
       this.container.createComponent(info);
     } catch (e: any) {
-      this.container.createComponent(NotPageInfoComponent);
+      console.error(e)
+      //this.container.createComponent(NotPageInfoComponent);
     }
   }
 

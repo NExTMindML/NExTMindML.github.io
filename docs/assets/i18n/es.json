@@ -1,0 +1,7 @@
+{
+    "cisp-dm": {
+       "title": "CRISP-DM",
+       "p1": "CRISP-DM (Cross-Industry Standard Process for Data Mining) es un método/proceso para orientar trabajos de minería de datos.",
+       "p2": "Lo que hace CRISP-DM es ofrecer un ciclo vital de minería de datos, en donde se incluyen un total de 6 fases (descritas) con ciertas dependencias (explicadas) frecuentes e importantes entre ellas, promoviendo un modelo iterativo a la vez que flexible, por lo que aplicable a distintas problemáticas de negocio a tratar."
+    }
+}
