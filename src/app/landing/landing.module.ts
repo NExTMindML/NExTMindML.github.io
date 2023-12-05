@@ -9,6 +9,11 @@ import { WorkPageComponent } from './components/work-page/work-page.component';
 import { NavigationCardComponent } from './components/work-page/navigation-card/navigation-card.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { NgsRevealModule } from 'ngx-scrollreveal';
+import { MemberInfoComponent } from './components/member-info/member-info.component';
+import { GruopInfoComponent } from './components/gruop-info/gruop-info.component';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../app.module';
 
 
 @NgModule({
@@ -17,13 +22,22 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
     HomePageComponent,
     AboutMeComponent,
     WorkPageComponent,
-    NavigationCardComponent
+    NavigationCardComponent,
+    MemberInfoComponent,
+    GruopInfoComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
     LandingRoutingModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+    }
+  })
   ]
 })
 export class LandingModule { }

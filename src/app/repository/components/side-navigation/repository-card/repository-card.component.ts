@@ -13,6 +13,7 @@ export class RepositoryCardComponent {
 @Input() excel?: boolean = false;
 @Input() miner?: boolean = false;
 @Input() info?: any;
+@Input() labels?: any;
 isActive: boolean = false;
 @Output() selectCardEvent = new EventEmitter<any>();
 
@@ -30,3 +31,5 @@ selectCard() {
   this.cardSelectedEvent.emitEvent(this)
 }
 }
+
+

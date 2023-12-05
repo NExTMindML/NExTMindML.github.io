@@ -1,6 +1,8 @@
 <div class="card-container {{ isActive ? 'active' : ''}}" (click)="selectCard()">
     <div class="card mb-2 mt-2">
-        <div class="p card-title">
+        <div class="p card-title pt-1">
+            <div>            <span class="badge bg-secondary ms-1" *ngFor="let label of labels">{{label}}
+            </span></div>
             <img *ngIf="this.excel" src="https://i.ibb.co/N9t2bQn/Microsoft-Excel-Logo.png" alt="Microsoft-Excel-Logo" class="excel">
             <img *ngIf="this.miner" src="https://i.ibb.co/18GRj4V/4490278.png" alt="4490278" class="miner">
             <img *ngIf="this.python" src="https://i.ibb.co/FmbDMT8/Python-logo-notext-svg.png" alt="Python-logo-notext-svg" class="python">

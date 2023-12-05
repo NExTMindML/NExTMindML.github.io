@@ -1,73 +1,59 @@
 <div data-aos="fade-zoom-in" data-aos-duration="2000">
-    <app-tittle>Technical aspect of ML</app-tittle>
+    <app-tittle>Aspecto Técnico de ML</app-tittle>
 
-    <app-paragraph>In a more technical view, it can be said that in Machine Learning there are different algorithms.
-        Each algorithm represents a different strategy of learning the objective function/mapping, so
-        that:</app-paragraph>
+    <app-paragraph>Desde un punto de vista más técnico, se puede decir que en Aprendizaje Automático existen diferentes algoritmos.
+        Cada algoritmo representa una estrategia diferente para aprender la función/mapping objetivo, de modo que:</app-paragraph>
 
     <app-paragraph>
-        <p class="cite">"Machine Learning algorithms are described as learning an objective function (F) that maps input
-            (X) variables (data) to an output variable (Y)."</p>
+        <p class="cite">"Los algoritmos de Aprendizaje Automático se describen como aprendiendo una función objetivo (F) que mapea las variables de entrada (X) (datos) a una variable de salida (Y)." </p>
     </app-paragraph>
 
     <div class="equation">
         Y = <span class="variable">F(X)</span>
     </div>
 
-    <app-paragraph>The latter can be considered a learning task in general, since one wants to make predictions in the
-        future given new examples of inputs.</app-paragraph>
+    <app-paragraph>Este último puede considerarse como una tarea de aprendizaje en general, ya que se desea hacer predicciones en el
+        futuro dadas nuevas ejemplos de entradas.</app-paragraph>
 
     <app-paragraph>
-        The subfield of Machine Learning that focuses on creating predictions is called "Predictive modeling", and is
-        the most common type of Machine Learning. Where this function is learned to create predictions about the outcome
-        (Y) for new data (x).
+        El subcampo del Aprendizaje Automático que se enfoca en crear predicciones se llama "Modelado Predictivo" y es
+        el tipo más común de Aprendizaje Automático. En este tipo de modelado, la función se aprende para hacer predicciones sobre el resultado (Y) para nuevos datos (x).
     </app-paragraph>
 
     <app-paragraph>
-        This type of modeling is called predictive modeling or predictive analytics and the goal is to create the
-        highest accuracy in predictions.
+        Este tipo de modelado se llama modelado predictivo o análisis predictivo y el objetivo es crear la mayor precisión en las predicciones.
     </app-paragraph>
 
     <app-paragraph>
-        Also, one can learn the mapping of the function $F(x) = Y$ to learn more about the data used. The latter is
-        called statistical inference.
+        También se puede aprender el mapeo de la función $F(x) = Y$ para obtener más información sobre los datos utilizados. Esto se llama inferencia estadística.
     </app-paragraph>
 
     <app-paragraph>
-        Talking more deeply about the objective function F, we do not really know what the form of this function looks
-        like, nor is it of much interest, it is like a black box to us, it is just used directly.
+        Hablando más profundamente sobre la función objetivo F, realmente no sabemos cómo es la forma de esta función, ni es de mucho interés, es como una caja negra para nosotros, simplemente se usa directamente.
     </app-paragraph>
 
     <app-paragraph>
-        Different representations make different assumptions about the form of the function to be learned. That's why it
-        is important to try a set of different algorithms on a Machine Learning problem, because you don't know which
-        would be the best estimate of the structure of the function you are trying to approximate.
+        Diferentes representaciones hacen diferentes suposiciones sobre la forma de la función a aprender. Por eso es importante probar un conjunto de algoritmos diferentes en un problema de Aprendizaje Automático, porque no se sabe cuál sería la mejor estimación de la estructura de la función que se está tratando de aproximar.
     </app-paragraph>
 
     <app-paragraph>
-        But not everything is simple, since there is also an error rate (e) that is independent of the input data (Y)
-        and is present in all algorithms of this style.
+        Pero no todo es simple, ya que también hay una tasa de error (e) que es independiente de los datos de entrada (Y) y está presente en todos los algoritmos de este estilo.
     </app-paragraph>
 
     <div class="equation">
         Y = <span class="variable">F(X) + e</span>
     </div>
 
-    <app-paragraph>This error is called irreducible because no matter how well we obtain an estimate, the objective
-        function (F) will not be able to reduce the error. So the estimation of the shape of the function F will always
-        have an error rate.</app-paragraph>
+    <app-paragraph>Este error se llama irreducible porque no importa cuán bien obtengamos una estimación, la función objetivo (F) no podrá reducir el error. Entonces, la estimación de la forma de la función F siempre tendrá una tasa de error.</app-paragraph>
 
-    <app-sub-title>Summary</app-sub-title>
+    <app-sub-title>Resumen</app-sub-title>
 
-    <app-paragraph>As a summary, in this section we saw:</app-paragraph>
+    <app-paragraph>En resumen, en esta sección vimos:</app-paragraph>
 
     <ul>
-        <app-list-item>Machine Learning algorithms work to estimate the mapping (structure) of a function F from a set
-            of output information (variables) (Y) given a set of input information (variables) (x).</app-list-item>
-        <app-list-item>Different Machine Learning algorithms make different assumptions about the shape of the function
-            to find out.</app-list-item>
-        <app-list-item>When not much is known about the shape of the objective function, a set of different algorithms
-            should be tried to see which one works/performs best.</app-list-item>
-        <app-list-item>Every mapping function has an inherent error rate.</app-list-item>
+        <app-list-item>Los algoritmos de Aprendizaje Automático trabajan para estimar el mapeo (estructura) de una función F a partir de un conjunto de información de salida (variables) (Y) dado un conjunto de información de entrada (variables) (x).</app-list-item>
+        <app-list-item>Diferentes algoritmos de Aprendizaje Automático hacen diferentes suposiciones sobre la forma de la función a descubrir.</app-list-item>
+        <app-list-item>Cuando no se sabe mucho sobre la forma de la función objetivo, se deben probar diferentes algoritmos para ver cuál funciona/mejora mejor.</app-list-item>
+        <app-list-item>Cada función de mapeo tiene una tasa de error inherente.</app-list-item>
     </ul>
 </div>

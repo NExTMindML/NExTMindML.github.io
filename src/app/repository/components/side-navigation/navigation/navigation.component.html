@@ -17,7 +17,7 @@
             <button ngbNavLink class="texto-hover">Study Cases</button>
             <ng-template ngbNavContent>
                 <app-repository-card *ngFor="let case of cases; let i = index" [info]="case.cardId" [tittle]="case.tittle" [python]="case.python"
-                    [excel]="case.excel" [miner]="case.miner" [minutesRead]="case.minutesRead" (selectCardEvent)="selectCard($event)"></app-repository-card>
+                    [excel]="case.excel" [miner]="case.miner" [minutesRead]="case.minutesRead" [labels]="case.labels" (selectCardEvent)="selectCard($event)"></app-repository-card>
             </ng-template>
         </li>
     </ul>

@@ -161,3 +161,164 @@
         Non-Parametric methods make few or no assumptions about the objective function, which makes it require a lot of data, makes it much slower to train, and with higher complexity, but can result in more powerful models.
     </app-list-item>
 </ul>
+<app-tittle>Algoritmos Paramétricos</app-tittle>
+
+<app-paragraph>En el mundo del Aprendizaje Automático, se puede decir que hay dos clases principales de algoritmos: "Paramétricos" y "No Paramétricos".</app-paragraph>
+
+<app-paragraph>Todos los algoritmos de Aprendizaje Automático se pueden organizar en estos dos grupos. En esta sección intentaremos explicar qué son y cuáles son sus ventajas y consideraciones.</app-paragraph>
+
+<app-sub-title>Paramétricos</app-sub-title>
+
+<app-paragraph>Estos algoritmos simplifican la función objetivo a una forma asumida ya conocida, lo que implica dos pasos:</app-paragraph>
+
+<app-paragraph>
+    1 - Seleccionar una forma para la función.
+</app-paragraph>
+
+<app-paragraph>
+    2 - Aprender los coeficientes para la función a partir de los datos de prueba.
+</app-paragraph>
+
+<app-paragraph>
+    Esta suposición puede simplificar en gran medida el proceso de aprendizaje, pero también puede limitar lo que se puede aprender.
+</app-paragraph>
+
+<app-paragraph>
+    Entre los beneficios y limitaciones de esta clase de algoritmos se encuentran:
+</app-paragraph>
+
+<app-mini-sub-title>Beneficios</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Simpleza: Este método es fácil de entender e interpretar.
+    </app-list-item>
+
+    <app-list-item>
+        Rapidez: Son muy rápidos en aprender de los datos.
+    </app-list-item>
+
+    <app-list-item>
+        Menos datos: No requieren una gran cantidad de datos de entrenamiento y pueden funcionar bien incluso si algunos datos no son perfectos.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Limitaciones</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Restringidos: Al elegir una forma funcional, este método está en gran medida limitado a una forma específica.
+    </app-list-item>
+
+    <app-list-item>
+        Complejidad limitada: Estos métodos son más adecuados para problemas simples.
+    </app-list-item>
+
+    <app-list-item>
+        Ajuste deficiente: En la práctica, es poco probable que los métodos coincidan con la función de mapeo subyacente. <br>Este es un problema importante que radica en la suposición realizada, ya que la función a conocer puede no tener la forma seleccionada, lo que lleva a resultados insatisfactorios.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Ejemplos</app-mini-sub-title>
+
+<app-paragraph>Algunos ejemplos de algoritmos paramétricos son:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        Regresión Logística
+    </app-list-item>
+
+    <app-list-item>
+        Análisis Discriminante Lineal
+    </app-list-item>
+
+    <app-list-item>
+        Regresión Lineal
+    </app-list-item>
+
+    <app-list-item>
+        Perceptrón
+    </app-list-item>
+</ul>
+
+<app-callout>Nota: Los algoritmos que asumen la función de mapeo en una forma lineal a menudo se denominan "Algoritmos Lineales de Aprendizaje Automático".</app-callout>
+
+<app-sub-title>No Paramétricos</app-sub-title>
+
+<app-paragraph>
+    A diferencia de los algoritmos paramétricos, los algoritmos no paramétricos no hacen suposiciones fuertes sobre la forma de la función objetivo. Por lo tanto, pueden aprender cualquier mapeo de entradas a salidas.
+</app-paragraph>
+
+<app-paragraph>
+    Debido a sus características, estos tipos de algoritmos son buenos cuando se tiene mucha data y no hay conocimientos previos, así como cuando no se está demasiado preocupado por elegir solo las características correctas.
+</app-paragraph>
+
+<app-paragraph>
+    Entre los beneficios y limitaciones de los algoritmos no paramétricos se encuentran los siguientes:
+</app-paragraph>
+
+<app-mini-sub-title>Beneficios</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Flexibilidad: Son capaces de ajustarse a una gran cantidad de formas funcionales.
+    </app-list-item>
+
+    <app-list-item>
+        Poder: No (o muy bajo) hace suposiciones sobre la función subyacente.
+    </app-list-item>
+
+    <app-list-item>
+        Rendimiento: Puede dar lugar a modelos altamente eficientes para la predicción.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Limitaciones</app-mini-sub-title>
+
+<ul>
+    <app-list-item>
+        Más datos: Requiere mucha data para entrenar y estimar la función objetivo.
+    </app-list-item>
+
+    <app-list-item>
+        Lento: Mucho más lento de entrenar ya que tiene más parámetros para entrenar.
+    </app-list-item>
+
+    <app-list-item>
+        Sobreadaptación: Mayor riesgo de sobreajustar los datos de entrenamiento y difícil de explicar por qué se hicieron predicciones específicas.
+    </app-list-item>
+</ul>
+
+<app-mini-sub-title>Ejemplos:</app-mini-sub-title>
+
+<app-paragraph>Algunos ejemplos de algoritmos no paramétricos son:</app-paragraph>
+
+<ul>
+    <app-list-item>
+        Naive Bayes
+    </app-list-item>
+
+    <app-list-item>
+        Árboles de Decisión como CART y C4.5
+    </app-list-item>
+
+    <app-list-item>
+        Máquinas de Soporte Vectorial
+    </app-list-item>
+
+    <app-list-item>
+        Redes Neuronales
+    </app-list-item>
+</ul>
+
+<app-sub-title>Resumen</app-sub-title>
+
+<ul>
+    <app-list-item>
+        Los métodos paramétricos hacen grandes suposiciones sobre el mapeo de variables de entrada a variables de salida, lo que lo hace rápido de entrenar y requiere menos datos, pero puede no ser muy potente.
+    </app-list-item>
+
+    <app-list-item>
+        Los métodos no paramétricos hacen pocas o ninguna suposición sobre la función objetivo, lo que hace que requiera mucha data, sea mucho más lento de entrenar y tenga una mayor complejidad, pero puede dar lugar a modelos más potentes.
+    </app-list-item>
+</ul>

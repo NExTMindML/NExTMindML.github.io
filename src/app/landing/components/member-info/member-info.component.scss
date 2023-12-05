@@ -1,0 +1,48 @@
+img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.img-container {
+    position: relative;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+
+.img-container:hover img {
+    opacity: 0.15;
+}
+
+.img-container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    cursor: default; 
+}
+
+
+h5 {
+    color: rgb(255, 10, 108);
+    font-weight: 700;
+}

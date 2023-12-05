@@ -5,5 +5,5 @@
 
 <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse">
     <app-repository-card *ngFor="let card of cards" [info]="card.cardId" [tittle]="card.tittle" [python]="card.python" [excel]="card.excel"
-        [miner]="card.miner" [minutesRead]="card.minutesRead" (selectCardEvent)="selectCard($event)"></app-repository-card>
+        [miner]="card.miner" [minutesRead]="card.minutesRead" [labels]="card.labels" (selectCardEvent)="selectCard($event)"></app-repository-card>
 </div>

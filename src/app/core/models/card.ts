@@ -7,4 +7,5 @@ export interface Card {
     excel?: boolean;
     minutesRead: number;
     cardId: any;
+    labels?: any;
 }

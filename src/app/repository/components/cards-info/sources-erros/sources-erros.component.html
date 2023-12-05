@@ -1,88 +1,88 @@
-<app-tittle>Sources of erros</app-tittle>
+<app-tittle>Fuentes de Errores</app-tittle>
 
 <app-paragraph>
-    In Machine Learning, and speaking only of the supervised model, there are two major sources of errors when learning from data: Bias and Variance. Any learning error can fall into one of these categories.
+    En Aprendizaje Automático, y hablando solo del modelo supervisado, hay dos fuentes principales de errores al aprender de los datos: Sesgo (Bias) y Varianza. Cualquier error de aprendizaje puede caer en una de estas categorías.
 </app-paragraph>
 
 <app-paragraph>
-    In addition to these errors, there is also the irreducible error that cannot be reduced regardless of the algorithm used (it is not influenced by Machine Learning algorithms). Unlike the Bias and Variance errors that can be influenced by the Machine Learning algorithm used.
+    Además de estos errores, también existe el error irreducible que no se puede reducir independientemente del algoritmo utilizado (no está influenciado por los algoritmos de Aprendizaje Automático). A diferencia de los errores de Sesgo y Varianza que pueden ser influenciados por el algoritmo de Aprendizaje Automático utilizado.
 </app-paragraph>
 
 <app-paragraph>
-    Let's specify a little bit more what are these influenceable errors about.
+    Vamos a especificar un poco más en qué consisten estos errores que pueden ser influenciados.
 </app-paragraph>
 
-<app-sub-title>Bias</app-sub-title>
+<app-sub-title>Sesgo (Bias)</app-sub-title>
 
 <app-paragraph>
-    Bias refers to the simplifications made by the algorithm to make the problem easy to solve. That is why parametric algorithms generally have a high Bias, making them easy to learn and simple to understand, but less flexible.
-</app-paragraph>
-
-<app-paragraph>
-    But what do we mean by high Bias? Well, we say that there is high Bias when more assumptions are suggested about the shape of the objective function.
+    El Sesgo se refiere a las simplificaciones hechas por el algoritmo para que el problema sea fácil de resolver. Es por eso que los algoritmos paramétricos generalmente tienen un Sesgo alto, lo que los hace fáciles de aprender y simples de entender, pero menos flexibles.
 </app-paragraph>
 
 <app-paragraph>
-    Conversely, we say that there is a low Bias when there are fewer assumptions suggested about the form of the objective function.
-</app-paragraph>
-
-<app-sub-title>Variance</app-sub-title>
-
-<app-paragraph>
-    Variance refers to the sensitivity of the model to the change of the training data. Generally nonparametric algorithms, which have a lot of flexibility, have a high variance.
+    Pero, ¿a qué nos referimos con alto Sesgo? Bueno, decimos que hay un Sesgo alto cuando se sugieren más suposiciones sobre la forma de la función objetivo.
 </app-paragraph>
 
 <app-paragraph>
-    As in Bias, we can divide this type of error into two parts: high variance and low variance.
+    Por el contrario, decimos que hay un Sesgo bajo cuando hay menos suposiciones sugeridas sobre la forma de la función objetivo.
+</app-paragraph>
+
+<app-sub-title>Varianza</app-sub-title>
+
+<app-paragraph>
+    La Varianza se refiere a la sensibilidad del modelo al cambio de los datos de entrenamiento. Generalmente, los algoritmos no paramétricos, que tienen mucha flexibilidad, tienen una Varianza alta.
 </app-paragraph>
 
 <app-paragraph>
-    We say that there is a low variance when there are small changes in the estimation of the objective function when the training data changes.
+    Al igual que en el Sesgo, podemos dividir este tipo de error en dos partes: alta varianza y baja varianza.
 </app-paragraph>
 
 <app-paragraph>
-    On the other hand, we say that there is a high variance when there are many changes in the estimate of the objective function when the training data changes. Thus, as expected, algorithms that have high variance are strongly influenced by the specific training data.
+    Decimos que hay una baja varianza cuando hay pequeños cambios en la estimación de la función objetivo cuando cambian los datos de entrenamiento.
 </app-paragraph>
 
-<app-sub-title>Objective</app-sub-title>
+<app-paragraph>
+    Por otro lado, decimos que hay una alta varianza cuando hay muchos cambios en la estimación de la función objetivo cuando cambian los datos de entrenamiento. Así, como era de esperar, los algoritmos que tienen alta varianza están fuertemente influenciados por los datos de entrenamiento específicos.
+</app-paragraph>
 
-<app-paragraph>In terms of error sources, as both Bias and Variance can be influenced by the specific algorithm, the objective of each (supervised) algorithm will then be to maintain a low Bias and a Low Variance. But in reality it happens that:</app-paragraph>
+<app-sub-title>Objetivo</app-sub-title>
+
+<app-paragraph>En términos de fuentes de error, ya que tanto el Sesgo como la Varianza pueden ser influenciados por el algoritmo específico, el objetivo de cada algoritmo (supervisado) será mantener un Sesgo bajo y una Varianza baja. Pero en la realidad sucede que:</app-paragraph>
 <ul>
     <app-list-item>
-        Parametric algorithms usually have a high Bias and a low Variance.
+        Los algoritmos paramétricos suelen tener un Sesgo alto y una Varianza baja.
     </app-list-item>
 
     <app-list-item>
-        Non-parametric algorithms usually have a low Variance but a high Bias.
+        Los algoritmos no paramétricos suelen tener una Varianza baja pero un Sesgo alto.
     </app-list-item>
 </ul>
 
-<app-paragraph>In general we will say that:</app-paragraph>
+<app-paragraph>En general, diremos que:</app-paragraph>
 
 <ul>
     <app-list-item>
-        If the Bias is increased the Variance decreases.
+        Si aumenta el Sesgo, la Varianza disminuye.
     </app-list-item>
 
     <app-list-item>
-        If the Variance is increased the Bias decreases.
+        Si aumenta la Varianza, el Sesgo disminuye.
     </app-list-item>
 </ul>
 
-<app-sub-title>Summary</app-sub-title>
+<app-sub-title>Resumen</app-sub-title>
 
-<app-paragraph>In this section we saw that:</app-paragraph>
+<app-paragraph>En esta sección vimos que:</app-paragraph>
 
 <ul>
     <app-list-item>
-        Bias is the simplifications made by the model made by the objective function to make it easy to approximate.
+        El Sesgo son las simplificaciones hechas por el modelo realizadas por la función objetivo para facilitar su aproximación.
     </app-list-item>
 
     <app-list-item>
-        Variance is the number of estimates of the objective function that will change given a new training data set.
+        La Varianza es la cantidad de estimaciones de la función objetivo que cambiarán dado un nuevo conjunto de datos de entrenamiento.
     </app-list-item>
 
     <app-list-item>
-        Trade-off is the tension between the error introduced by the Bias and the Variance.
+        La compensación es la tensión entre el error introducido por el Sesgo y la Varianza.
     </app-list-item>
 </ul>

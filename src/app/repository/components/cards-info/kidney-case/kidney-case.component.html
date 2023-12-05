@@ -1,282 +1,273 @@
-<app-tittle>Kidney Detection</app-tittle>
+<app-tittle>Detección de Riñón</app-tittle>
 
-<app-sub-title>Problem and context analysis and data.</app-sub-title>
+<app-sub-title>Análisis de Problema, Contexto y Datos</app-sub-title>
 
-<app-mini-sub-title>Overview</app-mini-sub-title>
+<app-mini-sub-title>Vista General</app-mini-sub-title>
 
-<app-paragraph>The problem at hand lies in early detection of chronic kidney disease.</app-paragraph>
+<app-paragraph>El problema en cuestión radica en detectar de manera temprana la enfermedad renal crónica.</app-paragraph>
 
-<app-mini-sub-title>Context</app-mini-sub-title>
+<app-mini-sub-title>Contexto</app-mini-sub-title>
 
-<app-paragraph>Chronic kidney disease affects people globally. But there are some parts of the world where they are more common than others. In fact, there is evidence to suggest that in countries still in the developing stages, they are affected more than in developed countries. But even so, aspects such as detection and treatment are highly influenced by socioeconomic level, cultural and political factors, etc. Therefore, its presence and severity throughout the sphere (the earth) could undergo severe changes. The latter may be due to the fact that detection of kidney disease is invasive, costly, time-consuming, and sometimes risky. So many patients arrive at late stages, and it is worse in developing countries, where quality medical care may be scarce.</app-paragraph>
+<app-paragraph>Las enfermedades renales crónicas afectan a nivel global. Pero hay algunos puntos en el mundo en donde son más comunes respecto al resto. De hecho, hay evidencia que sugiere que en países aún en etapas de desarrollo, son afectados de mayor forma respecto a los países desarrollados. Incluso aspectos como la detección y tratamiento están altamente influenciados por el nivel socioeconómico, factores culturales, políticos, etc. Por lo que su presencia y gravedad a lo largo de la esfera (la tierra) podría sufrir severos cambios. Esto último puede deberse a que la detección de enfermedades renales es invasiva, costosa, lenta, y a veces riesgosa. Por lo que muchos pacientes llegan en etapas tardías, y es peor en los países en vías de desarrollo, donde la atención médica de calidad puede ser escasa.</app-paragraph>
 
-<app-paragraph>Therefore, there is tremendous benefit in early detection tools and procedures for this disease, especially in the most vulnerable and affected countries and regions.</app-paragraph>
+<app-paragraph>Por lo tanto, se observa un tremendo beneficio en herramientas y procedimientos de detección temprana de esta enfermedad, sobre todo en los países y regiones más vulnerables y afectadas.</app-paragraph>
 
-<app-quote [title]="'Reference'"><app-paragraph><a href="https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment">https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment</a></app-paragraph>
+<app-quote [title]="'Referencia'"><app-paragraph><a href="https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment">https://www.revistanefrologia.com/es-carga-acceso-disparidades-enfermedad-renal-articulo-S0211699519300505#:~:text=Kidney%20disease%20is%20a,that%20its%20detection%20and%20treatment</a></app-paragraph>
 </app-quote>
 
+<app-mini-sub-title>Análisis de Datos</app-mini-sub-title>
 
-<app-mini-sub-title>Data analysis.</app-mini-sub-title>
-
-<app-paragraph>This time, we have a dataset of 25 attributes representing different physical and non-physical aspects, as well as medical issues affecting people located in India (a country with some difficult contexts):</app-paragraph>
+<app-paragraph>En esta ocasión, contamos con un conjunto de datos de 25 atributos que representan distintos aspectos físicos y no físicos, además de cuestiones médicas que afectan a las personas ubicadas en la India (un país con algunos contextos difíciles):</app-paragraph>
 
 <ul>
-    <app-list-item>1. <strong>age - Age (Age, numeric)</strong>: Represents the patient's age in years.</app-list-item>
-<app-list-item>2. <strong>bp - Blood Pressure (numeric)</strong>: Displays the patient's blood pressure in mm/Hg (millimeters of mercury).</app-list-item>
-<app-list-item>3. <strong>sg - Specific Gravity (nominal)</strong>: This is a categorical attribute indicating the specific gravity of the urine. It can have several nominal values, such as 1.005, 1.010, 1.015, 1.020, 1.025.</app-list-item>
-<app-list-item>4. <strong>al - Albumin (Albumin, nominal)</strong>: Represents the presence of albumin in the urine. Nominal values include 0, 1, 2, 2, 3, 4 and 5, indicating the amount of albumin present.</app-list-item>
-<app-list-item>5. <strong>su - Sugar (nominal)</strong>: Indicates the presence of sugar in the urine. The nominal values are 0, 1, 2, 2, 3, 4 and 5, representing different sugar levels.</app-list-item>
-<app-list-item>6. <strong>rbc - Red Blood Cells (nominal)</strong>: Describes the appearance of the red blood cells in the urine sample, which may be "normal" or "abnormal".</app-list-item>
-<app-list-item>7. <strong>pc - Pus Cell (nominal)</strong>: Indicates the presence of pus cells in the urine sample, which may be "normal" or "abnormal."</app-list-item>
-<app-list-item>8. <strong>pcc - Pus Cell Clumps (nominal)</strong>: Shows whether or not pus cell clumps are present.</app-list-item>
-<app-list-item>9. <strong>ba - Bacteria (Bacteria, nominal)</strong>: Indicates whether bacteria are present in the urine sample.</app-list-item>
-<app-list-item>10. <strong>bgr - Blood Glucose Random (numerical)</strong>: Displays the blood glucose level in milligrams per deciliter (mg/dl) at a random time.</app-list-item>
-<app-list-item>11. <strong>bu - Blood Urea (numerical)</strong>: Represents the blood urea concentration in milligrams per deciliter (mg/dl).</app-list-item>
-<app-list-item>12. <strong>sc - Serum Creatinine (numeric)</strong>: Indicates the blood creatinine concentration in milligrams per deciliter (mg/dl).</app-list-item>
-<app-list-item>13. <strong>sod - Sodium (numeric)</strong>: Shows blood sodium concentration in milliequivalents per liter (mEq/L).</app-list-item>
-<app-list-item>14. <strong>Pot - Potassium (Potassium, numeric)</strong>: Indicates the blood potassium concentration in milliequivalents per liter (mEq/L).</app-list-item>
-<app-list-item>15. <strong>hemo - Hemoglobin (Hemoglobin, numeric)</strong>: Shows the hemoglobin concentration in grams per deciliter (g/dL) of blood.</app-list-item>
-<app-list-item>16. 16. <strong>pcv - Packed Cell Volume (numeric)</strong>: Shows the volume of packed blood cells in percent.</app-list-item>
-<app-list-item>17. <strong>wc - White Blood Cell Count (numerical)</strong>: Represents the white blood cell count in cells per microliter (cumm) of blood.</app-list-item>
-<app-list-item>18. <strong>rc - Red Blood Cell Count (numerical)</strong>: Displays the red blood cell count in millions per cubic millimeter (cmm) of blood.</app-list-item>
-<app-list-item>19. <strong>htn - Hypertension (Hypertension, nominal)</strong>: Indicates whether the patient has hypertension ("yes" or "no").</app-list-item>
-<app-list-item>20. <strong>dm - Diabetes Mellitus (Diabetes Mellitus, nominal)</strong>: Shows whether the patient has diabetes mellitus ("yes" or "no").</app-list-item>
-<app-list-item>21. <strong>cad - Coronary Artery Disease (Coronary Artery Disease, nominal)</strong>: Indicates whether the patient has coronary artery disease ("yes" or "no").</app-list-item>
-<app-list-item>22. <strong>appet - Appetite (nominal)</strong>: Describes the patient's appetite, which may be "good" or "poor." 23.</app-list-item>
-<app-list-item>23. <strong>pe - Pedal Edema (Pedal Edema, nominal)</strong>: Indicates whether the patient has foot edema ("yes" or "no").</app-list-item>
-<app-list-item>24. <strong>ane - Anemia (Anemia, nominal)</strong>: Describes whether the patient has anemia ("yes" or "no").</app-list-item>
-<app-list-item>25. <strong>class - Class (Class, nominal)</strong>: This is the output attribute and is used to classify patients into two classes: "ckd" (chronic kidney disease) and "notckd" (no chronic kidney disease).</app-list-item>
+    <app-list-item>1. <strong>age - Edad (Edad, numérica)</strong>: Representa la edad del paciente en años.</app-list-item>
+    <app-list-item>2. <strong>bp - Presión Sanguínea (numérica)</strong>: Muestra la presión sanguínea del paciente en mm/Hg (milímetros de mercurio).</app-list-item>
+    <app-list-item>3. <strong>sg - Gravedad Específica (nominal)</strong>: Este es un atributo categórico que indica la gravedad específica de la orina. Puede tener varios valores nominales, como 1.005, 1.010, 1.015, 1.020, 1.025.</app-list-item>
+    <app-list-item>4. <strong>al - Albúmina (Albúmina, nominal)</strong>: Representa la presencia de albúmina en la orina. Los valores nominales incluyen 0, 1, 2, 2, 3, 4 y 5, indicando la cantidad de albúmina presente.</app-list-item>
+    <app-list-item>5. <strong>su - Azúcar (nominal)</strong>: Indica la presencia de azúcar en la orina. Los valores nominales son 0, 1, 2, 2, 3, 4 y 5, representando diferentes niveles de azúcar.</app-list-item>
+    <app-list-item>6. <strong>rbc - Glóbulos Rojos (nominal)</strong>: Describe la apariencia de los glóbulos rojos en la muestra de orina, que puede ser "normal" o "anormal".</app-list-item>
+    <app-list-item>7. <strong>pc - Células de Pus (nominal)</strong>: Indica la presencia de células de pus en la muestra de orina, que puede ser "normal" o "anormal".</app-list-item>
+    <app-list-item>8. <strong>pcc - Grumos de Células de Pus (nominal)</strong>: Muestra si hay o no grumos de células de pus presentes.</app-list-item>
+    <app-list-item>9. <strong>ba - Bacterias (Bacterias, nominal)</strong>: Indica si hay bacterias presentes en la muestra de orina.</app-list-item>
+    <app-list-item>10. <strong>bgr - Glucosa en Sangre Aleatoria (numérica)</strong>: Muestra el nivel de glucosa en sangre en miligramos por decilitro (mg/dl) en un momento aleatorio.</app-list-item>
+    <app-list-item>11. <strong>bu - Urea en Sangre (numérica)</strong>: Representa la concentración de urea en sangre en miligramos por decilitro (mg/dl).</app-list-item>
+    <app-list-item>12. <strong>sc - Creatinina en Suero (numérica)</strong>: Indica la concentración de creatinina en sangre en miligramos por decilitro (mg/dl).</app-list-item>
+    <app-list-item>13. <strong>sod - Sodio (numérica)</strong>: Muestra la concentración de sodio en sangre en miliequivalentes por litro (mEq/L).</app-list-item>
+    <app-list-item>14. <strong>Pot - Potasio (Potasio, numérica)</strong>: Indica la concentración de potasio en sangre en miliequivalentes por litro (mEq/L).</app-list-item>
+    <app-list-item>15. <strong>hemo - Hemoglobina (Hemoglobina, numérica)</strong>: Muestra la concentración de hemoglobina en gramos por decilitro (g/dL) de sangre.</app-list-item>
+    <app-list-item>16. <strong>pcv - Volumen de Células Empaquetadas (numérica)</strong>: Muestra el volumen de células sanguíneas empaquetadas en porcentaje.</app-list-item>
+    <app-list-item>17. <strong>wc - Recuento de Glóbulos Blancos (numérica)</strong>: Representa el recuento de glóbulos blancos en células por microlitro (cumm) de sangre.</app-list-item>
+    <app-list-item>18. <strong>rc - Recuento de Glóbulos Rojos (numérica)</strong>: Muestra el recuento de glóbulos rojos en millones por milímetro cúbico (cmm) de sangre.</app-list-item>
+    <app-list-item>19. <strong>htn - Hipertensión (Hipertensión, nominal)</strong>: Indica si el paciente tiene hipertensión ("sí" o "no").</app-list-item>
+    <app-list-item>20. <strong>dm - Diabetes Mellitus (Diabetes Mellitus, nominal)</strong>: Muestra si el paciente tiene diabetes mellitus ("sí" o "no").</app-list-item>
+    <app-list-item>21. <strong>cad - Enfermedad de las Arterias Coronarias (Enfermedad de las Arterias Coronarias, nominal)</strong>: Indica si el paciente tiene enfermedad de las arterias coronarias ("sí" o "no").</app-list-item>
+    <app-list-item>22. <strong>appet - Apetito (nominal)</strong>: Describe el apetito del paciente, que puede ser "bueno" o "pobre".</app-list-item>
+    <app-list-item>23. <strong>pe - Edema Pedal (Edema Pedal, nominal)</strong>: Indica si el paciente tiene edema en los pies ("sí" o "no").</app-list-item>
+    <app-list-item>24. <strong>ane - Anemia (Anemia, nominal)</strong>: Describe si el paciente tiene anemia ("sí" o "no").</app-list-item>
+    <app-list-item>25. <strong>class - Clase (Clase, nominal)</strong>: Este es el atributo de salida y se utiliza para clasificar a los pacientes en dos clases: "ckd" (enfermedad renal crónica) y "notckd" (no enfermedad renal crónica).</app-list-item>
 </ul>
 
-<app-sub-title>Data preparation.</app-sub-title>
 
-<app-paragraph>At this point, with the data already known, we must determine which attributes and records (tuples) will be most useful when training our model. So we will filter our dataset to keep only those that do not affect in a negative or misleading way the performance of our model.</app-paragraph>
+<app-sub-title>Preparación de Datos</app-sub-title>
 
-<app-mini-sub-title>Discard problematic attributes.</app-mini-sub-title>
+<app-paragraph>En este punto, con los datos ya conocidos, debemos determinar qué atributos y registros (tuplas) serán más útiles al entrenar nuestro modelo. Filtraremos nuestro conjunto de datos para mantener solo aquellos que no afecten de manera negativa o engañosa el rendimiento de nuestro modelo.</app-paragraph>
 
-<app-paragraph>1. First we will make sure that there are no duplicate tuples throughout the dataset.</app-paragraph>
+<app-mini-sub-title>Descartar Atributos Problemáticos</app-mini-sub-title>
+
+<app-paragraph>1. Primero nos aseguraremos de que no haya tuplas duplicadas en todo el conjunto de datos.</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-1.png'"></app-image>
 
-<app-paragraph>2. Now we will begin to determine aspects such as missing values and/or correlations in the attributes.</app-paragraph>
+<app-paragraph>2. Ahora comenzaremos a determinar aspectos como valores faltantes y/o correlaciones en los atributos.</app-paragraph>
 
-<app-paragraph>For this we will use the correlation matrix (for the numerical values, since for the nominal values, a priori, it is not possible to use it) and missings statistics, with the following operation:</app-paragraph>
+<app-paragraph>Para esto, utilizaremos la matriz de correlación (para los valores numéricos, ya que para los valores nominales, a priori, no es posible utilizarla) y estadísticas de valores faltantes, con la siguiente operación:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-2.png'"></app-image>
 
-<app-paragraph>This will give us results similar to the following:</app-paragraph>
+<app-paragraph>Esto nos dará resultados similares a los siguientes:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-3.png'"></app-image>
 <app-image [image]="'../../../../../assets/kideny-4.png'"></app-image>
 
-<app-mini-sub-title> - RBC</app-mini-sub-title>
+<app-mini-sub-title>- RBC</app-mini-sub-title>
 
-<app-paragraph>This attribute represents the appearance of the <strong>Red blood cells.</strong> It has 152 missing values, which is 38% of the total data. Its relevance to the problem to be solved was studied, and it was determined that although there are nuances, it can be dispensed with. In addition, it is a binary nominal type, so there is not much flexibility in the imputation that can be made.
+<app-paragraph>Este atributo representa la apariencia de los <strong>Glóbulos Rojos.</strong> Tiene 152 valores faltantes, que es el 38% del total de datos. Se estudió su relevancia para el problema a resolver y se determinó que, aunque hay matices, se puede prescindir de él. Además, es de tipo nominal binario, por lo que no hay mucha flexibilidad en la imputación que se puede realizar.</app-paragraph>
 
-<app-mini-sub-title> - RBCC</app-mini-sub-title>
+<app-mini-sub-title>- RBCC</app-mini-sub-title>
 
-<app-paragraph>This attribute represents the <strong>Red Blood Cell Count.</strong> It has 131 missing values, which is 33% of the total data. According to preliminary research. This data is not one of the primary or deterministic data used in the diagnosis of kidney disease. Therefore, it is not used in this iteration.
+<app-paragraph>Este atributo representa el <strong>Recuento de Glóbulos Rojos.</strong> Tiene 131 valores faltantes, que es el 33% del total de datos. Según la investigación preliminar. Estos datos no son uno de los datos primarios o determinísticos utilizados en el diagnóstico de la enfermedad renal. Por lo tanto, no se utiliza en esta iteración.</app-paragraph>
 
-<app-mini-sub-title> - WBCC</app-mini-sub-title>
+<app-mini-sub-title>- WBCC</app-mini-sub-title>
 
-<app-paragraph>This attribute represents the <strong>White Blood Cell Count.</strong> It has 106 missing values, which is 26% of the total data. We discard it for the same reason as "<strong>RBCC</strong>."
+<app-paragraph>Este atributo representa el <strong>Recuento de Glóbulos Blancos.</strong> Tiene 106 valores faltantes, que es el 26% del total de datos. Lo descartamos por la misma razón que "<strong>RBCC</strong>."</app-paragraph>
 
-<app-mini-sub-title> - SOD</app-mini-sub-title>
+<app-mini-sub-title>- SOD</app-mini-sub-title>
 
-<app-paragraph>This attribute represents <strong>Sodium.</strong> It has 87 missing values, which is 22% of the total data. In addition to this amount of missing values, it also presents a relationship with "blood pressure" (<strong>Hypertension</strong>), an important indicator to determine this type of diseases, according to the following reference:
+<app-paragraph>Este atributo representa el <strong>Sodio.</strong> Tiene 87 valores faltantes, que es el 22% del total de datos. Además de esta cantidad de valores faltantes, también presenta una relación con "presión arterial" (<strong>Hipertensión</strong>), un indicador importante para determinar este tipo de enfermedades, según la siguiente referencia:</app-paragraph>
 
-
-    
-<app-quote [title]="'Reference'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
+<app-quote [title]="'Referencia'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
 </app-quote>
 
-<app-paragraph>Therefore, we decided to discard this attribute.</app-paragraph>
+<app-paragraph>Por lo tanto, decidimos descartar este atributo.</app-paragraph>
 
-<app-mini-sub-title> - PCV</app-mini-sub-title>
+<app-mini-sub-title>- PCV</app-mini-sub-title>
 
-<app-paragraph>This attribute represents the <strong>Packed Cell Volume</strong>. It has 71 missing values, which is 18% of the total data.  It is also highly correlated with attributes such as <strong>Hypertension</strong> (0.633 relationship points). ****, which is why we discarded it.
+<app-paragraph>Este atributo representa el <strong>Volumen de Células Empaquetadas.</strong> Tiene 71 valores faltantes, que es el 18% del total de datos. También está altamente correlacionado con atributos como <strong>Hipertensión</strong> (puntos de relación 0.633). ****, por lo que lo descartamos.</app-paragraph>
 
-<app-mini-sub-title> -  BGR</app-mini-sub-title>
+<app-mini-sub-title>- BGR</app-mini-sub-title>
 
-<app-paragraph>This attribute represents the <strong>Blood Glucose Random.</strong> It has 44 missing values, which is 11% of the total data. In addition, it is closely related to the diabetes attribute, which can become deterministic in the detection of kidney disease. According to the following reference:
+<app-paragraph>Este atributo representa la <strong>Glucosa en Sangre Aleatoria.</strong> Tiene 44 valores faltantes, que es el 11% del total de datos. Además, está estrechamente relacionado con el atributo de diabetes, que puede volverse determinante en la detección de enfermedad renal. Según la siguiente referencia:</app-paragraph>
 
+<app-quote [title]="'Referencia'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
+</app-quote>
 
-    <app-quote [title]="'Reference'"><app-paragraph><a href="https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease">https://www.kidney.org/atoz/content/about-chronic-kidney-disease#what-chronic-kidney-disease</a></app-paragraph>
-    </app-quote>
+<app-paragraph>Por lo tanto, decidimos descartar este atributo.</app-paragraph>
 
-<app-paragraph>Therefore, we decided to discard this attribute.</app-paragraph>
+<app-mini-sub-title>- PC</app-mini-sub-title>
 
-<app-mini-sub-title> - PC</app-mini-sub-title>
+<app-paragraph>Este atributo representa las <strong>Células de Pus.</strong> Tiene 65 valores faltantes, que es el 16% del total de datos. Además, la distribución de los valores binomiales está lejos de ser igual, lo que puede dificultar la imputación de los datos. También se agrega que, según la investigación, no es un aspecto determinante de la enfermedad renal. Por todas las razones anteriores, descartamos el atributo.</app-paragraph>
 
-<app-paragraph>This attribute represents the <strong>Pus Cell.</strong> It has 65 missing values, which is 16% of the total data. Also, the distribution of the binomial values is far from equal, which may make it difficult to impute the data. It is also added that, according to research, it is not a determinant aspect of renal disease. For all the above reasons, we discard the attribute.
+<app-mini-sub-title>- SU</app-mini-sub-title>
 
-<app-mini-sub-title> - SU</app-mini-sub-title>
+<app-paragraph>Este atributo representa el <strong>Azúcar.</strong> Tiene 49 valores faltantes, que es el 12% del total de datos. Ya tenemos otro atributo que nos proporciona la misma información, pero también tiene una distribución bastante desigual, lo que dificulta su tratamiento para los modelos, por lo que se descarta.</app-paragraph>
 
-<app-paragraph>This attribute represents the <strong>Sugar.</strong> It has 49 missing values, which is 12% of the total data. We already have another attribute that provides us with the same information, but it also has a quite uneven distribution, which makes it difficult to treat it for the models, so it is discarded.
+<app-mini-sub-title>- BU</app-mini-sub-title>
 
-<app-mini-sub-title> - BU</app-mini-sub-title>
+<app-paragraph>Este atributo representa la <strong>Urea en Sangre.</strong> Tiene 19 valores faltantes, que es el 5% del total de datos. Aunque no es una dimensión exagerada, está estrechamente relacionado con la <strong>Creatinina en Suero</strong> (0.586), y en el contexto de la detección de enfermedades renales, su uso viene en conjunto con la última mencionada, por lo que nos limitamos a usar <strong>Creatinina en Suero</strong> descartando el uso de <strong>Urea en Sangre.</strong></app-paragraph>
 
-<app-paragraph>This attribute represents the <strong>Blood Urea.</strong> It has 19 missing values, which is 5% of the total data. Although it is not an exaggerated dimension, it is closely related to <strong>Serum Creatinine</strong> (0.586), and in the context of renal disease detection its use comes in conjunction with the last mentioned, so we limit ourselves to using <strong>Serum Creatinine</strong> discarding the use of <strong>Blood Urea.</strong>.
+<app-mini-sub-title>Manejo de Outliers</app-mini-sub-title>
 
-<app-mini-sub-title>Handling Outliers</app-mini-sub-title>
+<app-paragraph>Ahora, después de aplicar un filtro preliminar en los atributos, queda analizar los valores en los atributos. En este caso, comenzaremos con los outliers.</app-paragraph>
 
-<app-paragraph>Now, having applied a preliminary filter on the attributes, it remains to analyze the values in the attributes. In this case we will start with the outliers.
+<app-mini-sub-title>- BP</app-mini-sub-title>
 
-<app-mini-sub-title> - BP</app-mini-sub-title>
-
-<app-paragraph>The <strong>Blood Pressure</strong> attribute has some outliers as shown:</app-paragraph>
+<app-paragraph>El atributo de <strong>Presión Arterial</strong> tiene algunos outliers, como se muestra:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-5.png'"></app-image>
 
-<app-paragraph>The alternative left in this situation is to eliminate these tuples. So we will filter the data:</app-paragraph>
+<app-paragraph>La alternativa en esta situación es eliminar estas tuplas. Así que filtraremos los datos:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-6.png'"></app-image>
 
-<app-paragraph>In the previous step we used the "Filter Example" operator to filter all those records that meet any of the conditions indicated (that its value is less than or equal to 120), or that it is a missing value. The latter is to avoid discarding all missing values, since these can be solved with other strategies, such as data imputation.</app-paragraph>
+<app-paragraph>En el paso anterior, utilizamos el operador "Filter Example" para filtrar todos aquellos registros que cumplan con cualquiera de las condiciones indicadas (que su valor sea menor o igual a 120), o que sea un valor faltante. Esto último es para evitar descartar todos los valores faltantes, ya que estos se pueden resolver con otras estrategias, como la imputación de datos.</app-paragraph>
 
-<app-mini-sub-title> - SC</app-mini-sub-title>
+<app-mini-sub-title>- SC</app-mini-sub-title>
 
-<app-paragraph>The <strong>Serum Creatinine</strong> attribute presents some considerable outliers:</app-paragraph>
+<app-paragraph>El atributo de <strong>Creatinina en Suero</strong> presenta algunos outliers considerable:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-7.png'"></app-image>
 
-<app-paragraph>To solve this, in this first iteration, we are going to stick with values less than or equal to 5. This is because, according to research, Serum Creatinine values greater than 5 are considered to be in the most severe stage of kidney disease. And we need to predict early detection, so these values, a priori, would not be of much help to us.</app-paragraph>
+<app-paragraph>Para resolver esto, en esta primera iteración, nos quedaremos con valores menores o iguales a 5. Esto se debe a que, según la investigación, los valores de Creatinina en Suero mayores a 5 se consideran en la etapa más severa de la enfermedad renal. Y necesitamos predecir la detección temprana, por lo que estos valores, a priori, no serían de mucha ayuda.</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-8.png'"></app-image>
 
-<app-mini-sub-title>Handling missing values</app-mini-sub-title>
+<app-mini-sub-title>Manejo de Valores Faltantes</app-mini-sub-title>
 
-<app-paragraph>In order to solve the problem of missing values, we impute all missing values with the average of their respective attribute. For numeric type values, this would be the mean, while for nominal (categorical) type values, it would be the most popular value. So we will have the following:</app-paragraph>
+<app-paragraph>Para resolver el problema de los valores faltantes, imputamos todos los valores faltantes con el promedio de su respectivo atributo. Para valores de tipo numérico, esto sería la media, mientras que para valores de tipo nominal (categóricos), sería el valor más popular. Así que tendremos lo siguiente:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-9.png'"></app-image>
 
-<app-mini-sub-title>Handling missing values</app-mini-sub-title>
+<app-mini-sub-title>Normalización</app-mini-sub-title>
 
-<app-paragraph>In order to solve the problem of missing values, we impute all missing values with the average of their respective attribute. For numeric type values, this would be the mean, while for nominal (categorical) type values, it would be the most popular value. So we will have the following:</app-paragraph>
-
-<app-image [image]="'../../../../../assets/kideny-10.png'"></app-image>
-
-<app-mini-sub-title>Normalization</app-mini-sub-title>
-
-<app-paragraph>Since the scale in the attributes is not the same, it is necessary to normalize our dataset so that this aspect does not impact our models (an example will be K-NN, which is very susceptible to this type of problems). Currently our dataset looks like this:</app-paragraph>
+<app-paragraph>Dado que la escala en los atributos no es la misma, es necesario normalizar nuestro conjunto de datos para que este aspecto no afecte a nuestros modelos (un ejemplo sería K-NN, que es muy susceptible a este tipo de problemas). Actualmente, nuestro conjunto de datos se ve así:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-11.png'"></app-image>
 
-<app-paragraph>After normalizing, the scale of our attributes would be as follows:</app-paragraph>
+<app-paragraph>Después de normalizar, la escala de nuestros atributos sería la siguiente:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-12.png'"></app-image>
 
-<app-callout>Note that the normalization was tested at this point in order to demonstrate the results. In practice we will normalize within the cross validation operator to avoid contamination.</app-callout>
+<app-callout>Tenga en cuenta que la normalización se probó en este punto para demostrar los resultados. En la práctica, normalizaremos dentro del operador de validación cruzada para evitar la contaminación.</app-callout>
 
-<app-sub-title>Modeling</app-sub-title>
+<app-sub-title>Modelado</app-sub-title>
 
-<app-paragraph>Now, with the dataset prepared, what remains to be done is to select the models to be used.</app-paragraph>
+<app-paragraph>Ahora, con el conjunto de datos preparado, lo que queda por hacer es seleccionar los modelos a utilizar.</app-paragraph>
 
-<app-paragraph>This particular problem, which tries to detect kidney disease early, indicating the result with a binomial data (whether it has or does not have), is a classification problem.</app-paragraph>
+<app-paragraph>Este problema en particular, que intenta detectar enfermedades renales tempranas, indicando el resultado con datos binomiales (si la tiene o no la tiene), es un problema de clasificación.</app-paragraph>
 
-<app-paragraph>For this type of problem, the algorithms that can help us are:</app-paragraph>
+<app-paragraph>Para este tipo de problema, los algoritmos que pueden ayudarnos son:</app-paragraph>
 
 <ul>
     <app-list-item>Naive Bayes</app-list-item>
-    <app-list-item>Logistic Regression</app-list-item>
+    <app-list-item>Regresión Logística</app-list-item>
     <app-list-item>K-NN</app-list-item>
 </ul>
 
-<app-paragraph>Let's see some needs and considerations of each one:</app-paragraph>
+<app-paragraph>Vamos a ver algunas necesidades y consideraciones de cada uno:</app-paragraph>
 
 <app-mini-sub-title>Naive Bayes</app-mini-sub-title>
 <ul>
-    <app-list-item>The set must not have missing values.</app-list-item>
-    <app-list-item>The attributes must be conditionally independent.</app-list-item>
-    <app-list-item>It is advisable to use the Laplace correction in the case that the conditional probability of the value of an attribute gives 0, set it to 1 to avoid the operation of 0 values and that these are multiplied among other probabilities, and misleading results are obtained.</app-list-item>
+    <app-list-item>El conjunto no debe tener valores faltantes.</app-list-item>
+    <app-list-item>Los atributos deben ser condicionalmente independientes.</app-list-item>
+    <app-list-item>Es recomendable utilizar la corrección de Laplace en el caso de que la probabilidad condicional del valor de un atributo dé 0, establecerlo en 1 para evitar la operación de valores 0 y que estos se multipliquen entre otras probabilidades, obteniendo resultados engañosos.</app-list-item>
 </ul>
 
-<app-mini-sub-title>Logistic Regression</app-mini-sub-title>
+
+<app-mini-sub-title>Regresión Logística</app-mini-sub-title>
 <ul>
-    <app-list-item>There should be no outliers.</app-list-item>
-    <app-list-item>A normal distribution is recommended.</app-list-item>
-    <app-list-item>There should be no correlated attributes.</app-list-item>
-    <app-list-item>It is advisable to put a maximum number of iterations (parameter) in case the model does not converge (does not reach the coefficients that minimize the error between predicted and actual probabilities).</app-list-item>
+    <app-list-item>No debería haber outliers.</app-list-item>
+    <app-list-item>Se recomienda una distribución normal.</app-list-item>
+    <app-list-item>No debería haber atributos correlacionados.</app-list-item>
+    <app-list-item>Se recomienda establecer un número máximo de iteraciones (parámetro) en caso de que el modelo no converja (no alcance los coeficientes que minimizan el error entre las probabilidades predichas y reales).</app-list-item>
 </ul>
 
 <app-mini-sub-title>K-NN</app-mini-sub-title>
 <ul>
-    <app-list-item>Need for normalization of the data so that the scale of all attributes is the same, and to avoid certain attributes having greater weight than others.</app-list-item>
-    <app-list-item>It is also recommended that the number of nearest neighbors taken is greater than 1, and is an odd number, and is small. Because if the K is 1 a comparison is made with itself and will give a misleading result, since you will always have a 100% prediction.</app-list-item>
-    <app-list-item>I also recommend having a "weighted" vote to take into account the distance of the neighbors for weighting (closer, the more weight it has).</app-list-item>
+    <app-list-item>Necesidad de normalización de los datos para que la escala de todos los atributos sea la misma y evitar que ciertos atributos tengan mayor peso que otros.</app-list-item>
+    <app-list-item>También se recomienda que el número de vecinos más cercanos tomados sea mayor que 1, sea un número impar y pequeño. Porque si K es 1, se hace una comparación consigo mismo y dará un resultado engañoso, ya que siempre tendrá una predicción del 100%.</app-list-item>
+    <app-list-item>También se recomienda tener un voto "ponderado" para tener en cuenta la distancia de los vecinos para la ponderación (más cercano, más peso).</app-list-item>
 </ul>
 
-<app-paragraph>With all the models selected, it remains to apply and evaluate them.</app-paragraph>
+<app-paragraph>Con todos los modelos seleccionados, queda aplicarlos y evaluarlos.</app-paragraph>
 
-<app-sub-title>Evaluation</app-sub-title>
+<app-sub-title>Evaluación</app-sub-title>
 
-<app-paragraph>For the evaluation we will use cross-validation. So we will obtain these three operators:</app-paragraph>
+<app-paragraph>Para la evaluación, utilizaremos la validación cruzada. Así que obtendremos estos tres operadores:</app-paragraph>
 
 <div class="resize-3">
     <app-image [image]="'../../../../../assets/kideny-13.png'"></app-image>
 </div>
 
-<app-paragraph>Each of these cross selections has a distribution of operators identical to the following (except for the models used):</app-paragraph>
+<app-paragraph>Cada una de estas selecciones cruzadas tiene una distribución de operadores idéntica a la siguiente (excepto por los modelos utilizados):</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-14.png'"></app-image>
 
-<app-sub-title>Results</app-sub-title>
+<app-sub-title>Resultados</app-sub-title>
 
-<app-paragraph>Regarding the data we are interested in (the results), we obtain that for:</app-paragraph>
+<app-paragraph>En cuanto a los datos que nos interesan (los resultados), obtenemos que para:</app-paragraph>
 
 <app-mini-sub-title>Naive Bayes</app-mini-sub-title>
 
 <app-image [image]="'../../../../../assets/kideny-15.png'"></app-image>
 
-<app-paragraph>Performance: 99.12%</app-paragraph>
+<app-paragraph>Rendimiento: 99.12%</app-paragraph>
 
-<app-mini-sub-title>Logistic Regression</app-mini-sub-title>
+<app-mini-sub-title>Regresión Logística</app-mini-sub-title>
 
 <app-image [image]="'../../../../../assets/kideny-16.png'"></app-image>
 
-<app-paragraph>Performance: 96.47%</app-paragraph>
+<app-paragraph>Rendimiento: 96.47%</app-paragraph>
 
 <app-mini-sub-title>K-NN</app-mini-sub-title>
 
 <app-image [image]="'../../../../../assets/kideny-17.png'"></app-image>
 
-<app-paragraph>Performance: 94.42%</app-paragraph>
+<app-paragraph>Rendimiento: 94.42%</app-paragraph>
 
-<app-paragraph>We see then that these trained models have, a priori, a very good performance, but the one that generates the best performance is Naive Bayes with 99.12%.</app-paragraph>
+<app-paragraph>Vemos entonces que estos modelos entrenados tienen, a priori, un rendimiento muy bueno, pero el que genera el mejor rendimiento es Naive Bayes con un 99.12%.</app-paragraph>
 
-<app-paragraph>Also, to compare the performance of these models we can use the so-called ROC curves, such that we obtain:</app-paragraph>
+<app-paragraph>También, para comparar el rendimiento de estos modelos, podemos utilizar las llamadas curvas ROC, de modo que obtenemos:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-18.png'"></app-image>
 
-<app-paragraph>To interpret this curve we must know that, the straighter it goes upwards, and then straight to the right, the better the performance of the model.</app-paragraph>
+<app-paragraph>Para interpretar esta curva debemos saber que, cuanto más recta suba y luego recta a la derecha, mejor será el rendimiento del modelo.</app-paragraph>
 
-<app-paragraph>We see then that the model with the worst performance is Logistic Regression, while those with the best performance are K-nn, and Naive Bayes. So at this point, we will select the Naive Bayes model to undergo a final optimization.</app-paragraph>
+<app-paragraph>Vemos entonces que el modelo con peor rendimiento es la Regresión Logística, mientras que aquellos con mejor rendimiento son K-nn y Naive Bayes. Así que en este punto, seleccionaremos el modelo de Naive Bayes para someterlo a una optimización final.</app-paragraph>
 
-<app-sub-title>Optimizing the model</app-sub-title>
+<app-sub-title>Optimización del Modelo</app-sub-title>
 
-<app-paragraph>One of the ways to optimize the models is with the use of Feature Selection. Applying this operator to the current process, we obtain that:</app-paragraph>
+<app-paragraph>Una de las formas de optimizar los modelos es mediante el uso de la Selección de Características. Aplicando este operador al proceso actual, obtenemos que:</app-paragraph>
 
 <div class="resize-2">
     <app-image [image]="'../../../../../assets/kideny-19.png'"></app-image>
 </div>
 
-<app-callout>Note that we make use of an evolutionary algorithm for feature selection, since at this point it is one of the algorithms that could give us better performance (better combination of attributes).</app-callout>
+<app-callout>Tenga en cuenta que hacemos uso de un algoritmo evolutivo para la selección de características, ya que en este punto es uno de los algoritmos que podría darnos un mejor rendimiento (mejor combinación de atributos).</app-callout>
 
-<app-paragraph>Running the process gives us that set of attributes that generates the best performance, which is:</app-paragraph>
+<app-paragraph>Ejecutando el proceso, obtenemos ese conjunto de atributos que genera el mejor rendimiento, que es:</app-paragraph>
 
 <div class="resize">
     <app-image [image]="'../../../../../assets/kideny-20.png'"></app-image>
 </div>
 
-<app-callout>Note that the selected attributes are those marked with a "1".</app-callout>
+<app-callout>Tenga en cuenta que los atributos seleccionados son aquellos marcados con un "1".</app-callout>
 
-<app-paragraph>And with respect to performance, we have the following result:</app-paragraph>
+<app-paragraph>Y con respecto al rendimiento, tenemos el siguiente resultado:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/kideny-21.png'"></app-image>
 
-<app-paragraph>We see a slight improvement of 0.31%, which is not much, but a priori better than the previous result.</app-paragraph>
+<app-paragraph>Vemos una ligera mejora del 0.31%, que no es mucho, pero a priori es mejor que el resultado anterior.</app-paragraph>
 
-<app-sub-title>Conclusions</app-sub-title>
+<app-sub-title>Conclusiones</app-sub-title>
 
-<app-paragraph>As conclusions, to say that although this is the first iteration, the results at first sight look satisfactory. But one thing is for sure, we must continue testing on the model obtained, to avoid false hopes, and to rule out cases such as the presence of overfitting. We must always keep an eye open in these cases of super positive performance, as they are indications of possible deception. So in the next iterations we should pay special attention to the steps performed, and correct what is necessary, if so.</app-paragraph>
-
+<app-paragraph>Como conclusiones, decir que aunque esta es la primera iteración, los resultados a primera vista parecen satisfactorios. Pero una cosa es segura, debemos continuar probando en el modelo obtenido, para evitar falsas esperanzas, y descartar casos como la presencia de sobreajuste. Siempre debemos estar alerta en estos casos de rendimiento súper positivo, ya que son indicativos de posibles engaños. Entonces, en las próximas iteraciones, debemos prestar especial atención a los pasos realizados y corregir lo necesario, si es necesario.</app-paragraph>

@@ -1,7 +1,111 @@
 {
+    "members-info": {
+        "matias-info": "I am a student of computer engineering and a delegate of the Faculty of Engineering of the Catholic University of Uruguay, and right now I am getting into the world of artificial intelligence. Why? Nowadays, with the boom of this discipline in multiple areas, we can see the great amount of possibilities that it offers us, not only to solve current problems, but also to develop our creative thinking and to propose innovative ideas and tools."
+    },
     "cisp-dm": {
        "title": "CRISP-DM",
        "p1": "CRISP-DM (Cross-Industry Standard Process for Data Mining) is a method/process for guiding data mining work.",
        "p2": "What CRISP-DM does is provide a data mining lifecycle, consisting of a total of 6 phases (described) with certain common and important dependencies (explained) among them, promoting an iterative yet flexible model, making it applicable to various business problems to address."
-    }
+    },
+    "ckd-study-case": {
+        "title": "Kidney Detection",
+        "problem-context-analysis-data": {
+            "sub-title": "Problem and context analysis and data.",
+            "overview": {
+                "mini-sub-title": "Overview",
+                "p1": "The problem at hand lies in early detection of chronic kidney disease."
+            },
+            "context": {
+                "mini-sub-title": "Context",
+                "p1": "Chronic kidney disease affects people globally. But there are some parts of the world where they are more common than others. In fact, there is evidence to suggest that in countries still in the developing stages, they are affected more than in developed countries. But even so, aspects such as detection and treatment are highly influenced by socioeconomic level, cultural and political factors, etc. Therefore, its presence and severity throughout the sphere (the earth) could undergo severe changes. The latter may be due to the fact that detection of kidney disease is invasive, costly, time-consuming, and sometimes risky. So many patients arrive at late stages, and it is worse in developing countries, where quality medical care may be scarce. Therefore, there is tremendous benefit in early detection tools and procedures for this disease, especially in the most vulnerable and affected countries and regions."
+            }
+        },
+        "reference": {
+            "title": "Reference"
+        },
+        "Data-analysis": {
+            "title": "Data analysis",
+                "dataset-description": {
+                  "app-paragraph": "This time, we have a dataset of 25 attributes representing different physical and non-physical aspects, as well as medical issues affecting people located in India (a country with some difficult contexts):",
+                  "attributes-list": {
+                    "1": {
+                      "app-list-item": "1. <strong>age - Age (Age, numeric)</strong>: Represents the patient's age in years."
+                    },
+                    "2": {
+                      "app-list-item": "2. <strong>bp - Blood Pressure (numeric)</strong>: Displays the patient's blood pressure in mm/Hg (millimeters of mercury)."
+                    },
+                    "3": {
+                      "app-list-item": "3. <strong>sg - Specific Gravity (nominal)</strong>: This is a categorical attribute indicating the specific gravity of the urine. It can have several nominal values, such as 1.005, 1.010, 1.015, 1.020, 1.025."
+                    },
+                    "4": {
+                      "app-list-item": "4. <strong>al - Albumin (Albumin, nominal)</strong>: Represents the presence of albumin in the urine. Nominal values include 0, 1, 2, 2, 3, 4 and 5, indicating the amount of albumin present."
+                    },
+                    "5": {
+                      "app-list-item": "5. <strong>su - Sugar (nominal)</strong>: Indicates the presence of sugar in the urine. The nominal values are 0, 1, 2, 2, 3, 4 and 5, representing different sugar levels."
+                    },
+                    "6": {
+                      "app-list-item": "6. <strong>rbc - Red Blood Cells (nominal)</strong>: Describes the appearance of the red blood cells in the urine sample, which may be \"normal\" or \"abnormal\"."
+                    },
+                    "7": {
+                      "app-list-item": "7. <strong>pc - Pus Cell (nominal)</strong>: Indicates the presence of pus cells in the urine sample, which may be \"normal\" or \"abnormal\"."
+                    },
+                    "8": {
+                      "app-list-item": "8. <strong>pcc - Pus Cell Clumps (nominal)</strong>: Shows whether or not pus cell clumps are present."
+                    },
+                    "9": {
+                      "app-list-item": "9. <strong>ba - Bacteria (Bacteria, nominal)</strong>: Indicates whether bacteria are present in the urine sample."
+                    },
+                    "10": {
+                      "app-list-item": "10. <strong>bgr - Blood Glucose Random (numerical)</strong>: Displays the blood glucose level in milligrams per deciliter (mg/dl) at a random time."
+                    },
+                    "11": {
+                      "app-list-item": "11. <strong>bu - Blood Urea (numerical)</strong>: Represents the blood urea concentration in milligrams per deciliter (mg/dl)."
+                    },
+                    "12": {
+                      "app-list-item": "12. <strong>sc - Serum Creatinine (numeric)</strong>: Indicates the blood creatinine concentration in milligrams per deciliter (mg/dl)."
+                    },
+                    "13": {
+                      "app-list-item": "13. <strong>sod - Sodium (numeric)</strong>: Shows blood sodium concentration in milliequivalents per liter (mEq/L)."
+                    },
+                    "14": {
+                      "app-list-item": "14. <strong>Pot - Potassium (Potassium, numeric)</strong>: Indicates the blood potassium concentration in milliequivalents per liter (mEq/L)."
+                    },
+                    "15": {
+                      "app-list-item": "15. <strong>hemo - Hemoglobin (Hemoglobin, numeric)</strong>: Shows the hemoglobin concentration in grams per deciliter (g/dL) of blood."
+                    },
+                    "16": {
+                      "app-list-item": "16. 16. <strong>pcv - Packed Cell Volume (numeric)</strong>: Shows the volume of packed blood cells in percent."
+                    },
+                    "17": {
+                      "app-list-item": "17. <strong>wc - White Blood Cell Count (numerical)</strong>: Represents the white blood cell count in cells per microliter (cumm) of blood."
+                    },
+                    "18": {
+                      "app-list-item": "18. <strong>rc - Red Blood Cell Count (numerical)</strong>: Displays the red blood cell count in millions per cubic millimeter (cmm) of blood."
+                    },
+                    "19": {
+                      "app-list-item": "19. <strong>htn - Hypertension (Hypertension, nominal)</strong>: Indicates whether the patient has hypertension (\"yes\" or \"no\")."
+                    },
+                    "20": {
+                      "app-list-item": "20. <strong>dm - Diabetes Mellitus (Diabetes Mellitus, nominal)</strong>: Shows whether the patient has diabetes mellitus (\"yes\" or \"no\")."
+                    },
+                    "21": {
+                      "app-list-item": "21. <strong>cad - Coronary Artery Disease (Coronary Artery Disease, nominal)</strong>: Indicates whether the patient has coronary artery disease (\"yes\" or \"no\")."
+                    },
+                    "22": {
+                      "app-list-item": "22. <strong>appet - Appetite (nominal)</strong>: Describes the patient's appetite, which may be \"good\" or \"poor.\""
+                    },
+                    "23": {
+                      "app-list-item": "23. <strong>pe - Pedal Edema (Pedal Edema, nominal)</strong>: Indicates whether the patient has foot edema (\"yes\" or \"no\")."
+                    },
+                    "24": {
+                      "app-list-item": "24. <strong>ane - Anemia (Anemia, nominal)</strong>: Describes whether the patient has anemia (\"yes\" or \"no\")."
+                    },
+                    "25": {
+                      "app-list-item": "25. <strong>class - Class (Class, nominal)</strong>: This is the output attribute and is used to classify patients into two classes: \"ckd\" (chronic kidney disease) and \"notckd\" (no chronic kidney disease)."
+                    }
+                  }
+                }
+              }
+              
+        }
 }

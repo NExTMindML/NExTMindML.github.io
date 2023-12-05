@@ -1,66 +1,66 @@
-<app-tittle>Low Performance</app-tittle>
+<app-tittle>Rendimiento Bajo</app-tittle>
 
 <app-paragraph>
-    Machine Learning presents what is called the "Generalization Problem".
+    El Aprendizaje Automático presenta lo que se llama el "Problema de Generalización".
 </app-paragraph>
 
 <app-paragraph>
-    The generalization problem refers to how well the concepts learned from the Machine Learning model apply to specific examples not seen by the model when it was learning.
+    El problema de generalización se refiere a qué tan bien se aplican los conceptos aprendidos del modelo de Aprendizaje Automático a ejemplos específicos no vistos por el modelo cuando estaba aprendiendo.
 </app-paragraph>
 
 <app-paragraph>
-    Thus, the cause of poor performance is related to this generalization problem, which can be divided into two types: Overfitting and Underfitting.
+    Así, la causa del rendimiento deficiente está relacionada con este problema de generalización, que se puede dividir en dos tipos: sobreajuste y subajuste.
 </app-paragraph>
 
-<app-sub-title>Overfitting</app-sub-title>
+<app-sub-title>Sobreajuste</app-sub-title>
 
 <app-paragraph>
-    Overfitting refers to learning the training data so well that it does not reflect the same performance/results with the new data (it does not generalize).
-</app-paragraph>
-
-<app-paragraph>
-    This is the most common problem present in practice, and is more of a problem for non-parametric algorithms, which have more flexibility when learning the objective function.
+    El sobreajuste se refiere a aprender tan bien los datos de entrenamiento que no refleja el mismo rendimiento/resultados con los nuevos datos (no generaliza).
 </app-paragraph>
 
 <app-paragraph>
-    This type of problem can be limited with validation datasets, and by using resampling techniques.
-</app-paragraph>
-
-<app-sub-title>Underfitting</app-sub-title>
-
-<app-paragraph>
-    Underfitting refers to the failure to correctly learn the problem from the training data, so it is easy to detect.
+    Este es el problema más común presente en la práctica y es más un problema para los algoritmos no paramétricos, que tienen más flexibilidad al aprender la función objetivo.
 </app-paragraph>
 
 <app-paragraph>
-    The solution to this type of problem is to alternate between the Machine Learning algorithms used.
+    Este tipo de problema se puede limitar con conjuntos de datos de validación y mediante el uso de técnicas de remuestreo.
 </app-paragraph>
 
-<app-sub-title>Sweet spot</app-sub-title>
+<app-sub-title>Subajuste</app-sub-title>
 
 <app-paragraph>
-    Ideally, in practice, there should be a balance between overfitting and underfitting, so the sweet spot (the equilibrium point) should be taken into account.
+    El subajuste se refiere a la incapacidad de aprender correctamente el problema a partir de los datos de entrenamiento, por lo que es fácil de detectar.
 </app-paragraph>
 
 <app-paragraph>
-    The sweet spot is the previous point where the error in the training data starts to increase if the model has good skills on the training data and the new data.
+    La solución a este tipo de problema es alternar entre los algoritmos de Aprendizaje Automático utilizados.
 </app-paragraph>
 
-<app-sub-title>Summary</app-sub-title>
+<app-sub-title>Punto Óptimo</app-sub-title>
 
-<app-paragraph>In this section we saw:
+<app-paragraph>
+    Idealmente, en la práctica, debería haber un equilibrio entre el sobreajuste y el subajuste, por lo que se debe tener en cuenta el punto óptimo (el punto de equilibrio).
+</app-paragraph>
+
+<app-paragraph>
+    El punto óptimo es el punto anterior donde el error en los datos de entrenamiento comienza a aumentar si el modelo tiene buenas habilidades en los datos de entrenamiento y los nuevos datos.
+</app-paragraph>
+
+<app-sub-title>Resumen</app-sub-title>
+
+<app-paragraph>En esta sección vimos:
 </app-paragraph>
 
 <ul>
     <app-list-item>
-        Overfitting: Good performance on the training data, but poor generalization on the new data that is applied.
+        Sobreajuste: Buen rendimiento en los datos de entrenamiento, pero mala generalización en los nuevos datos que se aplican.
     </app-list-item>
 
     <app-list-item>
-        Underfitting: Poor performance in the training data and poor generalization in the new data applied.
+        Subajuste: Mal rendimiento en los datos de entrenamiento y mala generalización en los nuevos datos aplicados.
     </app-list-item>
 
     <app-list-item>
-        Sweet spot: the optimal equilibrium point at which a learning model works most efficiently and effectively.
+        Punto óptimo: el punto de equilibrio óptimo en el cual un modelo de aprendizaje funciona de manera más eficiente y efectiva.
     </app-list-item>
 </ul>

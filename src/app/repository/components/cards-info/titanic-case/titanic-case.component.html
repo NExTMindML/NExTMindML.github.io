@@ -1,98 +1,98 @@
 <app-tittle>Titanic</app-tittle>
 
-<app-sub-title>Introduction</app-sub-title>
+<app-sub-title>Introducción</app-sub-title>
 
-<app-paragraph>Hello! In this section we will go step by step through the process of building a Machine Learning algorithm dedicated to predict the supervenience of each passenger of the Titanic.</app-paragraph>
+<app-paragraph>¡Hola! En esta sección iremos paso a paso a través del proceso de construir un algoritmo de Machine Learning dedicado a predecir la supervivencia de cada pasajero del Titanic.</app-paragraph>
 
-<app-paragraph>To achieve this final goal, we will go through certain stages following the "Cross Industry Standard Process for Data Mining," or in other words, the CRISP-DM. So by way of summary, we will look at the following:</app-paragraph>
-
-<ul>
-    <app-list-item>Understanding the business and the data.</app-list-item>
-    <app-list-item>Data preparation.</app-list-item>
-    <app-list-item>Modeling.</app-list-item>
-    <app-list-item>Evaluation.</app-list-item>
-</ul>
-
-<app-paragraph>First we will base our explanation and build the model using RapidMiner, then we will do the same steps of selection and modeling in Python, to finally compare both results and reach a conclusion.</app-paragraph>
-
-<app-paragraph>Let's get to work!</app-paragraph>
-
-<app-sub-title>Understanding the "business" and the data.</app-sub-title>
-
-<app-mini-sub-title>The "business"</app-mini-sub-title>
-
-<app-paragraph>When we talk about understanding the "business," we mean understanding the problem/situation we are analyzing. For this, it can be very useful to ask questions such as:</app-paragraph>
+<app-paragraph>Para lograr este objetivo final, pasaremos por ciertas etapas siguiendo el "Cross Industry Standard Process for Data Mining" o, en otras palabras, el CRISP-DM. Así que, a modo de resumen, veremos lo siguiente:</app-paragraph>
 
 <ul>
-    <app-list-item>What problem does the data translate?</app-list-item>
-    <app-list-item>Do I understand the problem I am trying to solve?</app-list-item>
-    <app-list-item>What does my data represent?</app-list-item>
-    <app-list-item>What do I want to do/predict?</app-list-item>
+    <app-list-item>Entender el negocio y los datos.</app-list-item>
+    <app-list-item>Preparación de datos.</app-list-item>
+    <app-list-item>Modelado.</app-list-item>
+    <app-list-item>Evaluación.</app-list-item>
 </ul>
 
-<app-paragraph>In this case, since we are working on a known problem/event, it is easy to understand the "business." Our intention is to predict the survival of an individual in the catastrophe of the sinking of the ship "Titanic," so we are facing a classification problem (survive or not).</app-paragraph>
+<app-paragraph>Primero basaremos nuestra explicación y construiremos el modelo utilizando RapidMiner, luego realizaremos los mismos pasos de selección y modelado en Python, para finalmente comparar ambos resultados y llegar a una conclusión.</app-paragraph>
 
-<app-mini-sub-title>The data</app-mini-sub-title>
+<app-paragraph>¡Manos a la obra!</app-paragraph>
 
-<app-paragraph>Our current dataset represents in each of its tuples the data of a passenger, each tuple has a total of 12 attributes which have different types and domains. We have:</app-paragraph>
+<app-sub-title>Entender el "negocio" y los datos.</app-sub-title>
+
+<app-mini-sub-title>El "negocio"</app-mini-sub-title>
+
+<app-paragraph>Cuando hablamos de entender el "negocio", nos referimos a comprender el problema/situación que estamos analizando. Para esto, puede ser muy útil hacer preguntas como:</app-paragraph>
 
 <ul>
-    <app-list-item>PassengerId: A unique identifier given to each tuple of the dataset. Type: numeric.</app-list-item>
-    <app-list-item>Survived: Indicates whether the passenger in question survived or not. Type: binomial numeric with value 1 (survived) or 0 (did not survive) (This is our target variable).</app-list-item>
-    <app-list-item>Pclass: The class in which the passenger was traveling. Type: numeric with 3 possible values, 1 (first class), 2 (second class), 3 (third class).</app-list-item>
-    <app-list-item>Name: The passenger's name. Type: categorical.</app-list-item>
-    <app-list-item>Sex: The passenger's sex. Type: binomial categorical with value "male" (if male) or "female" (if female).</app-list-item>
-    <app-list-item>Age: The passenger's age. Type: numeric, integer.</app-list-item>
-    <app-list-item>SibSp: The number of siblings or spouses of the passenger, on board. Type: numeric.</app-list-item>
-    <app-list-item>Parch: The number of parents or children of the passenger, on board. Type: numeric.</app-list-item>
-    <app-list-item>Ticket11: The passenger's ticket number. Type: categorical.</app-list-item>
-    <app-list-item>Fare: The price of the ticket paid by the passenger. Type: numeric.</app-list-item>
-    <app-list-item>Cabin: The passenger's cabin number. Type: categorical.</app-list-item>
-    <app-list-item>Embarked: The port where the passenger embarked. Type: categorical with 3 possible values, "C" (Cherbourg), "Q" (Queenstown), "S" (Southampton).</app-list-item>
+    <app-list-item>¿Qué problema traduce los datos?</app-list-item>
+    <app-list-item>¿Entiendo el problema que estoy tratando de resolver?</app-list-item>
+    <app-list-item>¿Qué representa mis datos?</app-list-item>
+    <app-list-item>¿Qué quiero hacer/predict?</app-list-item>
 </ul>
 
-<app-paragraph>With all the recognized data, we can make a preliminary analysis and propose some hypotheses about them in their usefulness in predicting our target variable.</app-paragraph>
+<app-paragraph>En este caso, dado que estamos trabajando en un problema/evento conocido, es fácil entender el "negocio". Nuestra intención es predecir la supervivencia de un individuo en la catástrofe del hundimiento del barco "Titanic", por lo que nos enfrentamos a un problema de clasificación (sobrevivir o no).</app-paragraph>
 
-<app-paragraph>For example, it seems sensible to say that the passenger's name is not a data that provides much information to determine his survival. On the other hand, it seems that age or sex may play a role, based on the "women and children first in the boats" scoop.</app-paragraph>
+<app-mini-sub-title>Los datos</app-mini-sub-title>
 
-<app-paragraph>But, at the end of the day, it is when we make use of *cleansing* and attribute selection tactics that we will be able to know more reliably which attributes will have a certain level of performance when applied by our model.</app-paragraph>
-
-<app-paragraph>Knowing a little about the context of our problem, what we want to do, and what we currently have, we can proceed with our modeling process, the preparation of our data.</app-paragraph>
-
-<app-paragraph>When preparing our data, it is useful to have at hand those issues to which we have to pay attention, such as:</app-paragraph>
+<app-paragraph>Nuestro conjunto de datos actual representa en cada una de sus tuplas los datos de un pasajero, cada tupla tiene un total de 12 atributos que tienen diferentes tipos y dominios. Tenemos:</app-paragraph>
 
 <ul>
-    <app-list-item>Presence of *missing values.</app-list-item>
-    <app-list-item>Presence of outliers.</app-list-item>
-    <app-list-item>The distribution of our data.</app-list-item>
-    <app-list-item>The scale of our data.</app-list-item>
+    <app-list-item>PassengerId: Un identificador único dado a cada tupla del conjunto de datos. Tipo: numérico.</app-list-item>
+    <app-list-item>Survived: Indica si el pasajero en cuestión sobrevivió o no. Tipo: binomial numérico con valor 1 (sobrevivió) o 0 (no sobrevivió) (esta es nuestra variable objetivo).</app-list-item>
+    <app-list-item>Pclass: La clase en la que viajaba el pasajero. Tipo: numérico con 3 valores posibles, 1 (primera clase), 2 (segunda clase), 3 (tercera clase).</app-list-item>
+    <app-list-item>Name: El nombre del pasajero. Tipo: categórico.</app-list-item>
+    <app-list-item>Sex: El sexo del pasajero. Tipo: categórico binomial con valor "male" (si es masculino) o "female" (si es femenino).</app-list-item>
+    <app-list-item>Age: La edad del pasajero. Tipo: numérico, entero.</app-list-item>
+    <app-list-item>SibSp: El número de hermanos o cónyuges del pasajero a bordo. Tipo: numérico.</app-list-item>
+    <app-list-item>Parch: El número de padres o hijos del pasajero a bordo. Tipo: numérico.</app-list-item>
+    <app-list-item>Ticket11: El número de boleto del pasajero. Tipo: categórico.</app-list-item>
+    <app-list-item>Fare: El precio del boleto pagado por el pasajero. Tipo: numérico.</app-list-item>
+    <app-list-item>Cabin: El número de cabina del pasajero. Tipo: categórico.</app-list-item>
+    <app-list-item>Embarked: El puerto donde el pasajero embarcó. Tipo: categórico con 3 valores posibles, "C" (Cherbourg), "Q" (Queenstown), "S" (Southampton).</app-list-item>
 </ul>
 
-<app-paragraph>These are just some of the most common issues to which we have to pay attention when preparing our data. Of course, depending on the algorithm(s) we use, and the problem we are trying to solve, we will be more or less robust to the presence of some of them, or we will give more or less importance to some of them (for example, the case of fraud detection).</app-paragraph>
+<app-paragraph>Con todos los datos reconocidos, podemos hacer un análisis preliminar y proponer algunas hipótesis sobre su utilidad para predecir nuestra variable objetivo.</app-paragraph>
 
-<app-paragraph>Let's go to RapidMiner and see the "quality" of our dataset.</app-paragraph>
+<app-paragraph>Por ejemplo, parece sensato decir que el nombre del pasajero no es un dato que proporcione mucha información para determinar su supervivencia. Por otro lado, parece que la edad o el sexo pueden desempeñar un papel, basándonos en la idea de "mujeres y niños primero en los botes".</app-paragraph>
+
+<app-paragraph>Pero, al final del día, es cuando hagamos uso de tácticas de "limpieza" y selección de atributos que podremos saber de manera más confiable qué atributos tendrán cierto nivel de rendimiento cuando se apliquen por nuestro modelo.</app-paragraph>
+
+<app-paragraph>Conociendo un poco sobre el contexto de nuestro problema, lo que queremos hacer y lo que tenemos actualmente, podemos proceder con nuestro proceso de modelado, la preparación de nuestros datos.</app-paragraph>
+
+<app-paragraph>Cuando preparamos nuestros datos, es útil tener a mano esos problemas a los que debemos prestar atención, como:</app-paragraph>
+
+<ul>
+    <app-list-item>Presencia de valores *faltantes.</app-list-item>
+    <app-list-item>Presencia de valores atípicos.</app-list-item>
+    <app-list-item>La distribución de nuestros datos.</app-list-item>
+    <app-list-item>La escala de nuestros datos.</app-list-item>
+</ul>
+
+<app-paragraph>Estos son solo algunos de los problemas más comunes a los que debemos prestar atención al preparar nuestros datos. Por supuesto, según el algoritmo o algoritmos que usemos y el problema que estemos tratando de resolver, seremos más o menos resistentes a la presencia de algunos de ellos, o daremos más o menos importancia a algunos de ellos (por ejemplo, en el caso de la detección de fraudes).</app-paragraph>
+
+<app-paragraph>Vamos a RapidMiner y veamos la "calidad" de nuestro conjunto de datos.</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-1.png'"></app-image>
 
-<app-paragraph>In the first instance, we can see that the "Cabin" attribute has quite a lot of missing data. On the other hand, "age" also has some missing data, but in this first visualization, it seems to be much less than "Cabin".</app-paragraph>
+<app-paragraph>En primera instancia, podemos ver que el atributo "Cabin" tiene bastante información faltante. Por otro lado, "Age" también tiene algunos datos faltantes, pero en esta primera visualización parece ser mucho menos que "Cabin".</app-paragraph>
 
-<app-paragraph>If we get the statistics of all our attributes, we will see that:</app-paragraph>
+<app-paragraph>Si obtenemos las estadísticas de todos nuestros atributos, veremos que:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-2.png'"></app-image>
 
-<app-paragraph>There are indeed some attributes with missing values, more specifically they are:</app-paragraph>
+<app-paragraph>De hecho, hay algunos atributos con valores faltantes, más específicamente son:</app-paragraph>
 
 <ul>
-    <app-list-item>"Age" with 177 missing values.</app-list-item>
-    <app-list-item>"Cabin" with 687 missing values.</app-list-item>
-    <app-list-item>"Embarked" with 2 missing values.</app-list-item>
+    <app-list-item>"Age" con 177 valores faltantes.</app-list-item>
+    <app-list-item>"Cabin" con 687 valores faltantes.</app-list-item>
+    <app-list-item>"Embarked" con 2 valores faltantes.</app-list-item>
 </ul>
 
-<app-paragraph>On the other hand, if we want to analyze the presence of outliers, we should first determine which of the current attributes are candidates for this type of problem. For example, the attribute "Survived," which is a binomial, cannot have outlier data because its only possible values are 1 and 0, and in this case this characteristic is being fulfilled, the same happens with the attribute "Pclass," for example.</app-paragraph>
+<app-paragraph>Por otro lado, si queremos analizar la presencia de valores atípicos, primero debemos determinar cuáles de los atributos actuales son candidatos para este tipo de problema. Por ejemplo, el atributo "Survived", que es binomial, no puede tener datos atípicos porque sus únicos valores posibles son 1 y 0, y en este caso esta característica se cumple, lo mismo sucede con el atributo "Pclass", por ejemplo.</app-paragraph>
 
-<app-paragraph>Likewise, the attribute that represents the names of the passengers ("Name") will not be able to have outlier data either, especially because it is not a numeric data.</app-paragraph>
+<app-paragraph>Asimismo, el atributo que representa los nombres de los pasajeros ("Name") tampoco podrá tener datos atípicos, especialmente porque no es un dato numérico.</app-paragraph>
 
-<app-paragraph>If we continue to apply the same ideas for the rest of the data, we will obtain that the candidates we should pay attention to if we are looking for outliers are:</app-paragraph>
+<app-paragraph>Si continuamos aplicando las mismas ideas para el resto de los datos, obtendremos que los candidatos a los que debemos prestar atención si buscamos valores atípicos son:</app-paragraph>
 
 <ul>
     <app-list-item>"Age"</app-list-item>
@@ -101,215 +101,216 @@
     <app-list-item>"Fare"</app-list-item>
 </ul>
 
-<app-paragraph>So, having obtained those data, what we have to do now is to analyze them carefully. A good initial visualization is to look at the minimum, maximum, and average values, so by selecting the attributes, we get that:</app-paragraph>
+<app-paragraph>Entonces, habiendo obtenido esos datos, lo que debemos hacer ahora es analizarlos cuidadosamente. Una buena visualización inicial es observar los valores mínimo, máximo y promedio, así que seleccionando los atributos, obtenemos que:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-3.png'"></app-image>
 
-<app-paragraph>We see that, for example, the "Age" attribute, while having a maximum value of 80, averages about 30, which is not that far off. In addition, we can see the mini bar chart provided which roughly indicates the most common ages, which agrees with the calculations mentioned above, as we can see how the popularity of data is centered between the values of 15~20 and ~40, while the higher the age, the less occurrences of the same there are. We can say then that, although this attribute has data somewhat far apart, it is not such an alarming situation.</app-paragraph>
+<app-paragraph>Vemos que, por ejemplo, el atributo "Age", aunque tiene un valor máximo de 80, tiene un promedio de alrededor de 30, lo cual no está tan lejos. Además, podemos ver el mini gráfico de barras proporcionado que indica aproximadamente las edades más comunes, lo cual concuerda con los cálculos mencionados anteriormente, ya que podemos ver cómo la popularidad de los datos se centra entre los valores de 15-20 y ~40, mientras más alta sea la edad, menos ocurrencias de la misma hay. Podemos decir entonces que, aunque este atributo tiene datos un tanto alejados, no es una situación tan alarmante.</app-paragraph>
 
-<app-paragraph>On the other hand, if we go to the attributes of "SibSp" and "Parch," which have a similar behavior between them, we see, thanks to the graphs presented that the great majority of data in the attributes is in the minimum value of 0, having a maximum of 8 for the case of "SibSp," and 6 for the case of "Parch." In addition, we see that in general the average value in both cases is very far from the highest values, being the average of "SibSp" 0.523 and that of "Parch" 0.382. Although, although it seems a call for attention, we must take into account the meaning of the data. In this case, as mentioned above, these attributes represent the number of passengers "related" in some way or another to a certain passenger, which must be taken into account in the final analysis.</app-paragraph>
+<app-paragraph>Por otro lado, si nos dirigimos a los atributos de "SibSp" y "Parch", que tienen un comportamiento similar entre ellos, vemos, gracias a los gráficos presentados, que la gran mayoría de los datos en los atributos están en el valor mínimo de 0, teniendo un máximo de 8 para el caso de "SibSp" y 6 para el caso de "Parch". Además, vemos que en general el valor promedio en ambos casos está muy lejos de los valores más altos, siendo el promedio de "SibSp" 0.523 y el de "Parch" 0.382. Aunque, aunque parece una llamada de atención, debemos tener en cuenta el significado de los datos. En este caso, como se mencionó anteriormente, estos atributos representan el número de pasajeros "relacionados" de alguna manera a cierto pasajero, lo cual debe tenerse en cuenta en el análisis final.</app-paragraph>
 
-<app-paragraph>Finally, being the most differentiating case, we obtain that the attribute "Fare" does have outliers. We say this because we see that the minimum value in this case is 0, while the maximum is 512.329, being the average 32.204. This denotes that the maximum value of this attribute is an outlier. In addition, if we pay attention to the graphs, we also see that there are some data with values between 200,000 and 300,000 which are considerably high compared to the majority of data, which is located between 0 and 20,000. So we conclude that outliers are present in this attribute, which we will have to resolve.</app-paragraph>
+<app-paragraph>Finalmente, siendo el caso más diferenciador, obtenemos que el atributo "Fare" sí tiene valores atípicos. Decimos esto porque vemos que el valor mínimo en este caso es 0, mientras que el máximo es 512.329, siendo el promedio 32.204. Esto denota que el valor máximo de este atributo es un valor atípico. Además, si prestamos atención a los gráficos, también vemos que hay algunos datos con valores entre 200,000 y 300,000 que son considerablemente altos en comparación con la mayoría de los datos, que se encuentran entre 0 y 20,000. Así que concluimos que hay valores atípicos en este atributo, que tendremos que resolver.</app-paragraph>
 
-<app-paragraph>A very useful tool to visualize the distribution of our data are the graphs, in this case, if we make use of the "Scatter" graph we will be able to see in a better way the points that are farther away from the popular values. In the following we apply this visualization for the "Fare" attribute:</app-paragraph>
+<app-paragraph>Una herramienta muy útil para visualizar la distribución de nuestros datos son los gráficos, en este caso, si hacemos uso del gráfico "Scatter" podremos ver de una mejor manera los puntos que están más alejados de los valores populares. En lo siguiente aplicamos esta visualización para el atributo "Fare":</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-4.png'"></app-image>
 
-<app-paragraph>We see then that there are some points (highlighted in the red box in the image) that are quite far from the normal values.</app-paragraph>
+<app-paragraph>Entonces vemos que hay algunos puntos (destacados en el recuadro rojo en la imagen) que están bastante lejos de los valores normales.</app-paragraph>
 
-<app-paragraph>Moreover, if we make use of the "Detect Outlier" operator offered by RapidMiner, we can see how the cases framed in the box are detected:</app-paragraph>
+<app-paragraph>Además, si hacemos uso del operador "Detectar Valor Atípico" ofrecido por RapidMiner, podemos ver cómo se detectan los casos enmarcados en el cuadro:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-5.png'"></app-image>
 
-<app-paragraph>The points colored in green are those that were classified as "outliers," while those in blue are those that were not (note that for the "Detect Outlier" operator, the parameter indicating the number of "outliers" to be detected was initialized to 10, its default value).</app-paragraph>
+<app-paragraph>Los puntos coloreados en verde son aquellos que fueron clasificados como "valores atípicos" (outliers), mientras que los azules son aquellos que no lo fueron (ten en cuenta que para el operador "Detectar Outliers", el parámetro que indica el número de "valores atípicos" a detectar se inicializó en 10, su valor predeterminado).</app-paragraph>
 
-<app-paragraph>This type of visualizations/tools helps us to have an initial determination of the number of "outliers," which will be very useful when correcting this issue.</app-paragraph>
+<app-paragraph>Este tipo de visualizaciones/herramientas nos ayuda a tener una determinación inicial del número de "valores atípicos", lo cual será muy útil al corregir este problema.</app-paragraph>
 
-<app-paragraph>The same we did with the "Fare" attribute we can do with the rest of the attributes we consider, to determine more accurately the amount and presence of "outliers."</app-paragraph>
+<app-paragraph>Lo mismo que hicimos con el atributo "Fare", podemos hacerlo con el resto de los atributos que consideramos, para determinar con más precisión la cantidad y presencia de "valores atípicos".</app-paragraph>
 
-<app-paragraph>Closely related to outlier analysis is the distribution analysis of our data. Some of this we have already been talking about (without explicitly mentioning it) when we were analyzing, with the graphs, the presence of outliers in the attributes:</app-paragraph>
+<app-paragraph>Estrechamente relacionado con el análisis de valores atípicos está el análisis de la distribución de nuestros datos. Algo de esto ya lo hemos estado discutiendo (sin mencionarlo explícitamente) cuando analizábamos, con los gráficos, la presencia de valores atípicos en los atributos:</app-paragraph>
 
 <ul>
-    <app-list-item>"Age"</app-list-item>
+    <app-list-item>"Edad"</app-list-item>
     <app-list-item>"SibSp"</app-list-item>
     <app-list-item>"Parch"</app-list-item>
     <app-list-item>"Fare"</app-list-item>
 </ul>
 
-<app-paragraph>We must remember that it is beneficial to have a normal distribution (Gaussian) in our data, since it would alter some models that we can eventually use. If we analyze some distributions of the aforementioned attributes, with, for example, a histogram, we will see that for the case of "Age," we do have a more or less normal distribution:</app-paragraph>
+<app-paragraph>Debemos recordar que es beneficioso tener una distribución normal (Gaussiana) en nuestros datos, ya que podría afectar algunos modelos que eventualmente podríamos usar. Si analizamos algunas distribuciones de los atributos mencionados, con, por ejemplo, un histograma, veremos que en el caso de "Edad", sí tenemos una distribución más o menos normal:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-6.png'"></app-image>
 
-<app-paragraph>Although it is not quite perfect, it is close to what we want.</app-paragraph>
+<app-paragraph>Aunque no es perfecta, está cerca de lo que queremos.</app-paragraph>
 
-<app-paragraph>The opposite is the case for the "Fare" attribute, which, as we have already seen, has a rather skewed distribution:</app-paragraph>
+<app-paragraph>Lo contrario ocurre con el atributo "Fare", que, como ya hemos visto, tiene una distribución bastante sesgada:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-7.png'"></app-image>
 
-<app-paragraph>This must be taken into account when using our data, as it could affect the performance of some models, so we will have to consider transforming them.</app-paragraph>
+<app-paragraph>Esto debe tenerse en cuenta al usar nuestros datos, ya que podría afectar el rendimiento de algunos modelos, por lo que tendremos que considerar transformarlos.</app-paragraph>
 
-<app-paragraph>Finally, a point also to consider is the scale at which our data is found because many algorithms are sensitive to this point, and if there is an uneven scale, the performance could be affected.</app-paragraph>
+<app-paragraph>Finalmente, otro punto a considerar es la escala en la que se encuentran nuestros datos, porque muchos algoritmos son sensibles a este punto, y si hay una escala desigual, el rendimiento podría verse afectado.</app-paragraph>
 
-<app-paragraph>A great visualization tool to see the scale of our data is the "boxplot" graph, such that by applying it we will obtain:</app-paragraph>
+<app-paragraph>Una gran herramienta de visualización para ver la escala de nuestros datos es el gráfico "boxplot", de manera que al aplicarlo obtendremos:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-8.png'"></app-image>
 
-<app-paragraph>At first glance it is noticeable that there is an uneven distribution in the corresponding attributes (which are the numerical ones), so normalizing them will be a point to consider.</app-paragraph>
+<app-paragraph>A simple vista se nota que hay una distribución desigual en los atributos correspondientes (que son los numéricos), por lo que normalizarlos será un punto a considerar.</app-paragraph>
 
-<app-sub-title>Connecting all the dots</app-sub-title>
+<app-sub-title>Conectando todos los puntos</app-sub-title>
 
-<app-paragraph>As a summary of everything we have been talking about so far, we can say that:</app-paragraph>
+<app-paragraph>Como resumen de todo lo que hemos estado hablando hasta ahora, podemos decir que:</app-paragraph>
 
 <ul>
-    <app-list-item>Missings values: If there is presence of missing values in the attributes "Age", "Cabin", "Embarked".</app-list-item>
-    <app-list-item>Outliers: If outliers are present, especially in "Fare", "SibSp", "Parch" attributes.</app-list-item>
-    <app-list-item>Distribution: Attributes such as "Fare", "SibSp", "Parch" present a quite marked non-normal distribution.</app-list-item>
-    <app-list-item>Scale: Numeric attributes "Age", "SibSp", "Parch", "Fare" have different scaling.</app-list-item>
+    <app-list-item>Valores faltantes: Si hay presencia de valores faltantes en los atributos "Edad", "Cabin", "Embarked".</app-list-item>
+    <app-list-item>Valores atípicos: Si hay valores atípicos presentes, especialmente en los atributos "Fare", "SibSp", "Parch".</app-list-item>
+    <app-list-item>Distribución: Atributos como "Fare", "SibSp", "Parch" presentan una distribución bastante marcada y no normal.</app-list-item>
+    <app-list-item>Escala: Atributos numéricos "Edad", "SibSp", "Parch", "Fare" tienen escalas diferentes.</app-list-item>
 </ul>
 
-<app-sub-title>Preparing the dataset</app-sub-title>
+<app-sub-title>Preparando el conjunto de datos</app-sub-title>
 
-<app-mini-sub-title>Missings</app-mini-sub-title>
+<app-mini-sub-title>Valores faltantes</app-mini-sub-title>
 
-<app-paragraph>First of all, it is always advisable to take care of the missings values. As much as possible we will try to avoid discarding as much as possible the tuples/records that we have, since the data is a very limited and too important resource.</app-paragraph>
+<app-paragraph>En primer lugar, siempre es recomendable ocuparse de los valores faltantes. En la medida de lo posible, trataremos de evitar descartar tantos registros como sea posible, ya que los datos son un recurso muy limitado y demasiado importante.</app-paragraph>
 
-<app-paragraph>With this premise, for the case of the missing values of the attribute "Age", since they are relatively few (in comparison with the total volume of the dataset), what we can do is to use a strategy to impute data in these records. A very basic one, and quite often used, is to replace the missing ones by the total average of the attribute.</app-paragraph>
+<app-paragraph>Con esta premisa, para el caso de los valores faltantes del atributo "Edad", dado que son relativamente pocos (en comparación con el volumen total del conjunto de datos), lo que podemos hacer es utilizar una estrategia para imputar datos en estos registros. Una muy básica y bastante utilizada es reemplazar los faltantes por el promedio total del atributo.</app-paragraph>
 
-<app-paragraph>On the other hand, for the case of "Embarked" which has only 2 missing values, we could replace them by the mode value (s).</app-paragraph>
+<app-paragraph>Por otro lado, para el caso de "Embarked" que tiene solo 2 valores faltantes, podríamos reemplazarlos por el valor (o valores) más común (S).</app-paragraph>
 
-<app-paragraph>Finally we have the case of "Cabin", the most complicated one. "Cabin", as mentioned above, has a large number of missing values, in fact, very little of the data of this attribute has values. In a situation like this, where there is not enough information to perform any transformation, the most sensible thing to do would be to discard the use of this attribute.</app-paragraph>
+<app-paragraph>Finalmente, tenemos el caso de "Cabin", el más complicado. "Cabin", como se mencionó anteriormente, tiene una gran cantidad de valores faltantes, de hecho, muy poco de los datos de este atributo tiene valores. En una situación como esta, donde no hay suficiente información para realizar ninguna transformación, lo más sensato sería descartar el uso de este atributo.</app-paragraph>
 
-<app-paragraph>Knowing everything we have to do, the only thing left to do is to do it! This is how in RapidMiner we obtain:</app-paragraph>
+<app-paragraph>Sabiendo todo lo que tenemos que hacer, lo único que queda es ¡hacerlo! Así es como obtenemos en RapidMiner:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-9.png'"></app-image>
 
-<app-callout>Note that the rule for the process is an exclusion rule, and that we exclude the "Passengerid" attribute because it is not a piece of data that contributes any information to our problem, it is simply an identifier.</app-callout>
+<app-callout>Ten en cuenta que la regla para el proceso es una regla de exclusión, y que excluimos el atributo "Passengerid" porque no es una pieza de datos que contribuya ninguna información a nuestro problema, es simplemente un identificador.</app-callout>
 
-<app-paragraph>Now, to replace the missing values, what we must do is:</app-paragraph>
+<app-paragraph>Ahora, para reemplazar los valores faltantes, lo que debemos hacer es:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-10.png'"></app-image>
 
-<app-paragraph>The resulting dataset at this point is:</app-paragraph>
+<app-paragraph>El conjunto de datos resultante en este punto es:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-11.png'"></app-image>
 
-<app-callout><app-paragraph>Note that although the attribute "Embarked" is not numeric but categorical, if we apply the replacement by average, the result will be that the missing values will be replaced by the most popular data (S).</app-paragraph>
+<app-callout>
+    <app-paragraph>Ten en cuenta que aunque el atributo "Embarked" no es numérico sino categórico, si aplicamos el reemplazo por promedio, el resultado será que los valores faltantes se reemplazarán por los datos más populares (S).</app-paragraph>
 </app-callout>
 
-<app-mini-sub-title>Outliers</app-mini-sub-title>
+<app-mini-sub-title>Valores atípicos</app-mini-sub-title>
 
-<app-paragraph>To correct the outliers, in this case which are few in number, what we will do is to delete the records that contain such data. In this case, the only attribute worth correcting is the "Fare" attribute. Based on the graph we obtained previously, the ideal at this point will be to filter out all the examples that do appear to be valid, which are, a priori, those under 400.00, so we will have a result similar to the following:</app-paragraph>
+<app-paragraph>Para corregir los valores atípicos, en este caso, que son pocos en número, lo que haremos es eliminar los registros que contienen tales datos. En este caso, el único atributo que vale la pena corregir es el atributo "Fare". Según el gráfico que obtuvimos anteriormente, lo ideal en este punto será filtrar todos los ejemplos que no parecen ser válidos, que son, a priori, aquellos por debajo de 400.00, de modo que tendremos un resultado similar al siguiente:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-12.png'"></app-image>
 
-<app-paragraph>In this case, 3 tuples were detected that did not fit the indicated filter, and are considered outliers.</app-paragraph>
+<app-paragraph>En este caso, se detectaron 3 tuplas que no se ajustaban al filtro indicado y se consideran valores atípicos.</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-13.png'"></app-image>
 
-<app-mini-sub-title>Data scaling</app-mini-sub-title>
+<app-mini-sub-title>Escalado de datos</app-mini-sub-title>
 
-<app-paragraph>Finally, we need to adjust the scaling of certain attributes. We saw that the numeric attributes "<strong>Age</strong>", "****<u>SibSp</u>****", "<u>Parch</u>", "<u>Fare</u>", had different scales, and this can be detrimental to algorithms such as k-nn, because it would make certain attributes have a greater influence on the predictions. To solve this you have to normalize them, and in RapidMiner this can be done in the following way:</app-paragraph>
+<app-paragraph>Finalmente, necesitamos ajustar la escala de ciertos atributos. Vimos que los atributos numéricos "<strong>Edad</strong>", "<u>SibSp</u>", "<u>Parch</u>", "<u>Fare</u>", tenían escalas diferentes, y esto puede ser perjudicial para algoritmos como k-nn, porque haría que ciertos atributos tengan una mayor influencia en las predicciones. Para resolver esto, debes normalizarlos, y en RapidMiner esto se puede hacer de la siguiente manera:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-14.png'"></app-image>
 
-<app-paragraph>Obtaining, in this case, a result as follows:</app-paragraph>
+<app-paragraph>Obteniendo, en este caso, un resultado como el siguiente:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-15.png'"></app-image>
 
-<app-paragraph>Now the data have more or less the same scale, reducing the possible influence of this problem in the algorithms we use.</app-paragraph>
+<app-paragraph>Ahora los datos tienen más o menos la misma escala, reduciendo la posible influencia de este problema en los algoritmos que usemos.</app-paragraph>
 
-<app-callout>Note that the pre-defined transformation, "z-transformation," was used.</app-callout>
+<app-callout>Observa que se utilizó la transformación predefinida "z-transformación".</app-callout>
 
-<app-paragraph>At this point, it should be clarified that in the final process, normalization will not be done before applying a separation of data for test and training, or in any case before applying cross validation. Rather, it will be done prior to these processes. This is to avoid the so-called "contamination" of data, where our models may contain information that they should not, giving us misleading results.</app-paragraph>
+<app-paragraph>En este punto, es importante aclarar que en el proceso final, la normalización no se realizará antes de aplicar una separación de datos para prueba y entrenamiento, o en cualquier caso antes de aplicar la validación cruzada. Más bien, se hará antes de estos procesos. Esto es para evitar la llamada "contaminación" de datos, donde nuestros modelos pueden contener información que no deberían, dándonos resultados engañosos.</app-paragraph>
 
-<app-mini-sub-title>Finalizing the preparation</app-mini-sub-title>
+<app-mini-sub-title>Finalizando la preparación</app-mini-sub-title>
 
-<app-paragraph>At this point, we already have a dataset, a priori, better than the one we had at the beginning. So now all that remains is to start testing this version of our data.</app-paragraph>
+<app-paragraph>En este punto, ya tenemos un conjunto de datos, a priori, mejor que el que teníamos al principio. Así que ahora lo único que queda es comenzar a probar esta versión de nuestros datos.</app-paragraph>
 
-<app-sub-title>Modeling</app-sub-title>
+<app-sub-title>Modelado</app-sub-title>
 
-<app-paragraph>Before we start modeling we have to recognize certain steps that we have to perform, such as:</app-paragraph>
-
-<ul>
-    <app-list-item>Determine which models will be most useful to us based on our type of problem.</app-list-item>
-    <app-list-item>Determine if we will use any strategy to improve as much as possible the performance of our model.</app-list-item>
-    <app-list-item>Determine what strategy we will use to evaluate the performance of these models.</app-list-item>
-</ul>
-
-<app-paragraph>So let's get to work.</app-paragraph>
-
-<app-mini-sub-title>Model selection.</app-mini-sub-title>
-
-<app-paragraph>First, before selecting any model, we have to identify the type of problem we have, in order to determine which algorithms we could use in this first iteration. In this case, as we said at the beginning of this work, we are facing a binary classification problem, since we want to determine whether a person survives or not.</app-paragraph>
-
-<app-paragraph>To solve classification type problems, some algorithms that can be useful are:</app-paragraph>
+<app-paragraph>Antes de comenzar el modelado, tenemos que reconocer ciertos pasos que debemos realizar, como:</app-paragraph>
 
 <ul>
-    <app-list-item>Naive bayes: It is always a good starting point to make use of this model.</app-list-item>
-    <app-list-item>Logistic regression: Simple model and useful in two-class predictions.</app-list-item>
-    <app-list-item>K-nn: Simple model that determines the distance between points to determine to which group a certain record belongs.</app-list-item>
+    <app-list-item>Determinar qué modelos serán más útiles para nosotros basándonos en nuestro tipo de problema.</app-list-item>
+    <app-list-item>Determinar si usaremos alguna estrategia para mejorar tanto como sea posible el rendimiento de nuestro modelo.</app-list-item>
+    <app-list-item>Determinar qué estrategia usaremos para evaluar el rendimiento de estos modelos.</app-list-item>
 </ul>
 
-<app-paragraph>It must be taken into account that for each of these algorithms it will be necessary to make some modification in the data (data types for example).</app-paragraph>
+<app-paragraph>Así que manos a la obra.</app-paragraph>
 
-<app-mini-sub-title>Determination of performance strategies</app-mini-sub-title>
+<app-mini-sub-title>Selección del modelo.</app-mini-sub-title>
 
-<app-paragraph>We have some tools and strategies that we can use to make our models perform as well as possible. One of them is called "Feature Selection," where based on certain algorithms we determine the best possible combination of attributes to achieve better results.</app-paragraph>
+<app-paragraph>Primero, antes de seleccionar cualquier modelo, debemos identificar el tipo de problema que tenemos, para determinar qué algoritmos podríamos usar en esta primera iteración. En este caso, como dijimos al principio de este trabajo, nos enfrentamos a un problema de clasificación binaria, ya que queremos determinar si una persona sobrevive o no.</app-paragraph>
 
-<app-mini-sub-title>Performance evaluation</app-mini-sub-title>
-
-<app-paragraph>This point is unavoidable. We will always want to know how our model behaves, and how well it does what we want it to do.</app-paragraph>
-
-<app-paragraph>There are several strategies that we can use to measure the performance of a model, and some will be more or less useful than others, depending on our particular case. For this paper, we will consider two possible alternatives:</app-paragraph>
+<app-paragraph>Para resolver problemas de tipo clasificación, algunos algoritmos que pueden ser útiles son:</app-paragraph>
 
 <ul>
-    <app-list-item>Separate our dataset to use part of the data for training, and part for testing.</app-list-item>
-    <app-list-item>Make use of the cross-validation strategy.</app-list-item>
+    <app-list-item>Naive bayes: Siempre es un buen punto de partida para usar este modelo.</app-list-item>
+    <app-list-item>Regresión logística: Modelo simple y útil en predicciones de dos clases.</app-list-item>
+    <app-list-item>K-nn: Modelo simple que determina la distancia entre puntos para determinar a qué grupo pertenece un cierto registro.</app-list-item>
 </ul>
 
-<app-paragraph>Both alternatives are widely used, the first one may be a bit more complex to fix because there are issues such as: What data to separate? How do I determine the data to separate? Did I get a good test or training set? Among others. So this time we will make use of the Cross-validation strategy.</app-paragraph>
+<app-paragraph>Debe tenerse en cuenta que para cada uno de estos algoritmos será necesario realizar algunas modificaciones en los datos (tipos de datos, por ejemplo).</app-paragraph>
 
-<app-paragraph>Let's get to work!</app-paragraph>
+<app-mini-sub-title>Determinación de estrategias de rendimiento</app-mini-sub-title>
 
-<app-paragraph>First of all, what we have to do is to give the role of class/target variable to the attribute "Survived" since it is the one we want to predict.</app-paragraph>
+<app-paragraph>Tenemos algunas herramientas y estrategias que podemos usar para que nuestros modelos tengan el mejor rendimiento posible. Una de ellas se llama "Selección de Características", donde, basándonos en ciertos algoritmos, determinamos la mejor combinación posible de atributos para obtener mejores resultados.</app-paragraph>
+
+<app-mini-sub-title>Evaluación del rendimiento</app-mini-sub-title>
+
+<app-paragraph>Este punto es inevitable. Siempre querremos saber cómo se comporta nuestro modelo y qué tan bien hace lo que queremos que haga.</app-paragraph>
+
+<app-paragraph>Existen varias estrategias que podemos usar para medir el rendimiento de un modelo, y algunas serán más o menos útiles que otras, dependiendo de nuestro caso particular. Para este trabajo, consideraremos dos posibles alternativas:</app-paragraph>
+
+<ul>
+    <app-list-item>Separar nuestro conjunto de datos para usar parte de los datos para entrenamiento y parte para pruebas.</app-list-item>
+    <app-list-item>Hacer uso de la estrategia de validación cruzada.</app-list-item>
+</ul>
+
+<app-paragraph>Ambas alternativas son ampliamente utilizadas, la primera puede ser un poco más compleja de fijar porque hay problemas como: ¿Qué datos separar? ¿Cómo determino los datos a separar? ¿Obtuve un buen conjunto de prueba o entrenamiento? Entre otros. Así que esta vez haremos uso de la estrategia de validación cruzada.</app-paragraph>
+
+<app-paragraph>¡Manos a la obra!</app-paragraph>
+
+<app-paragraph>En primer lugar, lo que tenemos que hacer es asignar el papel de clase/variable objetivo al atributo "Survived", ya que es el que queremos predecir.</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-16.png'"></app-image>
 
-<app-paragraph>Now, what we have to do is to determine which strategy we will use to improve the performance of our models. Among the ones we know at the moment is "Feature Selection," and among the different options we have to apply this strategy, we find:</app-paragraph>
+<app-paragraph>Ahora, lo que tenemos que hacer es determinar qué estrategia usaremos para mejorar el rendimiento de nuestros modelos. Entre las que conocemos en este momento está la "Selección de Características", y entre las diferentes opciones que tenemos para aplicar esta estrategia, encontramos:</app-paragraph>
 
 <ul>
-    <app-list-item>Brute Force</app-list-item>
-    <app-list-item>Fordward Selection</app-list-item>
-    <app-list-item>Backward Selection</app-list-item>
-    <app-list-item>Evolutionary</app-list-item>
+    <app-list-item>Fuerza Bruta</app-list-item>
+    <app-list-item>Selección Hacia Adelante</app-list-item>
+    <app-list-item>Selección Hacia Atrás</app-list-item>
+    <app-list-item>Evolutiva</app-list-item>
 </ul>
 
-<app-paragraph>We will see the advantages and disadvantages of each of them to select the ideal one:</app-paragraph>
+<app-paragraph>Veremos las ventajas y desventajas de cada una de ellas para seleccionar la ideal:</app-paragraph>
 
 <ul>
-    <app-list-item><strong>Brute Force:</strong> It will provide us with the best possible combinations of attributes, but it will have an extremely high delay because it will try all possible combinations.</app-list-item>
-    <app-list-item><strong>Fordward Selection:</strong> It is much better in terms of time compared to the previous one, but it has the disadvantage that we are not guaranteed the best possible combination.</app-list-item>
-    <app-list-item><strong>Backward Selection:</strong> In general terms it is very similar to Fordward Selection.</app-list-item>
-    <app-list-item><strong>Evolutionary:</strong> Evolutionary algorithm, it has better times than Brute Force and can provide better combinations than Fordward and Backward Selection. From the above, in this instance it seems that an Evolutionary type optimization is the best option.</app-list-item>
+    <app-list-item><strong>Fuerza Bruta:</strong> Nos proporcionará las mejores combinaciones posibles de atributos, pero tendrá un retraso extremadamente alto porque probará todas las combinaciones posibles.</app-list-item>
+    <app-list-item><strong>Selección Hacia Adelante:</strong> Es mucho mejor en términos de tiempo en comparación con la anterior, pero tiene la desventaja de que no estamos garantizados la mejor combinación posible.</app-list-item>
+    <app-list-item><strong>Selección Hacia Atrás:</strong> En términos generales, es muy similar a la Selección Hacia Adelante.</app-list-item>
+    <app-list-item><strong>Evolutiva:</strong> Algoritmo evolutivo, tiene mejores tiempos que la Fuerza Bruta y puede proporcionar mejores combinaciones que la Selección Hacia Adelante y Hacia Atrás. De lo anterior, en esta instancia parece que una optimización de tipo evolutiva es la mejor opción.</app-list-item>
 </ul>
 
-<app-paragraph>Let's pass all of the above to RapidMiner:</app-paragraph>
+<app-paragraph>Llevemos todo lo anterior a RapidMiner:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-17.png'"></app-image>
 
-<app-paragraph>This time we have the three "Feature Selection" operations, where within each one there is a cross validation as follows:</app-paragraph>
+<app-paragraph>Esta vez tenemos las tres operaciones de "Selección de Características", donde dentro de cada una hay una validación cruzada de la siguiente manera:</app-paragraph>
 
 <app-image [image]="'../../../../../assets/titanic-18.png'"></app-image>
 
-<app-sub-title>Evaluation</app-sub-title>
+<app-sub-title>Evaluación</app-sub-title>
 
-<app-paragraph>It is time to determine which of the trained models has the best performance. For this, a manual and basic, but at the same time effective and simple, tactic is to compare by "eye". So given the following results:</app-paragraph>
+<app-paragraph>Es hora de determinar cuál de los modelos entrenados tiene el mejor rendimiento. Para esto, una táctica manual y básica, pero al mismo tiempo efectiva y simple, es comparar "a simple vista". Así que dados los siguientes resultados:</app-paragraph>
 
 <app-mini-sub-title>Naive Bayes</app-mini-sub-title>
 
 <app-image [image]="'../../../../../assets/titanic-20.png'"></app-image>
 
-<app-mini-sub-title>Logistic Regression</app-mini-sub-title>
+<app-mini-sub-title>Regresión Logística</app-mini-sub-title>
 
 <app-image [image]="'../../../../../assets/titanic-21.png'"></app-image>
 
@@ -317,8 +318,8 @@
 
 <app-image [image]="'../../../../../assets/titanic-22.png'"></app-image>
 
-<app-paragraph>It can be said that, of the algorithms used, K-NN is the one that generated the best performance.</app-paragraph>
+<app-paragraph>Se puede decir que, de los algoritmos utilizados, K-NN es el que generó el mejor rendimiento.</app-paragraph>
 
-<app-sub-title>Conclusions</app-sub-title>
+<app-sub-title>Conclusiones</app-sub-title>
 
-<app-paragraph>As conclusions, we can say that although this is the first iteration, the results at first sight are, at least, satisfactory. But one thing is for sure, we must continue testing on the model obtained to explore the possibility of improving performance.</app-paragraph>
+<app-paragraph>Como conclusiones, podemos decir que aunque esta es la primera iteración, los resultados a simple vista son, al menos, satisfactorios. Pero una cosa es segura, debemos seguir probando el modelo obtenido para explorar la posibilidad de mejorar el rendimiento.</app-paragraph>

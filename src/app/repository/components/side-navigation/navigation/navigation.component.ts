@@ -31,27 +31,32 @@ export class NavigationComponent    {
         {
           tittle: "What is Machine Learning",
           minutesRead: 7,
-          cardId: WhatIsMachineLearningComponent
+          cardId: WhatIsMachineLearningComponent,
+          labels: ['Concepto']
         },
         {
           tittle: "Technical aspect of ML",
           minutesRead: 5,
-          cardId: MlTechnicalAspectComponent
+          cardId: MlTechnicalAspectComponent,
+          labels: ['Concepto']
         },
         {
           tittle: "CRISP-DM",
           minutesRead: 1,
-          cardId: CRISPDMComponent
+          cardId: CRISPDMComponent,
+          labels: ['Concepto central']
         },
         {
           tittle: "Param-type Algorithms",
           minutesRead: 6,
-          cardId: ParamAlgorithmComponent
+          cardId: ParamAlgorithmComponent,
+          labels: ['Concepto central']
         },
         {
           tittle: "Supervision in Algorithms",
           minutesRead: 5,
-          cardId: SupervisionAlgorithmComponent
+          cardId: SupervisionAlgorithmComponent,
+          labels: ['Tipp de algorimto']
         }
       ]
     },
@@ -60,7 +65,8 @@ export class NavigationComponent    {
         {
           tittle: "Data Preparation",
           minutesRead: 5,
-          cardId: DataHandlingComponent
+          cardId: DataHandlingComponent,
+          labels: ['Preprocesamiento']
         }
       ]
     },
@@ -146,7 +152,9 @@ export class NavigationComponent    {
           minutesRead: 0,
           excel: true,
           python: true,
-          cardId: "what_ML"
+          cardId: "what_ML",
+          labels: ['Concepto']
+
         }
       ]
     }
@@ -157,13 +165,15 @@ export class NavigationComponent    {
       tittle: "Kidney detection",
       minutesRead: 35,
       miner: true,
-      cardId: KidneyCaseComponent
+      cardId: KidneyCaseComponent,
+      labels: ['Supervisado', 'Clasificación binaria']
     },
     {
       tittle: "Titanic - Getting Started",
       minutesRead: 45,
       miner: true,
-      cardId: TitanicCaseComponent
+      cardId: TitanicCaseComponent,
+      labels: ['Supervisado', 'Clasificacion binaria']
     }
   ];
 }

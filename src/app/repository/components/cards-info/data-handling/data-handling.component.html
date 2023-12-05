@@ -1,43 +1,40 @@
-<app-tittle>Data Preparation</app-tittle>
+<app-tittle>Preparación de Datos</app-tittle>
 
-<app-paragraph>Data handling is one of the stages in the process of building Machine Learning models, and it's likely where most of the time is spent as an analyst. It involves preparing and cleaning the data before it is used to feed an algorithm.</app-paragraph>
+<app-paragraph>El manejo de datos es una de las etapas en el proceso de construcción de modelos de Machine Learning, y es probablemente donde la mayoría del tiempo se dedica como analista. Implica preparar y limpiar los datos antes de utilizarlos para alimentar un algoritmo.</app-paragraph>
 
-<app-paragraph>There are two general approaches to data handling: "blending" and "cleansing."
+<app-paragraph>Existen dos enfoques generales para el manejo de datos: "combinación" y "limpieza".</app-paragraph>
 
-</app-paragraph>
+<app-mini-sub-title>Combinación</app-mini-sub-title>
 
-<app-mini-sub-title>Blending</app-mini-sub-title>
+<app-paragraph>Se trata de transformar un conjunto de datos de un estado a otro o combinar varios conjuntos.</app-paragraph>
 
-<app-paragraph>It's about transforming a dataset from one state to another or combining multiple sets.</app-paragraph>
+<app-mini-sub-title>Limpieza</app-mini-sub-title>
 
-<app-mini-sub-title>Cleansing</app-mini-sub-title>
+<app-paragraph>Se trata de mejorar los propios datos para que el modelo a entrenar pueda ofrecer mejores resultados.</app-paragraph>
 
-<app-paragraph>It's about improving the data itself so that the model to be trained can deliver better results.</app-paragraph>
+<app-sub-title>¿Qué debes saber?</app-sub-title>
 
-<app-sub-title>What should you know?</app-sub-title>
+<app-paragraph>Tanto para la combinación como para la limpieza, y en general, es esencial analizar a fondo el conjunto de datos que se va a examinar. En esta ocasión, especificaremos aspectos relacionados con la limpieza.</app-paragraph>
 
-<app-paragraph>For both blending and cleansing, and in general, it's essential to thoroughly analyze the dataset to be examined. This time, we will specify aspects related to cleansing.</app-paragraph>
-
-<app-paragraph>Among the most common aspects that can affect the performance of the model to be trained and should be considered when analyzing attributes are:</app-paragraph>
+<app-paragraph>Entre los aspectos más comunes que pueden afectar el rendimiento del modelo a entrenar y que deben tenerse en cuenta al analizar atributos se encuentran:</app-paragraph>
 
 <ul>
-    <app-list-item>Check for many missing values (?).</app-list-item>
-    <app-list-item>Check if there are attributes related to other attributes.</app-list-item>
-    <app-list-item>Identify unusual information.</app-list-item>
-    <app-list-item>Identify the range of attribute domains.</app-list-item>
+    <app-list-item>Verificar si hay muchos valores faltantes (?).</app-list-item>
+    <app-list-item>Verificar si hay atributos relacionados con otros atributos.</app-list-item>
+    <app-list-item>Identificar información inusual.</app-list-item>
+    <app-list-item>Identificar el rango de los dominios de atributos.</app-list-item>
 </ul>
 
-<app-callout>An important point to consider is that sometimes the information that is considered problematic is the one that requires attention. An example of this is in fraud detection problems, where unusual information (outliers) is what matters.
+<app-callout>Un punto importante a considerar es que a veces la información que se considera problemática es la que requiere atención. Un ejemplo de esto se encuentra en problemas de detección de fraude, donde la información inusual (valores atípicos) es lo que importa.
 </app-callout><br>
-<app-paragraph>Once the above aspects are identified, the actions that can be taken to try to improve the model's performance as much as possible will depend on the specific algorithm used. However, some strategies to reduce the problems that may arise include:</app-paragraph>
+
+<app-paragraph>Una vez identificados los aspectos anteriores, las acciones que se pueden tomar para tratar de mejorar el rendimiento del modelo tanto como sea posible dependerán del algoritmo específico utilizado. Sin embargo, algunas estrategias para reducir los problemas que puedan surgir incluyen:</app-paragraph>
 
 <ul>
-    <app-list-item>Replacing invalid or missing data with statistical data from the rest of the dataset, such as the average, median, minimum, etc., to avoid wasting information.</app-list-item>
-    <app-list-item>Eliminating attributes with many missing data. Sometimes, when there are many missing data, it's best to forgo the use of that attribute. You can also consider removing only those records that have such data.
-    </app-list-item>
-    <app-list-item>Removing attributes that are correlated with each other.
-    </app-list-item>
-    <app-list-item>Normalizing the range of attribute domains, bringing all the data in the dataset to the same scale to avoid possible inconsistencies (standardization).<br>
-                    One possible normalization technique would be to classify a certain set of data that is "farther away" from the rest of the dataset as "Outliers" or with some other distinctive label and handle them based on that characteristic to take appropriate action.
+    <app-list-item>Reemplazar datos inválidos o faltantes con datos estadísticos del resto del conjunto, como el promedio, la mediana, el mínimo, etc., para evitar desperdiciar información.</app-list-item>
+    <app-list-item>Eliminar atributos con muchos datos faltantes. A veces, cuando hay muchos datos faltantes, es mejor renunciar al uso de ese atributo. También se puede considerar eliminar solo los registros que tengan dichos datos.</app-list-item>
+    <app-list-item>Eliminar atributos que estén correlacionados entre sí.</app-list-item>
+    <app-list-item>Normalizar el rango de los dominios de atributos, llevando todos los datos en el conjunto al mismo nivel para evitar posibles inconsistencias (estandarización).<br>
+                    Una posible técnica de normalización sería clasificar un cierto conjunto de datos que está "más alejado" del resto del conjunto como "Valores Atípicos" o con alguna otra etiqueta distintiva y manejarlos en función de esa característica para tomar la acción apropiada.
     </app-list-item>
 </ul>
