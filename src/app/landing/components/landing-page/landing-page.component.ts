@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent {
-
+  ngOnInit() {
+    AOS.init();
+  }
 }
