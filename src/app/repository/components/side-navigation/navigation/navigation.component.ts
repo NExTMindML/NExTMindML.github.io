@@ -29,13 +29,13 @@ export class NavigationComponent    {
     {
       tittle: "Machine Learning", cards: [
         {
-          tittle: "What is Machine Learning",
+          tittle: "Que es Machine Learning",
           minutesRead: 7,
           cardId: WhatIsMachineLearningComponent,
           labels: ['Concepto']
         },
         {
-          tittle: "Technical aspect of ML",
+          tittle: "Aspectos tecnicos de ML",
           minutesRead: 5,
           cardId: MlTechnicalAspectComponent,
           labels: ['Concepto']
@@ -47,23 +47,23 @@ export class NavigationComponent    {
           labels: ['Concepto central']
         },
         {
-          tittle: "Param-type Algorithms",
+          tittle: "Algoritmos parametricos",
           minutesRead: 6,
           cardId: ParamAlgorithmComponent,
           labels: ['Concepto central']
         },
         {
-          tittle: "Supervision in Algorithms",
+          tittle: "Supervisación en algoritmos",
           minutesRead: 5,
           cardId: SupervisionAlgorithmComponent,
-          labels: ['Tipp de algorimto']
+          labels: ['Tipos del algoritmos']
         }
       ]
     },
     {
-      tittle: "Data Preparation", cards: [
+      tittle: "Preparación de datos", cards: [
         {
-          tittle: "Data Preparation",
+          tittle: "Preparación de datos",
           minutesRead: 5,
           cardId: DataHandlingComponent,
           labels: ['Preprocesamiento']
@@ -71,19 +71,19 @@ export class NavigationComponent    {
       ]
     },
     {
-      tittle: "Modeling", cards: [
+      tittle: "Modelado", cards: [
         {
-          tittle: "Modeling",
+          tittle: "Modelado",
           minutesRead: 0,
           cardId: "what_ML"
         },
         {
-          tittle: "Algorithms",
+          tittle: "Algoritmos",
           minutesRead: 0,
           cardId: "what_ML"
         },
         {
-          tittle: "Linear Algorithms",
+          tittle: "Algoritmos lineales",
           minutesRead: 0,
           cardId: "what_ML"
         }
@@ -92,22 +92,22 @@ export class NavigationComponent    {
     {
       tittle: "Performance", cards: [
         {
-          tittle: "Sources of Errors",
+          tittle: "Origen de errores",
           minutesRead: 5,
           cardId: SourcesErrosComponent
         },
         {
-          tittle: "Low Performance",
+          tittle: "Baja Performance",
           minutesRead: 4,
           cardId: LowPerformanceComponent
         },
         {
-          tittle: "Performance test",
+          tittle: "Test de Performance",
           minutesRead: 0,
           cardId: "what_ML"
         },
         {
-          tittle: "Gradient Descent",
+          tittle: "Decenso gradiante",
           minutesRead: 0,
           cardId: "what_ML"
         }
@@ -117,31 +117,31 @@ export class NavigationComponent    {
 
   basics: { tittle: String, cards: Card[] }[] = [
     {
-      tittle: "Data Understanding", cards: [
+      tittle: "Entendimiento de datos", cards: [
         {
-          tittle: "Poker Problem",
+          tittle: "Problema del poker",
           minutesRead: 0,
           miner: true,
           cardId: "what_ML"
         },
         {
-          tittle: "Iris Problem",
+          tittle: "Problema del Iris",
           minutesRead: 0,
           miner: true,
           cardId: "what_ML"
         }]
     },
     {
-      tittle: "Linear Algorithms", cards: [
+      tittle: "Algoritmos lineales", cards: [
         {
-          tittle: "Linear Regression",
+          tittle: "Regresion lineal",
           minutesRead: 0,
           excel: true,
           python: true,
           cardId: "what_ML"
         },
         {
-          tittle: "Logistic Regression",
+          tittle: "Regresion logistica",
           minutesRead: 0,
           excel: true,
           python: true,
@@ -162,14 +162,14 @@ export class NavigationComponent    {
 
   cases: Card[] = [
     {
-      tittle: "Kidney detection",
+      tittle: "CKD detection",
       minutesRead: 35,
       miner: true,
       cardId: KidneyCaseComponent,
       labels: ['Supervisado', 'Clasificación binaria']
     },
     {
-      tittle: "Titanic - Getting Started",
+      tittle: "Titanic - Empezando",
       minutesRead: 45,
       miner: true,
       cardId: TitanicCaseComponent,
